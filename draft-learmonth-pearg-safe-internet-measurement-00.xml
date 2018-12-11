@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rfc docName='draft-learmonth-pearg-safe-internet-measurement-00' version="3" ipr="trust200902" submissionType="IRTF" category="info" xml:lang="en" consensus="true" xmlns:xi="http://www.w3.org/2001/XInclude">
+<front>
+
+<title abbrev='Safe Internet Measurement'>
+Guidelines for Performing Safe Measurement on the Internet
+</title>
+
+<author initials="I. R." surname="Learmonth" fullname="Iain R. Learmonth">
+  <organization>Tor Project</organization>
+  <address>
+    <postal>
+      <street></street>
+    </postal>
+    <email>irl@torproject.org</email>
+  </address>
+</author>
+
+<date />
+
+<area></area>
+<workgroup></workgroup>
+<keyword>safety</keyword>
+<keyword>measurement</keyword>
+<keyword>monitoring</keyword>
+<keyword>research</keyword>
+<keyword>internet</keyword>
+
+<abstract>
+<t>Researchers from industry and academia will often use Internet measurements
+as a part of their work. While these measurements can give insight into the
+functioning and usage of the Internet, they can come at the cost of user privacy.
+This document describes guidelines for ensuring that such measurements can
+be carried out safely.</t>
+</abstract>
+
+<note title="Note">
+<t>Comments are solicited and should be addressed to the research group's mailing list at pearg@irtf.org and/or the author(s).</t>
+<t>The sources for this draft are at:</t>
+<t>https://github.com/irl/draft-safe-internet-measurement</t>
+</note>
+
+</front>
+
+<middle>
+
+<section anchor="introduction"><name>Introduction</name>
+<t>When performing research using the Internet, as opposed to an isolated testbed
+or simulation platform, means that you research co-exists in a space with other
+users. This document outlines guidelines for academic and industry researchers
+that might use the Internet as part of scientific experiementation.</t>
+<t>Following the guidelines contained within this document is not a substitute for
+any institutional ethics review process you may have, although these guidelines
+could help to inform that process. Similarly, these guidelines are not legal
+advice and local laws should be considered before starting any experiment that
+could have adverse impacts on user privacy.</t>
+<t>Considerations are grouped into two categories: those that primarily apply to
+active measurements and those that primarily apply to passive measurements.
+Some of these considerations may be applicable to both depending on the
+experiment design.</t>
+</section>
+
+<section anchor="active-measurements"><name>Active measurements</name>
+
+<t>Active measurements generate traffic. Performance measurements such as TCP
+throughput testing <xref target="RFC6349"></xref> or functional measurements
+such as the feature-dependent connectivity failure tests performed by
+<xref target="PATHspider"></xref> both fall into this category.</t>
+
+<section anchor="use-a-testbed"><name>Use a testbed</name>
+<t>Wherever possible, use a testbed. An isolated network means that there are no
+other users sharing the infrastructure you are using for your experiments.</t>
+<t>When measuring performance, competing traffic can have negative effects on
+the performance of your test traffic and so the testbed approach can also
+produce more accurate and repeatable results than experiments using the public
+Internet.</t>
+<t>WAN link conditions can be emulated through artificial delays and/or packet
+loss using a tool like <xref target="netem"></xref>. Competing traffic can
+also be emulated using traffic generators.</t>
+</section>
+
+<section anchor="only-record-your-own-traffic"><name>Only record your own traffic</name>
+<t>When performing measurements be sure to only capture traffic that you have
+generated. Traffic may be identified by IP ranges or by some token that is
+unlikely to be used by other users.</t>
+<t>Again, this can help to improve the accuracy and repeatability of your
+experiment. <xref target="RFC2544"></xref>, for performance benchmarking,
+requires that any frames received that were not part of the test traffic are
+discarded and not counted in the results.</t>
+</section>
+
+<section anchor="others-stuff"><name>Be respectful of other's infrastructure</name>
+<t>If your experiment is designed to trigger a response from infrastructure that
+is not your own, consider what the negative consequences of that may be. At the
+very least your experiment will consume bandwidth that may have to be paid for.</t>
+<t>In more extreme circumstances, you could cause traffic to be generated that
+causes legal trouble for the owner of that infrastructure. The Internet is a
+global network crossing many legal jurisdictions and so what may be legal for
+you is not necessarily legal for everyone.</t>
+<t>If you are sending a lot of traffic quickly, or otherwise generally deviate
+from typical client behaviour, a network may identify this as an attack which
+means that you will not be collecting results that are representative of what
+a typical client would see.</t>
+</section>
+</section><!-- Active -->
+<section anchor="passive-measurements"><name>Passive measurements</name>
+
+<t>Performing passive measurements requires existing traffic. Passive
+measurements can help to inform new developments in Internet protocols but can
+also carry risk.</t>
+
+<section anchor="expectations"><name>Consider the expectation of privacy</name>
+<t>If you are in a position to perform passive measurements of live network
+traffic, you are also in a position of responsibility. Users of a network will
+have certain expectations of privacy and those expectations may not align with
+the privacy guarantees offered by the technologies they are using. As a thought
+experiment, consider how users might respond if you asked for their informed
+consent for the measurements you'd like to perform.</t>
+</section>
+
+<section anchor="leaks-everywhere"><name>Only collect data that is safe to make public</name>
+<t>When deciding on the data to collect, assume that any data collected might
+become public. There are many ways that this could happen, through operation
+security mistakes or compulsion by a judicial system.</t>
+</section>
+
+<section anchor="minimization"><name>Minimization</name>
+<t>For all data collected, consider whether or not it is really needed.</t>
+</section>
+
+<section anchor="aggregation"><name>Aggregation</name>
+<t>When collecting data, consider if the granularity can be limited by using
+bins or adding noise. XXX: Differential privacy.</t>
+</section>
+
+<section anchor="source-aggregation"><name>Source Aggregation</name>
+<t>Do this at the source, definitely do it before you write to disk.</t>
+<t><xref target="Tor.2017-04-001"></xref> presents a case-study on the in-memory
+statistics in the software used by the Tor network, as an example.</t>
+</section>
+
+</section>
+
+<section anchor="risk-analysis"><name>Risk Analysis</name>
+<t>The benefits should outweigh the risks.
+Consider auxiliary data (e.g. third-party data sets) when assessing the risks.</t>
+</section>
+
+<section anchor="security-considerations"><name>Security Considerations</name>
+<t>Take reasonable security precautions, e.g. about who has access to your data sets or experimental systems.</t>
+</section>
+<section anchor="iana-considerations"><name>IANA Considerations</name>
+<t>This document has no actions for IANA.</t>
+</section>
+
+<section anchor="acknowledgements"><name>Acknowledgements</name>
+<t>Many of these considerations are based on those from the
+<xref target="TorSafetyBoard"></xref> adapted and generalised to be applied to
+Internet research.</t>
+</section>
+</middle>
+
+<back>
+<references><name>Informative References</name>
+<reference  anchor='RFC6349' target='https://www.rfc-editor.org/info/rfc6349'>
+<front>
+<title>Framework for TCP Throughput Testing</title>
+<author initials='B.' surname='Constantine' fullname='B. Constantine'><organization /></author>
+<author initials='G.' surname='Forget' fullname='G. Forget'><organization /></author>
+<author initials='R.' surname='Geib' fullname='R. Geib'><organization /></author>
+<author initials='R.' surname='Schrage' fullname='R. Schrage'><organization /></author>
+<date year='2011' month='August' />
+<abstract><t>This framework describes a practical methodology for measuring end- to-end TCP Throughput in a managed IP network.  The goal is to provide a better indication in regard to user experience.  In this framework, TCP and IP parameters are specified to optimize TCP Throughput.  This  document is not an Internet Standards Track specification; it is published for informational purposes.</t></abstract>
+</front>
+<seriesInfo name='RFC' value='6349'/>
+<seriesInfo name='DOI' value='10.17487/RFC6349'/>
+</reference>
+<reference anchor='PATHspider' target='https://dl.acm.org/citation.cfm?doid=2959424.2959441'>
+<front>
+<title>PATHspider: A tool for active measurement of path transparency</title>
+<author initials='I. R.' surname='Learmonth' fullname='I. R. Learmonth'><organization>University of Aberdeen</organization></author>
+<author initials='B.' surname='Trammell' fullname='B. Trammell'><organization>ETH Zurich</organization></author>
+<author initials='M.' surname='Kuehlewind' fullname='M. Kuehlewind'><organization>ETH Zurich</organization></author>
+<author initials='G.' surname='Fairhurst' fullname='G. Fairhurst'><organization>University of Aberdeen</organization></author>
+<date year='2016' month='July'/>
+</front>
+<seriesInfo name='DOI' value='10.1145/2959424.2959441'/>
+</reference>
+<reference anchor='netem'>
+<front>
+<title>Network emulation with NetEm</title>
+<author initials='H.' surname='Stephen' fullname='S. Hemminger'><organization>Open Source Development Lab</organization></author>
+<date year='2005' month='April'/>
+</front>
+</reference>
+<reference  anchor='RFC2544' target='https://www.rfc-editor.org/info/rfc2544'>
+<front>
+<title>Benchmarking Methodology for Network Interconnect Devices</title>
+<author initials='S.' surname='Bradner' fullname='S. Bradner'><organization /></author>
+<author initials='J.' surname='McQuaid' fullname='J. McQuaid'><organization /></author>
+<date year='1999' month='March' />
+<abstract><t>This document is a republication of RFC 1944 correcting the values for the IP addresses which were assigned to be used as the default addresses for networking test equipment. This memo provides information for the Internet community.</t></abstract>
+</front>
+<seriesInfo name='RFC' value='2544'/>
+<seriesInfo name='DOI' value='10.17487/RFC2544'/>
+</reference>
+<reference anchor="TorSafetyBoard" target="https://research.torproject.org/safetyboard.html">
+<front>
+<title>Tor Research Safety Board</title>
+<author><organization>Tor Project</organization></author>
+</front>
+</reference>
+<reference anchor="Tor.2017-04-001" target="https://research.torproject.org/techreports/privacy-in-memory-2017-04-28.pdf">
+<front>
+<title>Privacy analysis of Tor's in-memory statistics</title>
+<author initials="K." surname="Herm" fullname="K. Herm"><organization>Tor Project</organization></author>
+</front>
+<seriesInfo name="Tor Tech Report" value="2017-04-001"/>
+</reference>
+</references>
+
+</back>
+
+</rfc>
