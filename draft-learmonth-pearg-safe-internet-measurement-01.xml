@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rfc docName='draft-learmonth-pearg-safe-internet-measurement-00' version="3" ipr="trust200902" submissionType="IRTF" category="info" xml:lang="en" consensus="true" xmlns:xi="http://www.w3.org/2001/XInclude">
+<rfc docName='draft-learmonth-pearg-safe-internet-measurement-01' ipr="trust200902" submissionType="IRTF" category="info" xml:lang="en" consensus="true" xmlns:xi="http://www.w3.org/2001/XInclude">
 <front>
 
 <title abbrev='Safe Internet Measurement'>
@@ -44,7 +44,7 @@ be carried out safely.</t>
 
 <middle>
 
-<section anchor="introduction"><name>Introduction</name>
+<section anchor="introduction" title="Introduction">
 <t>When performing research using the Internet, as opposed to an isolated testbed
 or simulation platform, means that you research co-exists in a space with other
 users. This document outlines guidelines for academic and industry researchers
@@ -60,14 +60,14 @@ Some of these considerations may be applicable to both depending on the
 experiment design.</t>
 </section>
 
-<section anchor="active-measurements"><name>Active measurements</name>
+<section anchor="active-measurements" title="Active measurements">
 
 <t>Active measurements generate traffic. Performance measurements such as TCP
 throughput testing <xref target="RFC6349"></xref> or functional measurements
 such as the feature-dependent connectivity failure tests performed by
 <xref target="PATHspider"></xref> both fall into this category.</t>
 
-<section anchor="use-a-testbed"><name>Use a testbed</name>
+<section anchor="use-a-testbed" title="Use a testbed">
 <t>Wherever possible, use a testbed. An isolated network means that there are no
 other users sharing the infrastructure you are using for your experiments.</t>
 <t>When measuring performance, competing traffic can have negative effects on
@@ -79,7 +79,7 @@ loss using a tool like <xref target="netem"></xref>. Competing traffic can
 also be emulated using traffic generators.</t>
 </section>
 
-<section anchor="only-record-your-own-traffic"><name>Only record your own traffic</name>
+<section anchor="only-record-your-own-traffic" title="Only record your own traffic">
 <t>When performing measurements be sure to only capture traffic that you have
 generated. Traffic may be identified by IP ranges or by some token that is
 unlikely to be used by other users.</t>
@@ -89,7 +89,7 @@ requires that any frames received that were not part of the test traffic are
 discarded and not counted in the results.</t>
 </section>
 
-<section anchor="others-stuff"><name>Be respectful of other's infrastructure</name>
+<section anchor="others-stuff" title="Be respectful of other's infrastructure">
 <t>If your experiment is designed to trigger a response from infrastructure that
 is not your own, consider what the negative consequences of that may be. At the
 very least your experiment will consume bandwidth that may have to be paid for.</t>
@@ -103,13 +103,13 @@ means that you will not be collecting results that are representative of what
 a typical client would see.</t>
 </section>
 </section><!-- Active -->
-<section anchor="passive-measurements"><name>Passive measurements</name>
+<section anchor="passive-measurements" title="Passive measurements">
 
 <t>Performing passive measurements requires existing traffic. Passive
 measurements can help to inform new developments in Internet protocols but can
 also carry risk.</t>
 
-<section anchor="expectations"><name>Consider the expectation of privacy</name>
+<section anchor="expectations" title="Consider the expectation of privacy">
 <t>If you are in a position to perform passive measurements of live network
 traffic, you are also in a position of responsibility. Users of a network will
 have certain expectations of privacy and those expectations may not align with
@@ -118,22 +118,22 @@ experiment, consider how users might respond if you asked for their informed
 consent for the measurements you'd like to perform.</t>
 </section>
 
-<section anchor="leaks-everywhere"><name>Only collect data that is safe to make public</name>
+<section anchor="leaks-everywhere" title="Only collect data that is safe to make public">
 <t>When deciding on the data to collect, assume that any data collected might
 become public. There are many ways that this could happen, through operation
 security mistakes or compulsion by a judicial system.</t>
 </section>
 
-<section anchor="minimization"><name>Minimization</name>
+<section anchor="minimization" title="Minimization">
 <t>For all data collected, consider whether or not it is really needed.</t>
 </section>
 
-<section anchor="aggregation"><name>Aggregation</name>
+<section anchor="aggregation" title="Aggregation">
 <t>When collecting data, consider if the granularity can be limited by using
 bins or adding noise. XXX: Differential privacy.</t>
 </section>
 
-<section anchor="source-aggregation"><name>Source Aggregation</name>
+<section anchor="source-aggregation" title="Source Aggregation">
 <t>Do this at the source, definitely do it before you write to disk.</t>
 <t><xref target="Tor.2017-04-001"></xref> presents a case-study on the in-memory
 statistics in the software used by the Tor network, as an example.</t>
@@ -141,19 +141,19 @@ statistics in the software used by the Tor network, as an example.</t>
 
 </section>
 
-<section anchor="risk-analysis"><name>Risk Analysis</name>
+<section anchor="risk-analysis" title="Risk Analysis">
 <t>The benefits should outweigh the risks.
 Consider auxiliary data (e.g. third-party data sets) when assessing the risks.</t>
 </section>
 
-<section anchor="security-considerations"><name>Security Considerations</name>
+<section anchor="security-considerations" title="Security Considerations">
 <t>Take reasonable security precautions, e.g. about who has access to your data sets or experimental systems.</t>
 </section>
-<section anchor="iana-considerations"><name>IANA Considerations</name>
+<section anchor="iana-considerations" title="IANA Considerations">
 <t>This document has no actions for IANA.</t>
 </section>
 
-<section anchor="acknowledgements"><name>Acknowledgements</name>
+<section anchor="acknowledgements" title="Acknowledgements">
 <t>Many of these considerations are based on those from the
 <xref target="TorSafetyBoard"></xref> adapted and generalised to be applied to
 Internet research.</t>
@@ -161,7 +161,7 @@ Internet research.</t>
 </middle>
 
 <back>
-<references><name>Informative References</name>
+<references title="Informative References">
 <reference  anchor='RFC6349' target='https://www.rfc-editor.org/info/rfc6349'>
 <front>
 <title>Framework for TCP Throughput Testing</title>
