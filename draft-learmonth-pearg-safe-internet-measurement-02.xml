@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rfc docName='draft-learmonth-pearg-safe-internet-measurement-02' ipr="trust200902" submissionType="IRTF" category="info" xml:lang="en" consensus="true" xmlns:xi="http://www.w3.org/2001/XInclude">
+<rfc docName='draft-learmonth-pearg-safe-internet-measurement-02' ipr="trust200902" submissionType="IRTF" category="info" xml:lang="en"><!-- xmlns:xi="http://www.w3.org/2001/XInclude"-->
 <front>
 
 <title abbrev='Safe Internet Measurement'>
@@ -204,16 +204,18 @@ Internet research.</t>
 <seriesInfo name='RFC' value='2544'/>
 <seriesInfo name='DOI' value='10.17487/RFC2544'/>
 </reference>
-<reference anchor="TorSafetyBoard" target="https://research.torproject.org/safetyboard.html">
+<reference anchor="TorSafetyBoard" target="https://research.torproject.org/safetyboard/">
 <front>
 <title>Tor Research Safety Board</title>
 <author><organization>Tor Project</organization></author>
+<date/>
 </front>
 </reference>
 <reference anchor="Tor.2017-04-001" target="https://research.torproject.org/techreports/privacy-in-memory-2017-04-28.pdf">
 <front>
 <title>Privacy analysis of Tor's in-memory statistics</title>
 <author initials="K." surname="Herm" fullname="K. Herm"><organization>Tor Project</organization></author>
+<date year="2017" month="April" />
 </front>
 <seriesInfo name="Tor Tech Report" value="2017-04-001"/>
 </reference>
