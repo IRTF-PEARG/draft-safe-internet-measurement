@@ -110,7 +110,27 @@ you is not necessarily legal for everyone.</t>
 from typical client behaviour, a network may identify this as an attack which
 means that you will not be collecting results that are representative of what
 a typical client would see.</t>
+
+<section anchor="do-not-scan" title='Maintain a "Do Not Scan" list'>
+<t>When performing active measurements on a shared network, maintain a list of
+hosts that you will never scan regardless of whether they appear in your target
+lists. When developing tools for performing active measurement, or traffic
+generation for use in a larger measurement system, ensure that the tool will
+support the use of a "Do Not Scan" list.</t>
+<t>If complaints are made that request you do not generate traffic towards a
+host or network, you must add that host or network to your "Do Not Scan" list,
+even if no explanation is given or the request is automated.</t>
+<t>You may ask the requester for their reasoning if it would be useful to your
+experiment. This can also be an oppertunity to explain your research and offer
+to share any results that may be of interest. If you plan to share the reasoning
+when publishing your measurement results, e.g. in an academic paper, you must
+seek consent for this from the requester.</t>
+<t>Be aware that in publishing your measurement results, it may be possible to
+infer your "Do Not Scan" list from those results. For example, if you measured a
+well-known list of popular websites then it would be possible to correlate the
+results with that list to determine which are missing.</t>
 </section>
+</section><!-- others-stuff -->
 
 <section anchor="expectations" title="Consider the expectation of privacy">
 <t>If you are in a position to perform passive measurements of live network
