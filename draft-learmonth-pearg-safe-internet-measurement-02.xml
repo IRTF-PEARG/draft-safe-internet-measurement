@@ -204,6 +204,10 @@ Consider auxiliary data (e.g. third-party data sets) when assessing the risks.</
 <t>Many of these considerations are based on those from the
 <xref target="TorSafetyBoard"></xref> adapted and generalised to be applied to
 Internet research.</t>
+
+<t>Other considerations are taken from the Menlo Report
+<xref target="MenloReport"></xref> and its companion document
+<xref target="MenloReportCompanion"></xref>.</t>
 </section>
 </middle>
 
@@ -265,6 +269,23 @@ Internet research.</t>
 <date year="2017" month="April" />
 </front>
 <seriesInfo name="Tor Tech Report" value="2017-04-001"/>
+</reference>
+<reference anchor="MenloReport" target="https://www.caida.org/publications/papers/2012/menlo_report_actual_formatted/">
+<front>
+<title>The Menlo Report: Ethical Principles Guiding Information and Communication Technology Research</title>
+<author initials="D." surname="Dittrich" fullname="D. Dittrich"><organization/></author>
+<author initials="E." surname="Kenneally" fullname="E. Kenneally"><organization/></author>
+<date year="2012" month="August"/>
+</front>
+</reference>
+<reference anchor="MenloReportCompanion" target="https://www.impactcybertrust.org/link_docs/Menlo-Report-Companion.pdf">
+<front>
+<title>Applying Ethical Principles to Information and Communication Technology Research</title>
+<author initials="M." surname="Bailey" fullname="M. Bailey"><organization/></author>
+<author initials="D." surname="Dittrich" fullname="D. Dittrich"><organization/></author>
+<author initials="E." surname="Kenneally" fullname="E. Kenneally"><organization/></author>
+<date year="2013" month="October"/>
+</front>
 </reference>
 </references>
 
