@@ -49,24 +49,33 @@ be carried out safely.</t>
 or simulation platform, means that you research co-exists in a space with other
 users. This document outlines guidelines for academic and industry researchers
 that might use the Internet as part of scientific experiementation.</t>
+
+<section anchor="scope" title="Scope of this document">
 <t>Following the guidelines contained within this document is not a substitute for
 any institutional ethics review process you may have, although these guidelines
 could help to inform that process. Similarly, these guidelines are not legal
-advice and local laws should be considered before starting any experiment that
+advice and local laws must also be considered before starting any experiment that
 could have adverse impacts on user privacy.</t>
-<t>Considerations are grouped into two categories: those that primarily apply to
-active measurements and those that primarily apply to passive measurements.
-Some of these considerations may be applicable to both depending on the
-experiment design.</t>
 </section>
 
-<section anchor="active-measurements" title="Active measurements">
-
-<t>Active measurements generate traffic. Performance measurements such as TCP
-throughput testing <xref target="RFC6349"></xref> or functional measurements
+<section anchor="act-pas-measurements" title="Active and passive measurements">
+<t>Internet measurement studies can be broadly categorized into two groups:
+active measurements and passive measurements. Active measurements generate
+traffic. Performance measurements such as TCP throughput testing
+<xref target="RFC6349"></xref> or functional measurements
 such as the feature-dependent connectivity failure tests performed by
-<xref target="PATHspider"></xref> both fall into this category.</t>
+<xref target="PATHspider"></xref> both fall into this category.
+Performing passive measurements requires existing traffic. Passive
+measurements can help to inform new developments in Internet protocols but can
+also carry risk.</t>
+<t>The type of measurement is not truly binary and many studies will include
+both active and passive components. Each of the considerations in this document
+must be carefully considered for their applicability regardless of the type of
+measurement.</t>
+</section>
+</section>
 
+<section anchor="considerations" title="Safety Considerations">
 <section anchor="use-a-testbed" title="Use a testbed">
 <t>Wherever possible, use a testbed. An isolated network means that there are no
 other users sharing the infrastructure you are using for your experiments.</t>
@@ -102,12 +111,6 @@ from typical client behaviour, a network may identify this as an attack which
 means that you will not be collecting results that are representative of what
 a typical client would see.</t>
 </section>
-</section><!-- Active -->
-<section anchor="passive-measurements" title="Passive measurements">
-
-<t>Performing passive measurements requires existing traffic. Passive
-measurements can help to inform new developments in Internet protocols but can
-also carry risk.</t>
 
 <section anchor="expectations" title="Consider the expectation of privacy">
 <t>If you are in a position to perform passive measurements of live network
@@ -138,7 +141,6 @@ bins or adding noise. XXX: Differential privacy.</t>
 <t><xref target="Tor.2017-04-001"></xref> presents a case-study on the in-memory
 statistics in the software used by the Tor network, as an example.</t>
 </section>
-
 </section>
 
 <section anchor="risk-analysis" title="Risk Analysis">
