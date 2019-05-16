@@ -75,6 +75,40 @@ measurement.</t>
 </section>
 </section>
 
+<section anchor="consent" title="Consent">
+<t>Ideally, informed consent would be collected from all users of a shared
+network before measurements were performed on them. In cases where it is
+practical to do so, this should be done.</t>
+<t>For consent to be informed, all possible risks must be presented to the users.
+The considerations in this document can be used to provide a starting point
+although other risks may be present depending on the nature of the measurements
+to be performed.</t>
+
+<section anchor="proxy-consent" title="Proxy Consent">
+<t>In cases where it is not practical to collect informed consent from all
+users of a shared network, it may be possible to obtain proxy consent. Proxy
+consent may be given by a network operator or employer that would be more
+familiar with the expectations of users of a network than the researcher.</t>
+</section>
+
+<section anchor="low-risk" title="Implied consent">
+<t>In larger scale measurements, even proxy consent collection may not be
+practical. In this case, implied consent may be presumed from users for some
+measurements. Consider that users of a network will
+have certain expectations of privacy and those expectations may not align with
+the privacy guarantees offered by the technologies they are using. As a thought
+experiment, consider how users might respond if you asked for their informed
+consent for the measurements you'd like to perform.</t>
+<t>For example, the operator of a web server that is exposed to the Internet
+hosting a popular website would have the expectation that it may be included in
+surveys that look at supported protocols or extensions but would not expect that
+attempts be made to degrade the service with large numbers of simultaneous
+connections.</t>
+<t>If practical, attempt to obtain informed consent or proxy consent from a
+sample of users to better understand the expectations of other users.</t>
+</section>
+</section><!-- consent -->
+
 <section anchor="considerations" title="Safety Considerations">
 <section anchor="use-a-testbed" title="Use a testbed">
 <t>Wherever possible, use a testbed. An isolated network means that there are no
@@ -131,15 +165,6 @@ well-known list of popular websites then it would be possible to correlate the
 results with that list to determine which are missing.</t>
 </section>
 </section><!-- others-stuff -->
-
-<section anchor="expectations" title="Consider the expectation of privacy">
-<t>If you are in a position to perform passive measurements of live network
-traffic, you are also in a position of responsibility. Users of a network will
-have certain expectations of privacy and those expectations may not align with
-the privacy guarantees offered by the technologies they are using. As a thought
-experiment, consider how users might respond if you asked for their informed
-consent for the measurements you'd like to perform.</t>
-</section>
 
 <section anchor="leaks-everywhere" title="Only collect data that is safe to make public">
 <t>When deciding on the data to collect, assume that any data collected might
