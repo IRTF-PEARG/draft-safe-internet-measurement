@@ -27,8 +27,8 @@ Guidelines for Performing Safe Measurement on the Internet
 <keyword>internet</keyword>
 
 <abstract>
-<t>Researchers from industry and academia will often use Internet measurements
-as a part of their work. While these measurements can give insight into the
+<t>Researchers from industry and academia often use Internet measurements
+as part of their work. While these measurements can give insight into the
 functioning and usage of the Internet, they can come at the cost of user privacy.
 This document describes guidelines for ensuring that such measurements can
 be carried out safely.</t>
@@ -46,14 +46,14 @@ be carried out safely.</t>
 
 <section anchor="introduction" title="Introduction">
 <t>Performing research using the Internet, as opposed to an isolated testbed
-or simulation platform, means that you research co-exists in a space with other
+or simulation platform, means that experiments co-exist in a space with other
 users. This document outlines guidelines for academic and industry researchers
-that might use the Internet as part of scientific experiementation to mitigate
+that might use the Internet as part of scientific experimentation to mitigate
 risks to the safety of other users.</t>
 
 <section anchor="scope" title="Scope of this document">
 <t>Following the guidelines contained within this document is not a substitute for
-any institutional ethics review process you may have, although these guidelines
+any institutional ethics review process, although these guidelines
 could help to inform that process. Similarly, these guidelines are not legal
 advice and local laws must also be considered before starting any experiment
 that could have adverse impacts on user safety.</t>
@@ -93,7 +93,7 @@ to be performed.</t>
 <t>A researcher would like to use volunteer owned mobile devices to collect
 information about local Internet censorship. Connections will be made from the
 volunteer's device towards known or suspected blocked webpages.</t>
-<t>This experiment can carry substaintial risk for the user depending on the
+<t>This experiment can carry substantial risk for the user depending on the
 circumstances, from disciplinary action from their employer to arrest or
 imprisonment. Fully informed consent ensures that any risk that is being taken
 has been carefully considered by the volunteer before proceeding.</t>
@@ -116,9 +116,9 @@ network.</t>
 <t>The employer may already have terms of service laid out that allow them to
 provide proxy consent for this experiment on behalf of the employees (the users
 of the network). The purpose of the experiment may affect whether or not they
-are able to provide this consent. If it is to perform engineering work on the
-network then it may be allowed, whereas if it were for academic research this
-may not be covered.</t>
+are able to provide this consent. For example, to perform engineering work on
+the network then it may be allowed, whereas academic research may not be
+covered.</t>
 </section>
 
 <section anchor="low-risk" title="Implied Consent">
@@ -127,7 +127,7 @@ practical. In this case, implied consent may be presumed from users for some
 measurements. Consider that users of a network will
 have certain expectations of privacy and those expectations may not align with
 the privacy guarantees offered by the technologies they are using. As a thought
-experiment, consider how users might respond if you asked for their informed
+experiment, consider how users might respond if asked for their informed
 consent for the measurements you'd like to perform.</t>
 <t>Implied consent should not be considered sufficient for any experiment that
 may collect sensitive or personally identifying information. If practical,
@@ -152,7 +152,7 @@ and have instrumented both to report telemetry back. These updates will be
 pushed to users at random by the software's auto-update framework. The telemetry
 consists only of performance metrics and does not contain any personally
 identifying or sensitive information.</t>
-<t>As users expect to recieve automatic updates, the effect of changing the
+<t>As users expect to receive automatic updates, the effect of changing the
 behaviour of the software is already expected by the user. If users have
 already been informed that data will be reported back to the developers of the
 software, then again the addition of new metrics would be expected. There are
@@ -165,7 +165,7 @@ should be considered appropriate if some users are to remain with the old
 behavior.</t>
 <t>In the event that something does go wrong with the update, it should be easy
 for a user to discover that they have been part of an experiment and roll back
-the change, allowing for explicit refusal of consent to overrid the presumed
+the change, allowing for explicit refusal of consent to override the presumed
 implied consent.</t>
 </section>
 </section><!-- consent -->
@@ -184,8 +184,8 @@ also be emulated using traffic generators.</t>
 </section>
 
 <section anchor="only-record-your-own-traffic" title="Only record your own traffic">
-<t>When performing measurements be sure to only capture traffic that you have
-generated. Traffic may be identified by IP ranges or by some token that is
+<t>When performing active measurements be sure to only capture traffic that you
+have generated. Traffic may be identified by IP ranges or by some token that is
 unlikely to be used by other users.</t>
 <t>Again, this can help to improve the accuracy and repeatability of your
 experiment. <xref target="RFC2544"></xref>, for performance benchmarking,
@@ -216,7 +216,7 @@ support the use of a "Do Not Scan" list.</t>
 host or network, you must add that host or network to your "Do Not Scan" list,
 even if no explanation is given or the request is automated.</t>
 <t>You may ask the requester for their reasoning if it would be useful to your
-experiment. This can also be an oppertunity to explain your research and offer
+experiment. This can also be an opportunity to explain your research and offer
 to share any results that may be of interest. If you plan to share the reasoning
 when publishing your measurement results, e.g. in an academic paper, you must
 seek consent for this from the requester.</t>
