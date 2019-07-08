@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rfc docName='draft-irtf-pearg-safe-internet-measurement-00' ipr="trust200902" submissionType="IRTF" category="info" xml:lang="en"><!-- xmlns:xi="http://www.w3.org/2001/XInclude"-->
+<rfc docName='draft-irtf-pearg-safe-internet-measurement-01' ipr="trust200902" submissionType="IRTF" category="info" xml:lang="en"><!-- xmlns:xi="http://www.w3.org/2001/XInclude"-->
 <front>
 
 <title abbrev='Safe Internet Measurement'>
@@ -171,7 +171,8 @@ implied consent.</t>
 </section><!-- consent -->
 
 <section anchor="considerations" title="Safety Considerations">
-<section anchor="use-a-testbed" title="Use a testbed">
+
+<section anchor="use-a-testbed" title="Isolate risk with a dedicated testbed">
 <t>Wherever possible, use a testbed. An isolated network means that there are no
 other users sharing the infrastructure you are using for your experiments.</t>
 <t>When measuring performance, competing traffic can have negative effects on
@@ -181,16 +182,6 @@ Internet.</t>
 <t>WAN link conditions can be emulated through artificial delays and/or packet
 loss using a tool like <xref target="netem"></xref>. Competing traffic can
 also be emulated using traffic generators.</t>
-</section>
-
-<section anchor="only-record-your-own-traffic" title="Only record your own traffic">
-<t>When performing active measurements be sure to only capture traffic that you
-have generated. Traffic may be identified by IP ranges or by some token that is
-unlikely to be used by other users.</t>
-<t>Again, this can help to improve the accuracy and repeatability of your
-experiment. <xref target="RFC2544"></xref>, for performance benchmarking,
-requires that any frames received that were not part of the test traffic are
-discarded and not counted in the results.</t>
 </section>
 
 <section anchor="others-stuff" title="Be respectful of other's infrastructure">
@@ -227,27 +218,44 @@ results with that list to determine which are missing.</t>
 </section>
 </section><!-- others-stuff -->
 
-<section anchor="leaks-everywhere" title="Only collect data that is safe to make public">
+<section anchor="minimization" title="Data Minimization">
+<t>When collecting, using, disclosing, and storing data from a measurement, use
+only the minimal data necessary to perform a task. Reducing the amount of data
+reduces the amount of data that can be misused or leaked.</t>
 <t>When deciding on the data to collect, assume that any data collected might
-become public. There are many ways that this could happen, through operation
+be disclosed. There are many ways that this could happen, through operation
 security mistakes or compulsion by a judicial system.</t>
+<t>When directly instrumenting a protocol to provide metrics to a passive
+observer, see <xref target="RFC6973">section 6.1 of RFC6973</xref> for data
+minimalization considerations specific to this use case.</t>
+<section anchor="minimization-discard" title="Discarding Data">
+<t>XXX: Discard data that is not required to perform the task.</t>
+<t>When performing active measurements be sure to only capture traffic that you
+have generated. Traffic may be identified by IP ranges or by some token that is
+unlikely to be used by other users.</t>
+<t>Again, this can help to improve the accuracy and repeatability of your
+experiment. <xref target="RFC2544"></xref>, for performance benchmarking,
+requires that any frames received that were not part of the test traffic are
+discarded and not counted in the results.</t>
 </section>
-
-<section anchor="minimization" title="Minimization">
-<t>For all data collected, consider whether or not it is really needed.</t>
+<section anchor="minimization-mask" title="Masking Data">
+<t>XXX: Mask data that is not required to perform the task. Particularly useful
+for content of traffic to indicate that either a particular class of content
+existed or did not exist, or the length of the content, but not recording the
+content itself. Can also replace content with tokens, or encrypt.</t>
 </section>
-
-<section anchor="aggregation" title="Aggregation">
+<section anchor="minimization-generalize" title="Reduce Accuracy">
+<t>XXX: Binning, categorizing, geoip, noise.</t>
+</section>
+<section anchor="minimization-aggregation" title="Data Aggregation">
 <t>When collecting data, consider if the granularity can be limited by using
 bins or adding noise. XXX: Differential privacy.</t>
-</section>
-
-<section anchor="source-aggregation" title="Source Aggregation">
-<t>Do this at the source, definitely do it before you write to disk.</t>
+<t>XXX: Do this at the source, definitely do it before you write to disk.</t>
 <t><xref target="Tor.2017-04-001"></xref> presents a case-study on the in-memory
 statistics in the software used by the Tor network, as an example.</t>
 </section>
-</section>
+</section><!-- minimization -->
+</section><!-- considerations -->
 
 <section anchor="risk-analysis" title="Risk Analysis">
 <t>The benefits should outweigh the risks.
@@ -305,7 +313,7 @@ Internet research.</t>
 <date year='2005' month='April'/>
 </front>
 </reference>
-<reference  anchor='RFC2544' target='https://www.rfc-editor.org/info/rfc2544'>
+<reference anchor='RFC2544' target='https://www.rfc-editor.org/info/rfc2544'>
 <front>
 <title>Benchmarking Methodology for Network Interconnect Devices</title>
 <author initials='S.' surname='Bradner' fullname='S. Bradner'><organization /></author>
@@ -347,6 +355,20 @@ Internet research.</t>
 <author initials="E." surname="Kenneally" fullname="E. Kenneally"><organization/></author>
 <date year="2013" month="October"/>
 </front>
+</reference>
+<reference anchor="RFC6973" target="https://www.rfc-editor.org/info/rfc6937">
+<front>
+<title>Privacy Considerations for Internet Protocols</title>
+<author initials="A." surname="Cooper" fullname="A. Cooper"><organization>CDT</organization></author>
+<author initials="H." surname="Tschofenig" fullname="H. Tschofenig"><organization>Nokia Siemens Networks</organization></author>
+<author initials="B." surname="Aboba" fullname="B. Aboba"><organization>Skype</organization></author>
+<author initials="J." surname="Peterson" fullname="J. Peterson"><organization>NeuStar, Inc.</organization></author>
+<author initials="J." surname="Morris" fullname="J. Morris"><organization/></author>
+<author initials="M." surname="Hansen" fullname="M. Hansen"><organization>ULD</organization></author>
+<author initials="R." surname="Smith" fullname="R. Smith"><organization>Janet</organization></author>
+<date year="2013" month="July"/>
+</front>
+<seriesInfo name='RFC' value='6973'/>
 </reference>
 </references>
 
