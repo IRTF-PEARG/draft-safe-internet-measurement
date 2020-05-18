@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rfc docName='draft-irtf-pearg-safe-internet-measurement-02' ipr="trust200902" submissionType="IRTF" category="info" xml:lang="en"><!-- xmlns:xi="http://www.w3.org/2001/XInclude"-->
+<rfc docName='draft-irtf-pearg-safe-internet-measurement-03' ipr="trust200902" submissionType="IRTF" category="info" xml:lang="en"><!-- xmlns:xi="http://www.w3.org/2001/XInclude"-->
 <front>
 
 <title abbrev='Safe Internet Measurement'>
@@ -57,27 +57,74 @@ any institutional ethics review process, although these guidelines
 could help to inform that process. Similarly, these guidelines are not legal
 advice and local laws must also be considered before starting any experiment
 that could have adverse impacts on user safety.</t>
+
+<t>The scope of this document is restricted to guidelines that mitigate exposure
+to risks to Internet user safety when measuring properties of the Internet:
+the network, its constiuent hosts and links, or its users traffic.</t>
+
+<t>For the purpose of this document, an Internet user is an individual or
+organisation that uses the Internet to communicate, or maintains Internet
+infrastructure.</t>
 </section>
 
-<section anchor="act-pas-measurements" title="Active and passive measurements">
+<section anchor="threat-model" title="Threat Model">
+<t>A threat is a potential for a security violation, which exists when
+there is a circumstance, capability, action, or event that could
+breach security and cause harm <xref target="RFC4949"></xref>.
+Every Internet measurement study has the potential to subject Internet users
+to threat actions, or attacks.</t>
+<t>Many of the threats to user safety occur from an instantiation (or
+combination) of the following:</t>
+<t>Surveillance: An attack whereby an Internet user's
+information is collected. This type of attack covers not only data but
+also metadata.</t>
+<t>Inadequate protection of collected data: An attack where data, either in
+flight or at rest, was not adequately protected from disclosure.
+Failure to adequately protect data to the expectations of the user is an attack
+even if it does not lead to another party gaining access to the data.</t>
+<t>Traffic generation: An attack whereby traffic is generated to traverse the
+Internet.</t>
+<t>Traffic modification: An attack whereby the Internet traffic of users is
+modified.</t>
+<t>Any conceivable Internet measurement study might be considered an attack
+on an Internet user's safety. It is always necessary to consider the best
+approach to mitigate the impact of measurements, and to balance the risks of
+measurements against the benefits to impacted users.</t>
+</section>
+
+<section anchor="measurement-studies" title="Measurement Studies">
 <t>Internet measurement studies can be broadly categorized into two groups:
 active measurements and passive measurements. Active measurements generate
-traffic. Performance measurements such as TCP throughput testing
-<xref target="RFC6349"></xref> or functional measurements
-such as the feature-dependent connectivity failure tests performed by
-<xref target="PATHspider"></xref> both fall into this category.
-Performing passive measurements requires existing traffic.</t>
-<t>Both active and passive measurements carry risk. A poorly considered active
-measurement could result in an inadvertent denial-of-service attack, while
-passive measurements could result in serious violations of user privacy.</t>
-<t>The type of measurement is not truly binary and many studies will include
-both active and passive components. Each of the considerations in this document
-must be carefully considered for their applicability regardless of the type of
-measurement.</t>
+or modify traffic while passive measurements use surveillance of existing
+traffic.
+The type of measurement is not truly binary and many studies will include
+both active and passive components.
+The measurement of generated traffic may also lead to insights into other users'
+traffic indirectly.</t>
+<t>XXX On-path/off-path</t>
+<t>XXX One ended/two ended</t>
+</section>
+
+<section anchor="user-impact" title="User Impact from Measurement Studies">
+<t>Consequences of attacks</t>
+<t>Breach of Privacy: data collection. This impact also covers the case of an Internet user's data
+being shared beyond that which a user had given consent for.</t>
+<t>Impersonation: An attack where a user is impersonated during a measurement.
+</t>
+<t>XXX Legal</t>
+<t>XXX Other Retribution</t>
+<t>System corruption: An attack where generated or modified traffic causes the
+corruption of a system. This attack covers cases where a user's data may be
+lost or corrupted, and cases where a user's access to a system may be affected.
+</t>
+<t>XXX Data loss, corruption</t>
+<t>XXX Denial of Service (by which self-censorship is covered)</t>
+<t>XXX Emotional Trauma</t>
 </section>
 </section>
 
 <section anchor="consent" title="Consent">
+<t>XXX a user is best placed to balanced risks vs benefits themselves</t>
 <t>In an ideal world, informed consent would be collected from all users that
 may be placed at risk, no matter how small a risk, by an experiment. In cases
 where it is practical to do so, this should be done.</t>
@@ -282,30 +329,6 @@ Internet research.</t>
 
 <back>
 <references title="Informative References">
-<reference  anchor='RFC6349' target='https://www.rfc-editor.org/info/rfc6349'>
-<front>
-<title>Framework for TCP Throughput Testing</title>
-<author initials='B.' surname='Constantine' fullname='B. Constantine'><organization /></author>
-<author initials='G.' surname='Forget' fullname='G. Forget'><organization /></author>
-<author initials='R.' surname='Geib' fullname='R. Geib'><organization /></author>
-<author initials='R.' surname='Schrage' fullname='R. Schrage'><organization /></author>
-<date year='2011' month='August' />
-<abstract><t>This framework describes a practical methodology for measuring end- to-end TCP Throughput in a managed IP network.  The goal is to provide a better indication in regard to user experience.  In this framework, TCP and IP parameters are specified to optimize TCP Throughput.  This  document is not an Internet Standards Track specification; it is published for informational purposes.</t></abstract>
-</front>
-<seriesInfo name='RFC' value='6349'/>
-<seriesInfo name='DOI' value='10.17487/RFC6349'/>
-</reference>
-<reference anchor='PATHspider' target='https://dl.acm.org/citation.cfm?doid=2959424.2959441'>
-<front>
-<title>PATHspider: A tool for active measurement of path transparency</title>
-<author initials='I. R.' surname='Learmonth' fullname='I. R. Learmonth'><organization>University of Aberdeen</organization></author>
-<author initials='B.' surname='Trammell' fullname='B. Trammell'><organization>ETH Zurich</organization></author>
-<author initials='M.' surname='Kuehlewind' fullname='M. Kuehlewind'><organization>ETH Zurich</organization></author>
-<author initials='G.' surname='Fairhurst' fullname='G. Fairhurst'><organization>University of Aberdeen</organization></author>
-<date year='2016' month='July'/>
-</front>
-<seriesInfo name='DOI' value='10.1145/2959424.2959441'/>
-</reference>
 <reference anchor='netem'>
 <front>
 <title>Network emulation with NetEm</title>
@@ -329,6 +352,13 @@ Internet research.</t>
 <title>Tor Research Safety Board</title>
 <author><organization>Tor Project</organization></author>
 <date/>
+</front>
+</reference>
+<reference anchor='RFC4949' target="https://www.rfc-editor.org/info/rfc4949">
+<front>
+<title>Internet Security Glossary, Version 2</title>
+<author initials='R.' surname='Shirey' fullname='R. Shirey'></author>
+<date year='2007' month='August'/>
 </front>
 </reference>
 <reference anchor="Tor.2017-04-001" target="https://research.torproject.org/techreports/privacy-in-memory-2017-04-28.pdf">
