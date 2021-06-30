@@ -26,6 +26,16 @@ Guidelines for Performing Safe Measurement on the Internet
   </address>
 </author>
 
+<author initials="M." surname="Knodel" fullname="Mallory Knodel">
+  <organization>Center for Democracy & Technology</organization>
+  <address>
+    <postal>
+      <street></street>
+    </postal>
+    <email>mknodel@cdt.org</email>
+  </address>
+</author>
+
 <date />
 
 <area></area>
@@ -62,9 +72,13 @@ that might use the Internet as part of scientific experimentation to mitigate
 risks to the safety of other users.</t>
 
 <section anchor="scope" title="Scope of this document">
+<t>These are guidelines for how to measure the Internet safely. When performing research on a platform shared with live traffic from other users, that research is considered safe if and only if other users are protected from or unlikely to experience danger, risk, or injury, now or in the future, due to the research.</t>
+
 <t>Following the guidelines contained within this document is not a substitute for
 any institutional ethics review process, although these guidelines
-could help to inform that process. Similarly, these guidelines are not legal
+could help to inform that process. It is particularly important for the growing area of research that includes Internet measurement to <xref target="SIGCOMM">better equip review boards to evaluate Internet measurement methods</xref>, and we hope that this document is part of that larger effort.</t>
+ 
+<t>Similarly, these guidelines are not legal
 advice and local laws must also be considered before starting any experiment
 that could have adverse impacts on user safety.</t>
 
@@ -73,7 +87,7 @@ to risks to Internet user safety when measuring properties of the Internet:
 the network, its constiuent hosts and links, or its users traffic.</t>
 
 <t>For the purpose of this document, an Internet user is an individual or
-organisation that uses the Internet to communicate, or maintains Internet
+organisation whose data is used in communications over the Internet, most broadly, and those who use the Internet to communicate or maintain Internet
 infrastructure.</t>
 </section>
 
@@ -409,6 +423,17 @@ Internet research.</t>
 <date year="2013" month="July"/>
 </front>
 <seriesInfo name='RFC' value='6973'/>
+</reference>
+<reference anchor="SIGCOMM" target="http://conferences.sigcomm.org/sigcomm/2015/pdf/papers/nsethics/p17.pdf">
+<front>
+<title>Ethical Concerns for Censorship Measurement</title>
+<author initials="B." surname="Jones" fullname="Ben Jones"></organization></author>
+<author initials="R." surname="Ensafi" fullname="Roya Ensafi"></organization></author>
+<author initials="N." surname="Feamster" fullname="Nick Feamster"></organization></author>
+<author initials="V." surname="Paxson" fullname="Vern Paxson"></organization></author>
+<author initials="N." surname="Weaver" fullname="Nick Weaver"><organization/></author>
+<date year="2015" month="August"/>
+</front>
 </reference>
 </references>
 
