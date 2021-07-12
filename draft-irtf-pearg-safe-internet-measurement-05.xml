@@ -430,11 +430,11 @@ Internet research.</t>
 <reference anchor="SIGCOMM" target="http://conferences.sigcomm.org/sigcomm/2015/pdf/papers/nsethics/p17.pdf">
 <front>
 <title>Ethical Concerns for Censorship Measurement</title>
-<author initials="B." surname="Jones" fullname="Ben Jones"></organization></author>
-<author initials="R." surname="Ensafi" fullname="Roya Ensafi"></organization></author>
-<author initials="N." surname="Feamster" fullname="Nick Feamster"></organization></author>
-<author initials="V." surname="Paxson" fullname="Vern Paxson"></organization></author>
-<author initials="N." surname="Weaver" fullname="Nick Weaver"><organization/></author>
+<author initials="B." surname="Jones" fullname="Ben Jones"><organization></organization></author>
+<author initials="R." surname="Ensafi" fullname="Roya Ensafi"><organization></organization></author>
+<author initials="N." surname="Feamster" fullname="Nick Feamster"><organization></organization></author>
+<author initials="V." surname="Paxson" fullname="Vern Paxson"><organization></organization></author>
+<author initials="N." surname="Weaver" fullname="Nick Weaver"><organization><organization/></author>
 <date year="2015" month="August"/>
 </front>
 </reference>
