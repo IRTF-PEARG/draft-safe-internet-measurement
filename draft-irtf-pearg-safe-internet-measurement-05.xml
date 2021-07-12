@@ -148,6 +148,9 @@ lost or corrupted, and cases where a user's access to a system may be affected.
 </section>
 
 <section anchor="consent" title="Consent">
+<t>Accountability and transparency are fundamentally related to consent. As per the Menlo Report, "Accountability demands that research methodology, ethical evaluations, data collected, and
+results generated should be documented and made available responsibly in accordance with
+  balancing risks and benefits."<xref target="MenloReport"></xref></t>
 <t>XXX a user is best placed to balanced risks vs benefits themselves</t>
 <t>In an ideal world, informed consent would be collected from all users that
 may be placed at risk, no matter how small a risk, by an experiment. In cases
