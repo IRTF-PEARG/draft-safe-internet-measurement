@@ -16,7 +16,7 @@ Guidelines for Performing Safe Measurement on the Internet
   </address>
 </author>
 
-<author initials="GG" surname="Grover" fullname="Gurshabad Grover">
+<author initials="G." surname="Grover" fullname="Gurshabad Grover">
   <organization>Centre for Internet and Society</organization>
   <address>
     <postal>
@@ -254,7 +254,7 @@ loss using a tool like <xref target="netem"></xref>. Competing traffic can
 also be emulated using traffic generators.</t>
 </section>
 
-<section anchor="others-stuff" title="Be respectful of other's infrastructure">
+<section anchor="others-stuff" title="Be respectful of others' infrastructure">
 <t>If your experiment is designed to trigger a response from infrastructure that
 is not your own, consider what the negative consequences of that may be. At the
 very least your experiment will consume bandwidth that may have to be paid for.</t>
@@ -288,7 +288,7 @@ results with that list to determine which are missing.</t>
 </section>
 </section><!-- others-stuff -->
 
-<section anchor="minimization" title="Data Minimization">
+<section anchor="minimization" title="Minimize Data">
 <t>When collecting, using, disclosing, and storing data from a measurement, use
 only the minimal data necessary to perform a task. Reducing the amount of data
 reduces the amount of data that can be misused or leaked.</t>
@@ -308,7 +308,7 @@ experiment. <xref target="RFC2544"></xref>, for performance benchmarking,
 requires that any frames received that were not part of the test traffic are
 discarded and not counted in the results.</t>
 </section>
-<section anchor="minimization-mask" title="Masking Data">
+<section anchor="minimization-mask" title="Mask Data">
 <t>XXX: Mask data that is not required to perform the task. Particularly useful
 for content of traffic to indicate that either a particular class of content
 existed or did not exist, or the length of the content, but not recording the
@@ -317,7 +317,7 @@ content itself. Can also replace content with tokens, or encrypt.</t>
 <section anchor="minimization-generalize" title="Reduce Accuracy">
 <t>XXX: Binning, categorizing, geoip, noise.</t>
 </section>
-<section anchor="minimization-aggregation" title="Data Aggregation">
+<section anchor="minimization-aggregation" title="Aggregate Data">
 <t>When collecting data, consider if the granularity can be limited by using
 bins or adding noise. XXX: Differential privacy.</t>
 <t>XXX: Do this at the source, definitely do it before you write to disk.</t>
@@ -327,7 +327,7 @@ statistics in the software used by the Tor network, as an example.</t>
 </section><!-- minimization -->
 </section><!-- considerations -->
 
-<section anchor="risk-analysis" title="Risk Analysis">
+<section anchor="risk-analysis" title="Analyze Risk">
 <t>The benefits should outweigh the risks.
 Consider auxiliary data (e.g. third-party data sets) when assessing the risks.</t>
 </section>
