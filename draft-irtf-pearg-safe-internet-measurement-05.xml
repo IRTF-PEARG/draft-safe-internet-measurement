@@ -163,8 +163,7 @@ although other risks may be present depending on the nature of the measurements
 to be performed.</t>
 </section>
 
-<section anchor="informed-consent-example" title="Informed Consent: Case Study">
-<t>A researcher would like to use volunteer owned mobile devices to collect
+<t>Case study: A researcher would like to use volunteer owned mobile devices to collect
 information about local Internet censorship. Connections will be made from the
 volunteer's device towards known or suspected blocked webpages.</t>
 <t>This experiment can carry substantial risk for the user depending on the
@@ -183,8 +182,7 @@ specifically allow for giving consent to 3rd parties to perform certain
 experiments.</t>
 </section>
 
-<section anchor="proxy-consent-example" title="Proxy Consent: Case Study">
-<t>A researcher would like to perform a packet capture to determine the TCP
+<t>Case study: A researcher would like to perform a packet capture to determine the TCP
 options and their values used by all client devices on an corporate wireless
 network.</t>
 <t>The employer may already have terms of service laid out that allow them to
@@ -209,8 +207,7 @@ attempt to obtain informed consent or proxy consent from a sample of users to
 better understand the expectations of other users.</t>
 </section>
 
-<section anchor="low-risk-example-1" title="Implied Consent: Case Study 1">
-<t>A researcher would like to run a measurement campaign to determine the
+<t>Case study: A researcher would like to run a measurement campaign to determine the
 maximum supported TLS version on popular web servers.</t>
 <t>The operator of a web server that is exposed to the Internet
 hosting a popular website would have the expectation that it may be included in
@@ -219,8 +216,7 @@ attempts be made to degrade the service with large numbers of simultaneous
 connections.</t>
 </section>
 
-<section anchor="low-risk-example-2" title="Implied Consent: Case Study 2">
-<t>A researcher would like to perform A/B testing for protocol feature and how
+<t>Case study: A researcher would like to perform A/B testing for protocol feature and how
 it affects web performance. They have created two versions of their software
 and have instrumented both to report telemetry back. These updates will be
 pushed to users at random by the software's auto-update framework. The telemetry
