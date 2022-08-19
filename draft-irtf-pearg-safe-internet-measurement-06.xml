@@ -161,7 +161,6 @@ where it is practical to do so, this should be done.</t>
 The considerations in this document can be used to provide a starting point
 although other risks may be present depending on the nature of the measurements
 to be performed.</t>
-</section>
 
 <t>Case study: A researcher would like to use volunteer owned mobile devices to collect
 information about local Internet censorship. Connections will be made from the
@@ -180,7 +179,6 @@ familiar with the expectations of users of a network than the researcher.</t>
 <t>In some cases, a network operator or employer may have terms of service that
 specifically allow for giving consent to 3rd parties to perform certain
 experiments.</t>
-</section>
 
 <t>Case study: A researcher would like to perform a packet capture to determine the TCP
 options and their values used by all client devices on an corporate wireless
@@ -205,7 +203,6 @@ consent for the measurements you'd like to perform.</t>
 may collect sensitive or personally identifying information. If practical,
 attempt to obtain informed consent or proxy consent from a sample of users to
 better understand the expectations of other users.</t>
-</section>
 
 <t>Case study: A researcher would like to run a measurement campaign to determine the
 maximum supported TLS version on popular web servers.</t>
@@ -214,7 +211,6 @@ hosting a popular website would have the expectation that it may be included in
 surveys that look at supported protocols or extensions but would not expect that
 attempts be made to degrade the service with large numbers of simultaneous
 connections.</t>
-</section>
 
 <t>Case study: A researcher would like to perform A/B testing for protocol feature and how
 it affects web performance. They have created two versions of their software
@@ -266,6 +262,7 @@ you is not necessarily legal for everyone.</t>
 from typical client behaviour, a network may identify this as an attack which
 means that you will not be collecting results that are representative of what
 a typical client would see.</t>
+</section>
 
 <section anchor="do-not-scan" title='Maintain a "Do Not Scan" list'>
 <t>When performing active measurements on a shared network, maintain a list of
@@ -286,7 +283,6 @@ infer your "Do Not Scan" list from those results. For example, if you measured a
 well-known list of popular websites then it would be possible to correlate the
 results with that list to determine which are missing.</t>
 </section>
-</section><!-- others-stuff -->
 
 <section anchor="minimization" title="Minimize Data">
 <t>When collecting, using, disclosing, and storing data from a measurement, use
@@ -298,7 +294,8 @@ security mistakes or compulsion by a judicial system.</t>
 <t>When directly instrumenting a protocol to provide metrics to a passive
 observer, see <xref target="RFC6973">section 6.1 of RFC6973</xref> for data
 minimalization considerations specific to this use case.</t>
-<section anchor="minimization-discard" title="Discarding Data">
+
+<section anchor="minimization-discard" title="Discard Data">
 <t>XXX: Discard data that is not required to perform the task.</t>
 <t>When performing active measurements be sure to only capture traffic that you
 have generated. Traffic may be identified by IP ranges or by some token that is
