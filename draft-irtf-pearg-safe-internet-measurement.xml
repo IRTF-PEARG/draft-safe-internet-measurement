@@ -306,7 +306,7 @@ well-known list of popular websites then it would be possible to correlate the
 results with that list to determine which are missing.</t>
 </section>
 
-<section anchor="minimization" title="Minimize Data">
+<section anchor="minimization" title="Minimize data">
 <t>When collecting, using, disclosing, and storing data from a measurement, use
 only the minimal data necessary to perform a task. Reducing the amount of data
 reduces the amount of data that can be misused or leaked.</t>
@@ -316,11 +316,10 @@ be disclosed. There are many ways that this could happen, through operation
 security mistakes or compulsion by a judicial system.</t>
 
 <t>When directly instrumenting a protocol to provide metrics to a passive
-observer, see section 6.1 of RFC6973<xref target="RFC6973"></xref> for data
-minimalization considerations specific to this use case.</t>
-</section>
+observer, see section 6.1 of RFC6973<xref target="RFC6973"></xref> for the data
+minimalization considerations enumerated below that are specific to the use case.</t>
 
-<section anchor="minimization-discard" title="Discard Data">
+<section anchor="minimization-discard" title="Discard it">
 <t>Discard data that is not required to perform the task.</t>
 
 <t>When performing active measurements be sure to only capture traffic that you
@@ -333,18 +332,14 @@ requires that any frames received that were not part of the test traffic are
 discarded and not counted in the results.</t>
 </section>
 
-<section anchor="minimization-mask" title="Mask Data">
+<section anchor="minimization-mask" title="Mask it">
 <t>Mask data that is not required to perform the task. Particularly useful
 for content of traffic to indicate that either a particular class of content
 existed or did not exist, or the length of the content, but not recording the
 content itself. Can also replace content with tokens, or encrypt.</t>
 </section>
 
-<section anchor="minimization-generalize" title="Reduce Accuracy">
-<t>Binning, categorizing, geoip, noise.</t>
-</section>
-
-<section anchor="minimization-aggregation" title="Aggregate Data">
+<section anchor="minimization-aggregation" title="Aggregate it">
 <t>When collecting data, consider if the granularity can be limited by using
 bins or adding noise. XXX: Differential privacy.</t>
 
@@ -352,6 +347,11 @@ bins or adding noise. XXX: Differential privacy.</t>
 
 <t><xref target="Tor.2017-04-001"></xref> presents a case-study on the in-memory
 statistics in the software used by the Tor network, as an example.</t>
+</section>
+  </section>
+
+<section anchor="minimization-generalize" title="Reduce accuracy">
+<t>Binning, categorizing, geoip, noise.</t>
 </section>
 
 <section anchor="risk-analysis" title="Analyze Risk">
