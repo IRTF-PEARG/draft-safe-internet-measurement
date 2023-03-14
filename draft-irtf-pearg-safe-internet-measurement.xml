@@ -157,7 +157,7 @@ lost or corrupted, and cases where a user's access to a system may be affected.
 </section>
 
 <section anchor="guidelines" title="Safe Internet Measurement Guidelines">
-<section anchor="consent" title="Consent">
+<section anchor="consent" title="Obtain consent">
 <t>Accountability and transparency are fundamentally related to consent. As per the Menlo Report, "Accountability demands that research methodology, ethical evaluations, data collected, and
 results generated should be documented and made available responsibly in accordance with
   balancing risks and benefits."<xref target="MenloReport"></xref> A user is best placed to balanced the risks and benefits for themselves therefore consent must be obtained. From most transparent to least, there are a few options for obtaining consent.</t>
@@ -333,7 +333,7 @@ discarded and not counted in the results.</t>
 </section>
 
 <section anchor="minimization-mask" title="Mask Data">
-<t>XXX: Mask data that is not required to perform the task. Particularly useful
+<t>Mask data that is not required to perform the task. Particularly useful
 for content of traffic to indicate that either a particular class of content
 existed or did not exist, or the length of the content, but not recording the
 content itself. Can also replace content with tokens, or encrypt.</t>
@@ -357,6 +357,7 @@ statistics in the software used by the Tor network, as an example.</t>
 <t>The benefits should outweigh the risks.
 Consider auxiliary data (e.g. third-party data sets) when assessing the risks.</t>
 </section>
+</section> 
 
 <section anchor="security-considerations" title="Security Considerations">
 <t>Take reasonable security precautions, e.g. about who has access to your data sets or experimental systems.</t>
