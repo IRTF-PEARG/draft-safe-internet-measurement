@@ -162,7 +162,7 @@ lost or corrupted, and cases where a user's access to a system may be affected.
 results generated should be documented and made available responsibly in accordance with
   balancing risks and benefits."<xref target="MenloReport"></xref> A user is best placed to balanced the risks and benefits for themselves therefore consent must be obtained. From most transparent to least, there are a few options for obtaining consent.</t>
 
-<section anchor="informed-consent" title"Informed Consent">
+<section anchor="informed-consent" title="Informed Consent">
 <t>In an ideal world, informed consent would be collected from all users that
 may be placed at risk, no matter how small a risk, by an experiment. In cases
 where it is practical to do so, this should be done.</t>
