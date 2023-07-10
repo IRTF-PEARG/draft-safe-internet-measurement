@@ -110,7 +110,7 @@ traffic.</t>
 
 <t>On/off-path: A measurement, or attack, that is on-path happens on the network. Off-path indicates activity in a side-channel, end-point or at other points where the user, their connection, or their data can be accessed.</t>
 
-<t>One-/two-ended: </t>
+<t>One-/two-ended: A single-ended measurement is like a probe or a trace, where as a measurement with two-ended control provide more accuracy but require the cooperation of both endpoints, which might include the network itself if that is the measurement target.</t>
 </section>
 
 <section anchor="user-impact" title="User Impact from Measurement Studies">
@@ -264,7 +264,7 @@ the performance of your test traffic and so the testbed approach can also
 produce more accurate and repeatable results than experiments using the public
 Internet.</t>
 
-<t>WAN link conditions can be emulated through artificial delays and/or packet
+<t>Example: WAN link conditions can be emulated through artificial delays and/or packet
 loss using a tool like <xref target="netem"></xref>. Competing traffic can
 also be emulated using traffic generators.</t>
 </section>
@@ -343,12 +343,12 @@ content itself. Can also replace content with tokens, or encrypt.</t>
 
 <section anchor="minimization-aggregation" title="Aggregate it">
 <t>When collecting data, consider if the granularity can be limited by using
-bins or adding noise. XXX: Differential privacy.</t>
+bins or adding noise. Differential privacy techniques can achieve this.</t>
 
-<t>Do this at the source, definitely do it before you write to disk.</t>
+<t>Do this at the source. Do it before you store this data or perform computations on it.</t>
 
-<t><xref target="Tor.2017-04-001"></xref> presents a case-study on the in-memory
-statistics in the software used by the Tor network, as an example.</t>
+<t>Example: <xref target="Tor.2017-04-001"></xref> presents a case-study on the in-memory
+statistics in the software used by the Tor network.</t>
 </section>
   </section>
 
