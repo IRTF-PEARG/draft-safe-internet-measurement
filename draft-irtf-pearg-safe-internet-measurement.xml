@@ -98,21 +98,6 @@ breach security and cause harm <xref target="RFC4949"></xref>.
 Every Internet measurement study has the potential to subject Internet users
 to threat actions or attacks.</t>
 
-<t>Surveillance: An attack whereby an Internet user's
-information is collected. This type of attack covers not only data but
-also metadata.</t>
-
-<t>Inadequate protection of collected data: An attack where data, either in
-transit or at rest, is not adequately protected from disclosure.
-Failure to adequately protect data to the expectations of the user is an attack
-even if it does not lead to another party gaining access to the data.</t>
-
-<t>Traffic generation: An attack whereby undue traffic is generated to traverse the
-Internet.</t>
-
-<t>Traffic modification: An attack whereby on-path Internet traffic is
-unconsentually modified.</t>
-
 <t>Measurement studies: Internet measurement studies can be broadly categorized into two groups:
 active measurements and passive measurements. The type of measurement is not truly binary and many studies will include
 both active and passive components.</t>
@@ -123,7 +108,7 @@ or modify traffic.</t>
 <t>Passive measurement: Passive measurements use surveillance of existing
 traffic.</t>
 
-<t>On/off-path: An attack that is on-path happens on the network. Off-path attacks can happen as side-channel, end-point or other attacks or data compromises.</t>
+<t>On/off-path: A measurement, or attack, that is on-path happens on the network. Off-path indicates activity in a side-channel, end-point or at other points where the user, their connection, or their data can be accessed.</t>
 
 <t>One-/two-ended: </t>
 </section>
@@ -137,25 +122,40 @@ traffic indirectly as well.</t>
 approach to mitigate the impact of measurements, and to balance the risks of
 measurements against the benefits to impacted users, which we get to in the following section. But first, we describe the consequences of attacks that are made possible by measurement.</t>
 
-<t>Breach of privacy: In the context of data collection. This impact also covers the case of an Internet user's data
+<t>Surveillance: An attack whereby an Internet user's
+information is collected. This type of attack covers not only data but
+also metadata.</t>
+
+<t>Inadequate data protection: An attack where data, either in
+transit or at rest, is not adequately protected from disclosure.
+Failure to adequately protect data to the expectations of the user is an attack
+even if it does not lead to another party gaining access to the data.</t>
+
+<t>Traffic generation: An attack whereby undue traffic is generated to traverse the
+Internet.</t>
+
+<t>Traffic modification: An attack whereby on-path Internet traffic is
+nonconsentually modified.</t>
+
+<t>Breach of privacy: User privacy can be violated in the context of data collection. This impact also covers the case of an Internet user's data
 being shared beyond that which a user had given consent for.</t>
 
 <t>Impersonation: An attack where a user is impersonated during a measurement.</t>
 
 <t>Legal: Users and service providers are bound by a wide range of policies from terms of service to rule of law, each according to context and jurisdiction. </t>
 
-<t>Other Retribution: </t>
+<t>Other Retribution: A user may be actioned by a service or provider during a measurement or as a consequence of measurement behaviour over the network.</t>
 
 <t>System corruption: An attack where generated or modified traffic causes the
 corruption of a system. This attack covers cases where a user's data may be
 lost or corrupted, and cases where a user's access to a system may be affected.
 </t>
 
-<t>Data loss, corruption: </t>
+<t>Data loss, corruption: An attack where the integrity of user data is violated during or as a result of a measurement.</t>
 
-<t>Denial of Service (by which self-censorship is covered): </t>
+<t>Denial of Service (by which self-censorship is covered): An attack introduced during measurement that overwhelms the user client or service with excessive traffic, thus resulting in a denial of service.</t>
 
-<t>Emotional trauma:</t>
+<t>Emotional trauma: An attack by which either a measurement of or exposure to content or behaviour in an internet measurement causes a user harm.</t>
 </section>
   </section>
 
@@ -166,8 +166,8 @@ results generated should be documented and made available responsibly in accorda
   balancing risks and benefits."<xref target="MenloReport"></xref> A user is best placed to balanced the risks and benefits for themselves therefore consent must be obtained. From most transparent to least, there are a few options for obtaining consent.</t>
 
 <section anchor="informed-consent" title="Informed Consent">
-<t>In an ideal world, informed consent would be collected from all users that
-may be placed at risk, no matter how small a risk, by an experiment. In cases
+<t>Informed consent should be collected from all users that
+may be placed at risk, no matter how small a risk, by an experiment, however it may be impractical to do so at scale. In cases
 where it is practical to do so, this should be done.</t>
 
 <t>However for consent to be informed, all possible risks must be presented to the users.
