@@ -64,6 +64,8 @@ be carried out safely, with examples.</t>
 <middle>
 
 <section anchor="introduction" title="Introduction">
+<t>Measurement of the internet provides important insights and is a growing area of reseaerch. Similarly 
+the internet plays a role in enhancing research methods of different kinds.</t>
 <t>Performing research using the Internet, as opposed to an isolated testbed
 or simulation platform, means that experiments co-exist in a space with other
 services and end users. This document outlines guidelines for academic, industry and civil society researchers
