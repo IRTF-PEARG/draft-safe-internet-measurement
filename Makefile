@@ -1,5 +1,5 @@
 DRAFTS = draft-irtf-pearg-safe-internet-measurement
-OUTPUTS = $(foreach draft,$(DRAFTS),draft-${draft}.html draft-${draft}.xml draft-${draft}.txt)
+OUTPUTS = $(foreach draft,$(DRAFTS),${draft}.html ${draft}.xml ${draft}.txt)
 STAGING = staging.xml
 
 all: $(OUTPUTS)

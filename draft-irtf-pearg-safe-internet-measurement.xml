@@ -56,7 +56,7 @@ be carried out safely, with examples.</t>
 <note title="Note">
 <t>This document is a draft. It is not an IETF product. It does not propose a standard. Comments are solicited and should be addressed to the research group's mailing list at pearg@irtf.org and/or the author(s).</t>
 <t>The sources for this draft are at:</t>
-<t>https://github.com/irl/draft-safe-internet-measurement</t>
+<t>https://github.com/IRTF-PEARG/draft-safe-internet-measurement</t>
 </note>
 
 </front>
@@ -64,29 +64,29 @@ be carried out safely, with examples.</t>
 <middle>
 
 <section anchor="introduction" title="Introduction">
-<t>Measurement of the internet provides important insights and is a growing area of reseaerch. Similarly 
+<t>Measurement of the internet provides important insights and is a growing area of research. Similarly,
 the internet plays a role in enhancing research methods of different kinds.</t>
-<t>Performing research using the Internet, as opposed to an isolated testbed
+<t>Performing research using the internet, as opposed to an isolated testbed
 or simulation platform, means that experiments co-exist in a space with other
 services and end users. This document outlines guidelines for academic, industry and civil society researchers
-who might use the Internet as part of scientific experimentation to mitigate
-risks to the safety of other users.</t>
+who might use the internet as part of scientific experimentation to mitigate
+risks to the safety of users.</t>
 
 <section anchor="scope" title="Scope of this document">
-<t>These are guidelines for how to measure the Internet safely. When performing research on a platform shared with live traffic from other users, that research is considered safe if and only if other users are protected from or unlikely to experience danger, risk, or injury, now or in the future, due to the research.</t>
+<t>These are guidelines for how to measure the Internet safely. When performing research on a platform shared with live traffic from other users, that research is considered safe if and only if other users are protected from or unlikely to experience danger, risk, or injury arising due to the research, now or in the future.</t>
 
 <t>Following the guidelines contained within this document is not a substitute for institutional ethics review processes, although these guidelines
-could help to inform that process. It is particularly important for the growing area of research that includes Internet measurement to better equip review boards to evaluate Internet measurement methods<xref target="SIGCOMM"></xref>, and we hope that this document is part of that larger effort.</t>
+could help to inform that process. It is particularly important for the growing area of research that includes Internet measurement to better equip review boards to evaluate internet measurement methods<xref target="SIGCOMM"></xref>, and we hope that this document is part of that larger effort.</t>
  
 <t>Similarly, these guidelines are not legal
 advice and local laws must also be considered before starting any experiment
 that could have adverse impacts on user safety.</t>
 
 <t>The scope of this document is restricted to guidelines that mitigate exposure
-to risks to Internet user safety when measuring properties of the Internet:
-the network, its constiuent hosts and links, or its users traffic.</t>
+to risks to user safety when measuring properties of the internet:
+the network, its constituent hosts and links, or user traffic.</t>
 
-<t>For the purpose of this document, an Internet user is an individual or
+<t>For the purpose of this document, an internet user is an individual or
 organisation whose data is used in communications over the Internet, most broadly, and those who use the Internet to communicate or maintain Internet
 infrastructure.</t>
 </section>
