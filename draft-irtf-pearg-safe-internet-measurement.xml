@@ -2,8 +2,8 @@
 <rfc docName='draft-irtf-pearg-safe-internet-measurement-08' ipr="trust200902" submissionType="IRTF" category="info" xml:lang="en"><!-- xmlns:xi="http://www.w3.org/2001/XInclude"-->
 <front>
 
-<title abbrev='Safe Internet Measurement'>
-Guidelines for Performing Safe Measurement on the Internet
+<title abbrev='Safe internet Measurement'>
+Guidelines for Performing Safe Measurement on the internet
 </title>
 
 <author initials="I. R." surname="Learmonth" fullname="Iain R. Learmonth">
@@ -17,7 +17,7 @@ Guidelines for Performing Safe Measurement on the Internet
 </author>
 
 <author initials="G." surname="Grover" fullname="Gurshabad Grover">
-  <organization>Centre for Internet and Society</organization>
+  <organization>Centre for internet and Society</organization>
   <address>
     <postal>
       <street></street>
@@ -47,8 +47,8 @@ Guidelines for Performing Safe Measurement on the Internet
 <keyword>internet</keyword>
 
 <abstract>
-<t>Internet measurement is important to researchers from industry, academia and civil society. While measurement of the internet can give insight into the
-functioning and usage of the Internet, it can present risks to user privacy.
+<t>internet measurement is important to researchers from industry, academia and civil society. While measurement of the internet can give insight into the
+functioning and usage of the internet, it can present risks to user privacy.
 This document describes briefly those risks and proposes guidelines for ensuring that internet measurements can
 be carried out safely, with examples.</t>
 </abstract>
@@ -73,10 +73,10 @@ who might use the internet as part of scientific experimentation to mitigate
 risks to the safety of users.</t>
 
 <section anchor="scope" title="Scope of this document">
-<t>These are guidelines for how to measure the Internet safely. When performing research on a platform shared with live traffic from other users, that research is considered safe if and only if other users are protected from or unlikely to experience danger, risk, or injury arising due to the research, now or in the future.</t>
+<t>These are guidelines for how to measure the internet safely. When performing research on a platform shared with live traffic from other users, that research is considered safe if and only if other users are protected from or unlikely to experience danger, risk, or injury arising due to the research, now or in the future.</t>
 
 <t>Following the guidelines contained within this document is not a substitute for institutional ethics review processes, although these guidelines
-could help to inform that process. It is particularly important for the growing area of research that includes Internet measurement to better equip review boards to evaluate internet measurement methods<xref target="SIGCOMM"></xref>, and we hope that this document is part of that larger effort.</t>
+could help to inform that process. It is particularly important for the growing area of research that includes internet measurement to better equip review boards to evaluate internet measurement methods <xref target="SIGCOMM"></xref>, and we hope that this document is part of that larger effort.</t>
  
 <t>Similarly, these guidelines are not legal
 advice and local laws must also be considered before starting any experiment
@@ -87,79 +87,62 @@ to risks to user safety when measuring properties of the internet:
 the network, its constituent hosts and links, or user traffic.</t>
 
 <t>For the purpose of this document, an internet user is an individual or
-organisation whose data is used in communications over the Internet, most broadly, and those who use the Internet to communicate or maintain Internet
+organisation whose data is used in communications over the internet, most broadly, and those who use the internet to communicate or maintain internet
 infrastructure.</t>
 </section>
 
 <section anchor="terminology" title="Terminology">
 <t>Threat model: A threat is a potential for a security violation, which exists when
 there is a circumstance, capability, action, or event that could
-breach security and cause harm <xref target="RFC4949"></xref>.
-Every Internet measurement study has the potential to subject Internet users
-to threat actions or attacks.</t>
-
-<t>Measurement studies: Internet measurement studies can be broadly categorized into two groups:
-active measurements and passive measurements. The type of measurement is not truly binary and many studies will include
-both active and passive components.</t>
+breach security and cause harm <xref target="RFC4949"></xref>.</t>
 
 <t>Active measurement: Active measurements generate
 or modify traffic.</t>
 
-<t>Passive measurement: Passive measurements use surveillance of existing
-traffic.</t>
+<t>Passive measurement: Passive measurements involve the observation of existing traffic without active intervention.</t>
 
-<t>On/off-path: A measurement, or attack, that is on-path happens on the network. Off-path indicates activity in a side-channel, end-point or at other points where the user, their connection, or their data can be accessed.</t>
+<t>On/off-path: A measurement that is on-path happens on the network. Off-path indicates activity in a side-channel, end-point or at other points where the user, their connection, or their data can be accessed.</t>
 
-<t>One-/two-ended: A single-ended measurement is like a probe or a trace, where as a measurement with two-ended control provide more accuracy but require the cooperation of both endpoints, which might include the network itself if that is the measurement target.</t>
+<t>One-/two-ended: A single-ended measurement is like a probe or a trace, while a measurement with two-ended control provide more accuracy but require the cooperation of both endpoints, which might include the network itself if it is the measurement target.</t>
 </section>
 
 <section anchor="user-impact" title="User Impact from Measurement Studies">
-<t>Any conceivable Internet measurement study might be considered an attack
-on an Internet user's safety. The measurement of generated traffic may also lead to insights into other users'
-traffic indirectly as well.</t>
-
-<t>It is always necessary to consider the best
+<t>Any conceivable internet measurement study might have an impact on an internet user's safety. 
+The measurement of generated traffic may also lead to insights into other users'
+traffic indirectly as well. It is always necessary to consider the best
 approach to mitigate the impact of measurements, and to balance the risks of
-measurements against the benefits to impacted users, which we get to in the following section. But first, we describe the consequences of attacks that are made possible by measurement.</t>
+measurements against the benefits to impacted users.</t>
 
-<t>Surveillance: An attack whereby an Internet user's
-information is collected. This type of attack covers not only data but
-also metadata.</t>
+<t>Some possible ways in which users can be affected as a result of an internet measurement study:</t>
 
-<t>Inadequate data protection: An attack where data, either in
-transit or at rest, is not adequately protected from disclosure.
-Failure to adequately protect data to the expectations of the user is an attack
-even if it does not lead to another party gaining access to the data.</t>
+<t>Breach of privacy: User privacy can be violated in the context of data collection. This impact also covers the case of an internet user's data
+  being shared beyond that which a user had given consent for.</t>
 
-<t>Traffic generation: An attack whereby undue traffic is generated to traverse the
-Internet.</t>
+<t>Inadequate data protection: A scenario where data, either in
+  transit or at rest, lacks sufficient protection from disclosure.
+  Failure to meet user expectations for data protection is a concern,
+  even if it does not result in unauthorized access to the data.</t>
 
-<t>Traffic modification: An attack whereby on-path Internet traffic is
-nonconsentually modified.</t>
+<t>Traffic generation: A scenario where undue traffic is generated to traverse the
+internet.</t>
 
-<t>Breach of privacy: User privacy can be violated in the context of data collection. This impact also covers the case of an Internet user's data
-being shared beyond that which a user had given consent for.</t>
+<t>Traffic modification: A scenario where users' on-path internet traffic is nonconsensually modified.</t>
 
-<t>Impersonation: An attack where a user is impersonated during a measurement.</t>
+<t>Impersonation: A scenario where a user is impersonated during a measurement.</t>
 
-<t>Legal: Users and service providers are bound by a wide range of policies from terms of service to rule of law, each according to context and jurisdiction. </t>
+<t>Legal: Users and service providers are bound by a wide range of policies from Terms of Service to rule of law, each according to context and jurisdiction. 
+  A measurement study may violate these policies, and the consequences of such a violation may be severe.</t>
 
-<t>Other Retribution: A user may be actioned by a service or provider during a measurement or as a consequence of measurement behaviour over the network.</t>
-
-<t>System corruption: An attack where generated or modified traffic causes the
-corruption of a system. This attack covers cases where a user's data may be
-lost or corrupted, and cases where a user's access to a system may be affected.
+<t>System or data corruption: A scenario where generated or modified traffic causes the
+corruption of a system. This covers cases where a user's data may be
+lost or corrupted, and cases where a user's access to a system may be affected as a result.
 </t>
 
-<t>Data loss, corruption: An attack where the integrity of user data is violated during or as a result of a measurement.</t>
-
-<t>Denial of Service (by which self-censorship is covered): An attack introduced during measurement that overwhelms the user client or service with excessive traffic, thus resulting in a denial of service.</t>
-
-<t>Emotional trauma: An attack by which either a measurement of or exposure to content or behaviour in an internet measurement causes a user harm.</t>
+<t>Emotional trauma: A scenario where a measurement of or exposure to content or behaviour in an internet measurement study causes a user emotional or psychological harm.</t>
 </section>
   </section>
 
-<section anchor="guidelines" title="Safe Internet Measurement Guidelines">
+<section anchor="guidelines" title="Safe internet Measurement Guidelines">
 <section anchor="consent" title="Obtain consent">
 <t>Accountability and transparency are fundamentally related to consent. As per the Menlo Report, "Accountability demands that research methodology, ethical evaluations, data collected, and
 results generated should be documented and made available responsibly in accordance with
@@ -176,7 +159,7 @@ although other risks may be present depending on the nature of the measurements
 to be performed.</t>
 
 <t>Example: A researcher would like to use volunteer owned mobile devices to collect
-information about local Internet censorship. Connections will be attempted by the
+information about local internet censorship. Connections will be attempted by the
 volunteer's device with services and content known or suspected to be subject to censorship orders.</t>
 
 <t>This experiment can carry substantial risk for the user depending on the
@@ -223,7 +206,7 @@ better understand the expectations of other users.</t>
 <t>Example: A researcher would like to run a measurement campaign to determine the
 maximum supported TLS version on popular web servers.</t>
 
-<t>The operator of a web server that is exposed to the Internet
+<t>The operator of a web server that is exposed to the internet
 hosting a popular website would have the expectation that it may be included in
 surveys that look at supported protocols or extensions but would not expect that
 attempts be made to degrade the service with large numbers of simultaneous
@@ -262,7 +245,7 @@ other users sharing the infrastructure you are using for your experiments.</t>
 <t>When measuring performance, competing traffic can have negative effects on
 the performance of your test traffic and so the testbed approach can also
 produce more accurate and repeatable results than experiments using the public
-Internet.</t>
+internet.</t>
 
 <t>Example: WAN link conditions can be emulated through artificial delays and/or packet
 loss using a tool like <xref target="netem"></xref>. Competing traffic can
@@ -275,7 +258,7 @@ is not your own, consider what the negative consequences of that may be. At the
 very least your experiment will consume bandwidth that may have to be paid for.</t>
 
 <t>In more extreme circumstances, you could cause traffic to be generated that
-causes legal trouble for the owner of that infrastructure. The Internet is a
+causes legal trouble for the owner of that infrastructure. The internet is a
 global network crossing many legal jurisdictions and so what may be legal for
 you is not necessarily legal for everyone.</t>
 
@@ -372,7 +355,7 @@ Consider auxiliary data (e.g. third-party data sets) when assessing the risks.</
 <section anchor="acknowledgements" title="Acknowledgements">
 <t>Many of these considerations are based on those from the
 <xref target="TorSafetyBoard"></xref> adapted and generalised to be applied to
-Internet research.</t>
+internet research.</t>
 
 <t>Other considerations are taken from the Menlo Report
 <xref target="MenloReport"></xref> and its companion document
@@ -395,7 +378,7 @@ Internet research.</t>
 <author initials='S.' surname='Bradner' fullname='S. Bradner'><organization /></author>
 <author initials='J.' surname='McQuaid' fullname='J. McQuaid'><organization /></author>
 <date year='1999' month='March' />
-<abstract><t>This document is a republication of RFC 1944 correcting the values for the IP addresses which were assigned to be used as the default addresses for networking test equipment. This memo provides information for the Internet community.</t></abstract>
+<abstract><t>This document is a republication of RFC 1944 correcting the values for the IP addresses which were assigned to be used as the default addresses for networking test equipment. This memo provides information for the internet community.</t></abstract>
 </front>
 <seriesInfo name='RFC' value='2544'/>
 <seriesInfo name='DOI' value='10.17487/RFC2544'/>
@@ -409,7 +392,7 @@ Internet research.</t>
 </reference>
 <reference anchor='RFC4949' target="https://www.rfc-editor.org/info/rfc4949">
 <front>
-<title>Internet Security Glossary, Version 2</title>
+<title>internet Security Glossary, Version 2</title>
 <author initials='R.' surname='Shirey' fullname='R. Shirey'></author>
 <date year='2007' month='August'/>
 </front>
@@ -441,7 +424,7 @@ Internet research.</t>
 </reference>
 <reference anchor="RFC6973" target="https://www.rfc-editor.org/info/rfc6937">
 <front>
-<title>Privacy Considerations for Internet Protocols</title>
+<title>Privacy Considerations for internet Protocols</title>
 <author initials="A." surname="Cooper" fullname="A. Cooper"><organization>CDT</organization></author>
 <author initials="H." surname="Tschofenig" fullname="H. Tschofenig"><organization>Nokia Siemens Networks</organization></author>
 <author initials="B." surname="Aboba" fullname="B. Aboba"><organization>Skype</organization></author>
