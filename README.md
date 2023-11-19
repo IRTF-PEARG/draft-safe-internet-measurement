@@ -1,4 +1,4 @@
-# Guidelines for Performing Safe Measurement on the internet
+# Guidelines for Performing Safe Measurement on the Internet
 
 This is an Internet-Draft adopted by the [PEARG](https://pearg.org) group at the [IRTF](https://irtf.org).
 
