@@ -269,7 +269,9 @@ means that you will not be collecting results that are representative of what
 a typical client would see.</t>
 
 <t>One possible way to mitigate this risk is transparency, i.e. mark measurement-related
-  data or activity as such. For example [TODO(shivan): zmap tool].
+  data or activity as such. For example, the popular internet measurement tool ZMap
+  hardcodes its packets to have IP ID 54321 in order to allow identification
+  <xref target="ZMap"/>.
 </t>
 </section>
 
@@ -329,12 +331,13 @@ for content of traffic to indicate that either a particular class of content
 existed or did not exist, or the length of the content, but not recording the
 content itself. The content can be replaced with tokens or encrypted.</t>
 
-<t>It is important to note that masking data does not necessarily anonymize it [TODO(shivan): reference] </t>
+<t>It is important to note that masking data does not necessarily anonymize it
+  <xref target="SurveyNetworkTrafficAnonymisationTech"/>.</t>
 </section>
 
 <section anchor="minimization-aggregation" title="Aggregate data">
 <t>When collecting data, consider if the granularity can be limited by using
-bins or adding noise. Differential privacy techniques (TODO(shivan): add reference) can help with this.</t>
+bins or adding noise. Differential privacy techniques <xref target="DifferentialPrivacy"/> can help with this.</t>
 
 <t>Example: <xref target="Tor.2017-04-001"></xref> presents a case-study on the in-memory
 statistics in the software used by the Tor network.</t>
@@ -428,6 +431,33 @@ internet research.</t>
 <author initials="E." surname="Kenneally" fullname="E. Kenneally"><organization/></author>
 <date year="2013" month="October"/>
 </front>
+</reference>
+<!-- Reference for differential privacy -->
+<reference anchor="DifferentialPrivacy" target="https://link.springer.com/chapter/10.1007/11681878_14">
+  <front>
+  <title>Calibrating Noise to Sensitivity in Private Data Analysis</title>
+  <author initials="C." surname="Dwork"><organization/></author>
+  <author initials="F." surname="McSherry"><organization/></author>
+  <author initials="K." surname="Nissim"><organization/></author>
+  <author initials="A." surname="Smith"><organization/></author>
+  <date year="2006"/>
+  </front>
+  </reference>
+<!-- Reference for data masking != anonymization -->
+<reference anchor="SurveyNetworkTrafficAnonymisationTech" target="https://dl.acm.org/doi/10.1145/3182660">
+  <front>
+  <title>A Survey of Network Traffic Anonymisation Techniques and Implementations</title>
+  <author initials="N." surname="Van Dijkhuizen" fullname="Niels Van Dijkhuizen"><organization/></author>
+  <author initials="J." surname="Van Der Ham" fullname="Jeroen Van Der Ham"><organization/></author>
+  <date year="2018" month="May"/>
+  </front>
+</reference>
+<!-- Reference for ZMap -->
+<reference anchor="ZMap" target="https://github.com/zmap/zmap/blob/main/src/probe_modules/packet.c">
+  <front>
+  <title>ZMap Source Code - packet.c</title>
+  <author><organization>University of Michigan</organization></author>
+  </front>
 </reference>
 <reference anchor="RFC6973" target="https://www.rfc-editor.org/info/rfc6937">
 <front>
