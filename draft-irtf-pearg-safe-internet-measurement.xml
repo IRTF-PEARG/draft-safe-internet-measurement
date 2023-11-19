@@ -48,7 +48,7 @@ Guidelines for Performing Safe Measurement on the Internet
 
 <abstract>
 <t>internet measurement is important to researchers from industry, academia and civil society. While measurement of the internet can give insight into the
-functioning and usage of the internet, it can present risks to user privacy.
+functioning and usage of the internet, it can present risks to user privacy and safety.
 This document describes briefly those risks and proposes guidelines for ensuring that internet measurements can
 be carried out safely, with examples.</t>
 </abstract>
@@ -140,7 +140,7 @@ lost or corrupted, and cases where a user's access to a system may be affected a
 
 <t>Emotional trauma: A scenario where a measurement of or exposure to content or behaviour in an internet measurement study causes a user emotional or psychological harm.</t>
 </section>
-  </section>
+</section>
 
 <section anchor="guidelines" title="Guidelines">
 <section anchor="consent" title="Obtain consent">
@@ -238,7 +238,7 @@ for a user to discover that they have been part of an experiment and roll back
 the change, allowing for explicit refusal of consent to override the presumed
 implied consent.</t>
 </section>
-</section><!-- consent -->
+</section>
 
 <section anchor="use-a-testbed" title="Isolate risk with a dedicated testbed">
 <t>Wherever possible, use a testbed. An isolated network means that there are no
@@ -261,14 +261,14 @@ very least your experiment will consume bandwidth that may have to be paid for.<
 <t>In more extreme circumstances, you could cause traffic to be generated that
 causes legal trouble for the owner of that infrastructure. The internet is a
 global network that crosses many legal jurisdictions and so what may be legal for
-you is not necessarily legal for everyone.</t>
+one is not necessarily legal for another.</t>
 
 <t>If you are sending a lot of traffic quickly, or otherwise generally deviating
 from typical client behaviour, a network may identify this as an attack which
 means that you will not be collecting results that are representative of what
 a typical client would see.</t>
 
-<t>One possible way to mitigate this risk is to provide transparency by marking measurement-related
+<t>One possible way to mitigate this risk is transparency, i.e. mark measurement-related
   data or activity as such. For example [TODO(shivan): zmap tool].
 </t>
 </section>
@@ -342,11 +342,11 @@ statistics in the software used by the Tor network.</t>
   </section>
 
 <section anchor="minimization-generalize" title="Reduce accuracy">
-<t>(TODO(shivan): expand) Binning, categorizing, geoip, noise.</t>
+<t>TODO: expand. Binning, categorizing, geoip, noise.</t>
 </section>
 
 <section anchor="risk-analysis" title="Analyze risk">
-<t>(TODO(shivan): expand) The benefits should outweigh the risks.
+<t>TODO: expand. The benefits should outweigh the risks.
 Consider auxiliary data (e.g. third-party data sets) when assessing the risks.</t>
 </section>
 </section> 
@@ -431,7 +431,7 @@ internet research.</t>
 </reference>
 <reference anchor="RFC6973" target="https://www.rfc-editor.org/info/rfc6937">
 <front>
-<title>Privacy Considerations for internet Protocols</title>
+<title>Privacy Considerations for Internet Protocols</title>
 <author initials="A." surname="Cooper" fullname="A. Cooper"><organization>CDT</organization></author>
 <author initials="H." surname="Tschofenig" fullname="H. Tschofenig"><organization>Nokia Siemens Networks</organization></author>
 <author initials="B." surname="Aboba" fullname="B. Aboba"><organization>Skype</organization></author>
