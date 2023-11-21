@@ -48,7 +48,7 @@ Guidelines for Performing Safe Measurement on the Internet
 
 <abstract>
 <t>Internet measurement is important to researchers from industry, academia and civil society. While measurement of the internet can give insight into the
-functioning and usage of the Internet, it can present risks to user privacy.
+functioning and usage of the internet, it can present risks to user privacy and safety.
 This document describes briefly those risks and proposes guidelines for ensuring that internet measurements can
 be carried out safely, with examples.</t>
 </abstract>
@@ -56,7 +56,7 @@ be carried out safely, with examples.</t>
 <note title="Note">
 <t>This document is a draft. It is not an IETF product. It does not propose a standard. Comments are solicited and should be addressed to the research group's mailing list at pearg@irtf.org and/or the author(s).</t>
 <t>The sources for this draft are at:</t>
-<t>https://github.com/irl/draft-safe-internet-measurement</t>
+<t>https://github.com/IRTF-PEARG/draft-safe-internet-measurement</t>
 </note>
 
 </front>
@@ -64,128 +64,124 @@ be carried out safely, with examples.</t>
 <middle>
 
 <section anchor="introduction" title="Introduction">
-<t>Measurement of the internet provides important insights and is a growing area of reseaerch. Similarly 
+<t>Measurement of the internet provides important insights and is a growing area of research. Similarly,
 the internet plays a role in enhancing research methods of different kinds.</t>
-<t>Performing research using the Internet, as opposed to an isolated testbed
+<t>Performing research using the internet, as opposed to an isolated testbed
 or simulation platform, means that experiments co-exist in a space with other
 services and end users. This document outlines guidelines for academic, industry and civil society researchers
-who might use the Internet as part of scientific experimentation to mitigate
-risks to the safety of other users.</t>
+who might use the internet as part of scientific experimentation to mitigate
+risks to the safety of users.</t>
 
 <section anchor="scope" title="Scope of this document">
-<t>These are guidelines for how to measure the Internet safely. When performing research on a platform shared with live traffic from other users, that research is considered safe if and only if other users are protected from or unlikely to experience danger, risk, or injury, now or in the future, due to the research.</t>
+<t>These are guidelines for how to measure the internet safely.
+  When performing research on a platform shared with live traffic from other users,
+  that research is considered safe if and only if other users are protected from or unlikely to experience danger,
+  risk, or injury arising due to the research, now or in the future.</t>
 
 <t>Following the guidelines contained within this document is not a substitute for institutional ethics review processes, although these guidelines
-could help to inform that process. It is particularly important for the growing area of research that includes Internet measurement to better equip review boards to evaluate Internet measurement methods<xref target="SIGCOMM"></xref>, and we hope that this document is part of that larger effort.</t>
+could help to inform that process. It is particularly important for the growing area of research that includes internet measurement to better equip review boards to evaluate internet measurement methods <xref target="SIGCOMM"></xref>, and we hope that this document is part of that larger effort.</t>
  
 <t>Similarly, these guidelines are not legal
 advice and local laws must also be considered before starting any experiment
 that could have adverse impacts on user safety.</t>
 
 <t>The scope of this document is restricted to guidelines that mitigate exposure
-to risks to Internet user safety when measuring properties of the Internet:
-the network, its constiuent hosts and links, or its users traffic.</t>
+to risks to user safety when measuring properties of the internet:
+the network, its constituent hosts and links, or user traffic.</t>
 
-<t>For the purpose of this document, an Internet user is an individual or
-organisation whose data is used in communications over the Internet, most broadly, and those who use the Internet to communicate or maintain Internet
-infrastructure.</t>
 </section>
 
 <section anchor="terminology" title="Terminology">
 <t>Threat model: A threat is a potential for a security violation, which exists when
 there is a circumstance, capability, action, or event that could
-breach security and cause harm <xref target="RFC4949"></xref>.
-Every Internet measurement study has the potential to subject Internet users
-to threat actions or attacks.</t>
+breach security and cause harm <xref target="RFC4949"></xref>.</t>
 
-<t>Measurement studies: Internet measurement studies can be broadly categorized into two groups:
-active measurements and passive measurements. The type of measurement is not truly binary and many studies will include
-both active and passive components.</t>
+<t>User: For the purpose of this document, an internet user is an individual or
+  organisation whose data is used in communications over the internet, most broadly, and those who use the internet to communicate or maintain internet
+  infrastructure.</t>
 
 <t>Active measurement: Active measurements generate
 or modify traffic.</t>
 
-<t>Passive measurement: Passive measurements use surveillance of existing
-traffic.</t>
+<t>Passive measurement: Passive measurements involve the observation of existing traffic without active intervention.</t>
 
-<t>On/off-path: A measurement, or attack, that is on-path happens on the network. Off-path indicates activity in a side-channel, end-point or at other points where the user, their connection, or their data can be accessed.</t>
+<t>On/off-path: A measurement that is on-path happens on the network. Off-path indicates activity in a side-channel, end-point or at other points where the user, their connection, or their data can be accessed.</t>
 
-<t>One-/two-ended: A single-ended measurement is like a probe or a trace, where as a measurement with two-ended control provide more accuracy but require the cooperation of both endpoints, which might include the network itself if that is the measurement target.</t>
 </section>
 
-<section anchor="user-impact" title="User Impact from Measurement Studies">
-<t>Any conceivable Internet measurement study might be considered an attack
-on an Internet user's safety. The measurement of generated traffic may also lead to insights into other users'
-traffic indirectly as well.</t>
-
-<t>It is always necessary to consider the best
+<section anchor="user-impact" title="User impact from measurement studies">
+<t>Any conceivable internet measurement study might have an impact on an internet user's safety. 
+The measurement of generated traffic may also lead to insights into other users'
+traffic indirectly as well. It is always necessary to consider the best
 approach to mitigate the impact of measurements, and to balance the risks of
-measurements against the benefits to impacted users, which we get to in the following section. But first, we describe the consequences of attacks that are made possible by measurement.</t>
+measurements against the benefits to impacted users.</t>
 
-<t>Surveillance: An attack whereby an Internet user's
-information is collected. This type of attack covers not only data but
-also metadata.</t>
+<t>Some possible ways in which users can be affected as a result of an internet measurement study:</t>
 
-<t>Inadequate data protection: An attack where data, either in
-transit or at rest, is not adequately protected from disclosure.
-Failure to adequately protect data to the expectations of the user is an attack
-even if it does not lead to another party gaining access to the data.</t>
+<t>Breach of privacy: User privacy can be violated in the context of data collection. This impact also covers the case of an internet user's data
+  being shared beyond that which a user had given consent for.</t>
 
-<t>Traffic generation: An attack whereby undue traffic is generated to traverse the
-Internet.</t>
+<t>Inadequate data protection: A scenario where data, either in
+  transit or at rest, lacks sufficient protection from disclosure.
+  Failure to meet user expectations for data protection is a concern,
+  even if it does not result in unauthorized access to the data. This includes cases of improper access control
+(i.e. people having access to user data who do not need it).</t>
 
-<t>Traffic modification: An attack whereby on-path Internet traffic is
-nonconsentually modified.</t>
+<t>Traffic generation: A scenario where undue traffic is generated to traverse the
+internet.</t>
 
-<t>Breach of privacy: User privacy can be violated in the context of data collection. This impact also covers the case of an Internet user's data
-being shared beyond that which a user had given consent for.</t>
+<t>Traffic modification: A scenario where users' on-path internet traffic is nonconsensually modified.</t>
 
-<t>Impersonation: An attack where a user is impersonated during a measurement.</t>
+<t>Impersonation: A scenario where a user is impersonated during a measurement.</t>
 
-<t>Legal: Users and service providers are bound by a wide range of policies from terms of service to rule of law, each according to context and jurisdiction. </t>
+<t>Legal: Users and service providers are bound by a wide range of policies from Terms of Service to rule of law, each according to context and jurisdiction. 
+  A measurement study may violate these policies, and the consequences of such a violation may be severe.</t>
 
-<t>Other Retribution: A user may be actioned by a service or provider during a measurement or as a consequence of measurement behaviour over the network.</t>
-
-<t>System corruption: An attack where generated or modified traffic causes the
-corruption of a system. This attack covers cases where a user's data may be
-lost or corrupted, and cases where a user's access to a system may be affected.
+<t>System or data corruption: A scenario where generated or modified traffic causes the
+corruption of a system. This covers cases where a user's data may be
+lost or corrupted, and cases where a user's access to a system may be affected as a result.
 </t>
 
-<t>Data loss, corruption: An attack where the integrity of user data is violated during or as a result of a measurement.</t>
-
-<t>Denial of Service (by which self-censorship is covered): An attack introduced during measurement that overwhelms the user client or service with excessive traffic, thus resulting in a denial of service.</t>
-
-<t>Emotional trauma: An attack by which either a measurement of or exposure to content or behaviour in an internet measurement causes a user harm.</t>
+<t>Emotional trauma: A scenario where a measurement of or exposure to content or behaviour in an internet measurement study causes a user emotional or psychological harm.</t>
 </section>
-  </section>
+</section>
 
-<section anchor="guidelines" title="Safe Internet Measurement Guidelines">
+<section anchor="guidelines" title="Guidelines">
 <section anchor="consent" title="Obtain consent">
 <t>Accountability and transparency are fundamentally related to consent. As per the Menlo Report, "Accountability demands that research methodology, ethical evaluations, data collected, and
 results generated should be documented and made available responsibly in accordance with
   balancing risks and benefits."<xref target="MenloReport"></xref> A user is best placed to balanced the risks and benefits for themselves therefore consent must be obtained. From most transparent to least, there are a few options for obtaining consent.</t>
 
-<section anchor="informed-consent" title="Informed Consent">
+<section anchor="informed-consent" title="Informed consent">
 <t>Informed consent should be collected from all users that
-may be placed at risk, no matter how small a risk, by an experiment, however it may be impractical to do so at scale. In cases
-where it is practical to do so, this should be done.</t>
+may be placed at risk by an experiment.</t>
 
-<t>However for consent to be informed, all possible risks must be presented to the users.
+<t>For consent to be informed, a reasonable coverage of possible risks must be presented to the users.
 The considerations in this document can be used to provide a starting point
 although other risks may be present depending on the nature of the measurements
-to be performed.</t>
+to be performed. In addition, it should be clear from the consent language who the asker is, and what the terms
+of data observation and/or collection are.</t>
 
-<t>Example: A researcher would like to use volunteer owned mobile devices to collect
-information about local Internet censorship. Connections will be attempted by the
+<t>Example: A researcher would like to use volunteer-owned mobile devices to collect
+information about local internet censorship. Connections will be attempted by the
 volunteer's device with services and content known or suspected to be subject to censorship orders.</t>
 
-<t>This experiment can carry substantial risk for the user depending on the
-circumstances, from disciplinary action from their employer to arrest or
-imprisonment. Fully informed consent ensures that any risk that is being taken
-has been carefully considered by the volunteer before proceeding.</t>
+<t>This experiment can carry substantial risk for the user depending on their specific
+circumstances. Trying to access censored material can be seen as (network) policy infringement or breaking laws.
+Consequences can range from disciplinary action from their employer to arrest or
+imprisonment by government authorities. If the experimenter wants to expose volunteers to this kind of risk,
+users must be fully informed, and voluntarily give consent to run the measurement.
+Even then, experimenters should seriously consider designing their experiment in another way.</t>
+
+<t>Note that informed consent is notoriously tricky to obtain. Conveying all possible risks of a measurement
+  is often simply impractical, depending upon how technical the user audience is, the context of the consent prompt,
+  what the tool is normally used by users for, etc. In addition, consent can have network effects. For example, asking a user
+  to consent to sharing information about their communication with others can have
+  impacts on users who have not personally consented to the study.
+</t>
 </section>
 
-<section anchor="proxy-consent" title="Proxy Consent">
+<section anchor="proxy-consent" title="Proxy consent">
 <t>In cases where it is not practical to collect informed consent from all
 users of a shared network, it may be possible to obtain proxy consent. Proxy
 consent may be given by a network operator or employer that would be more
@@ -206,7 +202,7 @@ the network may be allowed, whereas academic research may not be
 already covered.</t>
 </section>
 
-<section anchor="low-risk" title="Implied Consent">
+<section anchor="low-risk" title="Implied consent">
 <t>In larger scale measurements, even proxy consent collection may not be
 practical. In this case, implied consent may be presumed from users for some
 measurements. Consider that users of a network will
@@ -223,7 +219,7 @@ better understand the expectations of other users.</t>
 <t>Example: A researcher would like to run a measurement campaign to determine the
 maximum supported TLS version on popular web servers.</t>
 
-<t>The operator of a web server that is exposed to the Internet
+<t>The operator of a web server that is exposed to the internet
 hosting a popular website would have the expectation that it may be included in
 surveys that look at supported protocols or extensions but would not expect that
 attempts be made to degrade the service with large numbers of simultaneous
@@ -239,22 +235,16 @@ identifying or sensitive information.</t>
 <t>As users expect to receive automatic updates, the effect of changing the
 behaviour of the software is already expected by the user. If users have
 already been informed that data will be reported back to the developers of the
-software, then again the addition of new metrics would be expected. There are
-risks in pushing any new software update, and the A/B testing technique can
-reduce the number of users that may be adversely affected by a bad update.</t>
-
-<t>The reduced impact should not be used as an excuse for pushing higher risk
-updates, only updates that could be considered appropriate to push to all users
-should be A/B tested. Likewise, not pushing the new behaviour to any user
-should be considered appropriate if some users are to remain with the old
-behavior.</t>
+software, then again the addition of new metrics would be expected. Note that
+the reduced impact of A/B testing should not be used be an excuse to push updates that
+might compromise user expectations around security and privacy.</t>
 
 <t>In the event that something does go wrong with the update, it should be easy
 for a user to discover that they have been part of an experiment and roll back
 the change, allowing for explicit refusal of consent to override the presumed
 implied consent.</t>
 </section>
-</section><!-- consent -->
+</section>
 
 <section anchor="use-a-testbed" title="Isolate risk with a dedicated testbed">
 <t>Wherever possible, use a testbed. An isolated network means that there are no
@@ -262,7 +252,7 @@ other users sharing the infrastructure you are using for your experiments.</t>
 <t>When measuring performance, competing traffic can have negative effects on
 the performance of your test traffic and so the testbed approach can also
 produce more accurate and repeatable results than experiments using the public
-Internet.</t>
+internet.</t>
 
 <t>Example: WAN link conditions can be emulated through artificial delays and/or packet
 loss using a tool like <xref target="netem"></xref>. Competing traffic can
@@ -275,14 +265,20 @@ is not your own, consider what the negative consequences of that may be. At the
 very least your experiment will consume bandwidth that may have to be paid for.</t>
 
 <t>In more extreme circumstances, you could cause traffic to be generated that
-causes legal trouble for the owner of that infrastructure. The Internet is a
-global network crossing many legal jurisdictions and so what may be legal for
-you is not necessarily legal for everyone.</t>
+causes legal trouble for the owner of that infrastructure. The internet is a
+global network that crosses many legal jurisdictions and so what may be legal for
+one is not necessarily legal for another.</t>
 
-<t>If you are sending a lot of traffic quickly, or otherwise generally deviate
+<t>If you are sending a lot of traffic quickly, or otherwise generally deviating
 from typical client behaviour, a network may identify this as an attack which
 means that you will not be collecting results that are representative of what
 a typical client would see.</t>
+
+<t>One possible way to mitigate this risk is transparency, i.e. mark measurement-related
+  data or activity as such. For example, the popular internet measurement tool ZMap
+  hardcodes its packets to have IP ID 54321 in order to allow identification
+  <xref target="ZMap"/>.
+</t>
 </section>
 
 <section anchor="do-not-scan" title='Maintain a "Do Not Scan" list'>
@@ -305,7 +301,8 @@ seek consent for this from the requester.</t>
 <t>Be aware that in publishing your measurement results, it may be possible to
 infer your "Do Not Scan" list from those results. For example, if you measured a
 well-known list of popular websites then it would be possible to correlate the
-results with that list to determine which are missing.</t>
+results with that list to determine which are missing. This inference might leak the fact
+that those websites specifically requested to not be scanned.</t>
 </section>
 
 <section anchor="minimization" title="Minimize data">
@@ -314,38 +311,39 @@ only the minimal data necessary to perform a task. Reducing the amount of data
 reduces the amount of data that can be misused or leaked.</t>
 
 <t>When deciding on the data to collect, assume that any data collected might
-be disclosed. There are many ways that this could happen, through operation
+be disclosed. There are many ways that this could happen, through operational
 security mistakes or compulsion by a judicial system.</t>
 
 <t>When directly instrumenting a protocol to provide metrics to a passive
 observer, see section 6.1 of RFC6973<xref target="RFC6973"></xref> for the data
-minimalization considerations enumerated below that are specific to the use case.</t>
+minimization considerations enumerated below that are specific to the use case.</t>
 
-<section anchor="minimization-discard" title="Discard it">
+<section anchor="minimization-discard" title="Discard data">
 <t>Discard data that is not required to perform the task.</t>
 
-<t>When performing active measurements be sure to only capture traffic that you
+<t>When performing active measurements, be sure to only capture traffic that you
 have generated. Traffic may be identified by IP ranges or by some token that is
 unlikely to be used by other users.</t>
 
 <t>Again, this can help to improve the accuracy and repeatability of your
-experiment. <xref target="RFC2544"></xref>, for performance benchmarking,
+experiment. For performance benchmarking, <xref target="RFC2544"></xref>
 requires that any frames received that were not part of the test traffic are
 discarded and not counted in the results.</t>
 </section>
 
-<section anchor="minimization-mask" title="Mask it">
-<t>Mask data that is not required to perform the task. Particularly useful
+<section anchor="minimization-mask" title="Mask data">
+<t>Mask data that is not required to perform the task. This technique is particularly useful
 for content of traffic to indicate that either a particular class of content
 existed or did not exist, or the length of the content, but not recording the
-content itself. Can also replace content with tokens, or encrypt.</t>
+content itself. The content can be replaced with tokens or encrypted.</t>
+
+<t>It is important to note that masking data does not necessarily anonymize it
+  <xref target="SurveyNetworkTrafficAnonymisationTech"/>.</t>
 </section>
 
-<section anchor="minimization-aggregation" title="Aggregate it">
+<section anchor="minimization-aggregation" title="Aggregate data">
 <t>When collecting data, consider if the granularity can be limited by using
-bins or adding noise. Differential privacy techniques can achieve this.</t>
-
-<t>Do this at the source. Do it before you store this data or perform computations on it.</t>
+bins or adding noise. Differential privacy techniques <xref target="DifferentialPrivacy"/> can help with this.</t>
 
 <t>Example: <xref target="Tor.2017-04-001"></xref> presents a case-study on the in-memory
 statistics in the software used by the Tor network.</t>
@@ -353,18 +351,23 @@ statistics in the software used by the Tor network.</t>
   </section>
 
 <section anchor="minimization-generalize" title="Reduce accuracy">
-<t>Binning, categorizing, geoip, noise.</t>
+<t>There are various techniques that can be used to reduce the accuracy of the collected data and make it
+  less identifying.
+</t>
+<t>TODO: expand. Binning, categorizing, geoip, noise.</t>
 </section>
 
-<section anchor="risk-analysis" title="Analyze Risk">
-<t>The benefits should outweigh the risks.
+<section anchor="risk-analysis" title="Analyze risk">
+<t>TODO: expand. The benefits should outweigh the risks.
 Consider auxiliary data (e.g. third-party data sets) when assessing the risks.</t>
 </section>
 </section> 
 
 <section anchor="security-considerations" title="Security Considerations">
-<t>Take reasonable security precautions, e.g. about who has access to your data sets or experimental systems.</t>
+<t>This document as a whole addresses user safety considerations for internet measurement studies, and thus discusses
+  security considerations extensively throughout regarding collection and storage of user data.</t>
 </section>
+
 <section anchor="iana-considerations" title="IANA Considerations">
 <t>This document has no actions for IANA.</t>
 </section>
@@ -372,11 +375,14 @@ Consider auxiliary data (e.g. third-party data sets) when assessing the risks.</
 <section anchor="acknowledgements" title="Acknowledgements">
 <t>Many of these considerations are based on those from the
 <xref target="TorSafetyBoard"></xref> adapted and generalised to be applied to
-Internet research.</t>
+internet research.</t>
 
 <t>Other considerations are taken from the Menlo Report
 <xref target="MenloReport"></xref> and its companion document
 <xref target="MenloReportCompanion"></xref>.</t>
+
+<t>Comments of several people on the mailing list was helpful, especially
+Marwan Fayed and Jeroen van der Ham.</t>
 </section>
 </middle>
 
@@ -395,7 +401,7 @@ Internet research.</t>
 <author initials='S.' surname='Bradner' fullname='S. Bradner'><organization /></author>
 <author initials='J.' surname='McQuaid' fullname='J. McQuaid'><organization /></author>
 <date year='1999' month='March' />
-<abstract><t>This document is a republication of RFC 1944 correcting the values for the IP addresses which were assigned to be used as the default addresses for networking test equipment. This memo provides information for the Internet community.</t></abstract>
+<abstract><t>This document is a republication of RFC 1944 correcting the values for the IP addresses which were assigned to be used as the default addresses for networking test equipment. This memo provides information for the internet community.</t></abstract>
 </front>
 <seriesInfo name='RFC' value='2544'/>
 <seriesInfo name='DOI' value='10.17487/RFC2544'/>
@@ -438,6 +444,33 @@ Internet research.</t>
 <author initials="E." surname="Kenneally" fullname="E. Kenneally"><organization/></author>
 <date year="2013" month="October"/>
 </front>
+</reference>
+<!-- Reference for differential privacy -->
+<reference anchor="DifferentialPrivacy" target="https://link.springer.com/chapter/10.1007/11681878_14">
+  <front>
+  <title>Calibrating Noise to Sensitivity in Private Data Analysis</title>
+  <author initials="C." surname="Dwork"><organization/></author>
+  <author initials="F." surname="McSherry"><organization/></author>
+  <author initials="K." surname="Nissim"><organization/></author>
+  <author initials="A." surname="Smith"><organization/></author>
+  <date year="2006"/>
+  </front>
+  </reference>
+<!-- Reference for data masking != anonymization -->
+<reference anchor="SurveyNetworkTrafficAnonymisationTech" target="https://dl.acm.org/doi/10.1145/3182660">
+  <front>
+  <title>A Survey of Network Traffic Anonymisation Techniques and Implementations</title>
+  <author initials="N." surname="Van Dijkhuizen" fullname="Niels Van Dijkhuizen"><organization/></author>
+  <author initials="J." surname="Van Der Ham" fullname="Jeroen Van Der Ham"><organization/></author>
+  <date year="2018" month="May"/>
+  </front>
+</reference>
+<!-- Reference for ZMap -->
+<reference anchor="ZMap" target="https://github.com/zmap/zmap/blob/main/src/probe_modules/packet.c">
+  <front>
+  <title>ZMap Source Code - packet.c</title>
+  <author><organization>University of Michigan</organization></author>
+  </front>
 </reference>
 <reference anchor="RFC6973" target="https://www.rfc-editor.org/info/rfc6937">
 <front>
