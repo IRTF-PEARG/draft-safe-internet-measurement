@@ -17,7 +17,7 @@ Guidelines for Performing Safe Measurement on the Internet
 </author>
 
 <author initials="G." surname="Grover" fullname="Gurshabad Grover">
-  <organization>Centre for internet and Society</organization>
+  <organization>Centre for Internet and Society</organization>
   <address>
     <postal>
       <street></street>
@@ -47,7 +47,7 @@ Guidelines for Performing Safe Measurement on the Internet
 <keyword>internet</keyword>
 
 <abstract>
-<t>internet measurement is important to researchers from industry, academia and civil society. While measurement of the internet can give insight into the
+<t>Internet measurement is important to researchers from industry, academia and civil society. While measurement of the internet can give insight into the
 functioning and usage of the internet, it can present risks to user privacy and safety.
 This document describes briefly those risks and proposes guidelines for ensuring that internet measurements can
 be carried out safely, with examples.</t>
@@ -73,7 +73,10 @@ who might use the internet as part of scientific experimentation to mitigate
 risks to the safety of users.</t>
 
 <section anchor="scope" title="Scope of this document">
-<t>These are guidelines for how to measure the internet safely. When performing research on a platform shared with live traffic from other users, that research is considered safe if and only if other users are protected from or unlikely to experience danger, risk, or injury arising due to the research, now or in the future.</t>
+<t>These are guidelines for how to measure the internet safely.
+  When performing research on a platform shared with live traffic from other users,
+  that research is considered safe if and only if other users are protected from or unlikely to experience danger,
+  risk, or injury arising due to the research, now or in the future.</t>
 
 <t>Following the guidelines contained within this document is not a substitute for institutional ethics review processes, although these guidelines
 could help to inform that process. It is particularly important for the growing area of research that includes internet measurement to better equip review boards to evaluate internet measurement methods <xref target="SIGCOMM"></xref>, and we hope that this document is part of that larger effort.</t>
@@ -86,15 +89,16 @@ that could have adverse impacts on user safety.</t>
 to risks to user safety when measuring properties of the internet:
 the network, its constituent hosts and links, or user traffic.</t>
 
-<t>For the purpose of this document, an internet user is an individual or
-organisation whose data is used in communications over the internet, most broadly, and those who use the internet to communicate or maintain internet
-infrastructure.</t>
 </section>
 
 <section anchor="terminology" title="Terminology">
 <t>Threat model: A threat is a potential for a security violation, which exists when
 there is a circumstance, capability, action, or event that could
 breach security and cause harm <xref target="RFC4949"></xref>.</t>
+
+<t>User: For the purpose of this document, an internet user is an individual or
+  organisation whose data is used in communications over the internet, most broadly, and those who use the internet to communicate or maintain internet
+  infrastructure.</t>
 
 <t>Active measurement: Active measurements generate
 or modify traffic.</t>
@@ -345,6 +349,9 @@ statistics in the software used by the Tor network.</t>
   </section>
 
 <section anchor="minimization-generalize" title="Reduce accuracy">
+<t>There are various techniques that can be used to reduce the accuracy of the collected data and make it
+  less identifying.
+</t>
 <t>TODO: expand. Binning, categorizing, geoip, noise.</t>
 </section>
 
@@ -355,9 +362,10 @@ Consider auxiliary data (e.g. third-party data sets) when assessing the risks.</
 </section> 
 
 <section anchor="security-considerations" title="Security Considerations">
-<t>This document discusses user safety considerations for internet measurement studies, and thus discusses
-  security considerations extensively regarding collection and storage of user data.</t>
+<t>This document as a whole addresses user safety considerations for internet measurement studies, and thus discusses
+  security considerations extensively throughout regarding collection and storage of user data.</t>
 </section>
+
 <section anchor="iana-considerations" title="IANA Considerations">
 <t>This document has no actions for IANA.</t>
 </section>
@@ -370,6 +378,9 @@ internet research.</t>
 <t>Other considerations are taken from the Menlo Report
 <xref target="MenloReport"></xref> and its companion document
 <xref target="MenloReportCompanion"></xref>.</t>
+
+<t>Comments of several people on the mailing list was helpful, especially
+Marwan Fayed and Jeroen van der Ham.</t>
 </section>
 </middle>
 
