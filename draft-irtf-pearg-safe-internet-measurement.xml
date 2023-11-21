@@ -235,7 +235,9 @@ identifying or sensitive information.</t>
 <t>As users expect to receive automatic updates, the effect of changing the
 behaviour of the software is already expected by the user. If users have
 already been informed that data will be reported back to the developers of the
-software, then again the addition of new metrics would be expected.</t>
+software, then again the addition of new metrics would be expected. Note that
+the reduced impact of A/B testing should not be used be an excuse to push updates that
+might compromise user expectations around security and privacy.</t>
 
 <t>In the event that something does go wrong with the update, it should be easy
 for a user to discover that they have been part of an experiment and roll back
