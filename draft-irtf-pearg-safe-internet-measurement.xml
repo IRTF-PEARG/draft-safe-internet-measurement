@@ -107,6 +107,7 @@ or modify traffic.</t>
 
 <t>On/off-path: A measurement that is on-path happens on the network. Off-path indicates activity in a side-channel, end-point or at other points where the user, their connection, or their data can be accessed.</t>
 
+<t>One-/two-ended: A single-ended measurement is like a probe or a trace, whereas a measurement with two-ended control provides more accuracy but requires the cooperation of both endpoints, which might include the network itself if that is the measurement target.</t>
 </section>
 
 <section anchor="user-impact" title="User impact from measurement studies">
@@ -155,7 +156,7 @@ lost or corrupted, and cases where a user's access to a system may be affected a
 <section anchor="consent" title="Obtain consent">
 <t>Accountability and transparency are fundamentally related to consent. As per the Menlo Report, "Accountability demands that research methodology, ethical evaluations, data collected, and
 results generated should be documented and made available responsibly in accordance with
-  balancing risks and benefits."<xref target="MenloReport"></xref> A user is best placed to balanced the risks and benefits for themselves therefore consent must be obtained. From most transparent to least, there are a few options for obtaining consent.</t>
+  balancing risks and benefits."<xref target="MenloReport"></xref> A user is best placed to balance the risks and benefits for themselves therefore consent must be obtained. From most transparent to least, there are a few options for obtaining consent.</t>
 
 <section anchor="informed-consent" title="Informed consent">
 <t>Informed consent should be collected from all users that
@@ -195,8 +196,8 @@ familiar with the expectations of users of a network than the researcher.</t>
 specifically allow for giving consent to third parties to perform certain
 experiments.</t>
 
-<t>Example: A researcher would like to perform a packet capture to determine the TCP
-options and their values used by all client devices on an corporate wireless
+<t>Example: Some researchers would like to perform a packet capture to determine the TCP
+options and their values used by all client devices on a corporate wireless
 network.</t>
 
 <t>The employer may already have terms of service laid out that allow them to
@@ -245,7 +246,7 @@ the reduced impact of A/B testing should not be used be an excuse to push update
 might compromise user expectations around security and privacy.</t>
 
 <t>In the event that something does go wrong with the update, it should be easy
-for a user to discover that they have been part of an experiment and roll back
+for users to discover that they have been part of an experiment and roll back
 the change, allowing for explicit refusal of consent to override the presumed
 implied consent.</t>
 </section>
