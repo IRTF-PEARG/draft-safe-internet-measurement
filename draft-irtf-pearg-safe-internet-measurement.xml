@@ -379,7 +379,7 @@ statistics in the software used by the Tor network.</t>
 <t>There are various techniques that can be used to reduce the accuracy of the collected data and make it
   less identifying.
 </t>
-<t>The use of binning to group numbers of more-or-less continuous values, coarse categorization in modeling, reduction in concentrations of IP address by geography (geoip) or other first- or second-order identifiers, the introduction of noise and all privacy-preserving measurement techniques that allow researchers to safely conduct internet measurement experiments without risking harm to real users.</t>
+<t>The use of binning to group numbers of more-or-less continuous values, coarse categorization in modeling, reduction in concentrations of IP address by geography (geoip) or other first- or second-order identifiers, the introduction of noise and all privacy-preserving measurement techniques that allow researchers to safely conduct internet measurement experiments without risking harm to real users<xref target="Janson"></xref>.</t>
 </section>
 
 <section anchor="risk-analysis" title="Analyze risk">
