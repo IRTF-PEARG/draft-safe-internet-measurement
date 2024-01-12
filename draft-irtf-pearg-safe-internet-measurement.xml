@@ -252,6 +252,20 @@ implied consent.</t>
 </section>
 </section>
 
+<section anchor="share" title="Share responsibly">
+<t>Further to use of measurement data, data is often shared with other researchers. Measurement data sharing comes with its own set of expectations and responsibilities of the provider.
+Likewise there are responsibilities that come with the use of others’ measurement data. One obvious expectation is around end-user consent (see "Implied consent" above). <xref target="allman">Allman and Paxson</xref> provide "a set of guidelines that aim to aid the process of sharing measurement data... [in] a framework under which providers and users can
+better attain a mutual understanding about how to treat particular
+datasets."</t>
+<t>Their guidance since 2007 has been for data providers to:</t>
+<ul><li>explicitly indications of the terms of a dataset’s acceptable use</li>
+<li>convey what interactions they desire or will accommodate.</li></ul>
+<t>Their guidance for researchers is to:</t>
+<ul><li>be thoughtful in the reporting of potentially sensitive information gleaned from providers’ data.</li>
+<li>comply with the indications and interactions of the data providers.</li></ul>
+<t>Example: Researchers have obtained network measurement data from more than one provider for purposes of conducting analysis of protocol use on both. Where privacy paritioning techniques are used, the researchers' findings may inadvertently collude to uncover private information about users. Once realised, researchers should mitigate this privacy risk to end users as well as disclosing this result to the data providers themselves.</t>
+</section>
+  
 <section anchor="use-a-testbed" title="Isolate risk with a dedicated testbed">
 <t>Wherever possible, use a testbed. An isolated network means that there are no
 other users sharing the infrastructure you are using for your experiments.</t>
@@ -512,6 +526,15 @@ Marwan Fayed and Jeroen van der Ham.</t>
 <date year='2023' month='November'/>
 </front>
 </reference>
+<reference anchor='Allman' target="https://conferences.sigcomm.org/imc/2007/papers/imc80.pdf">
+<front>
+<title>Issues and Etiquette Concerning Use of Shared Measurement Data</title>
+<author initials='M.' surname='Allman' fullname='Mark Allman'></author>
+<author initials='V.' surname='Paxson' fullname='Vern Paxson'></author>
+<date year='2007' month='October'/>
+</front>
+</reference>
+
 </references>
 
 </back>
