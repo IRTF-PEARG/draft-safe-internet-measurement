@@ -67,7 +67,7 @@ be carried out safely, with examples.</t>
 the internet plays a role in enhancing research methods of different kinds.</t>
 <t>Performing research using the internet, as opposed to an isolated testbed
 or simulation platform, means that experiments co-exist in a space with other
-services and end users. Furthermore privacy considerations are of particular importance in internet measurement research that depends on collaboration and data sharing models between industry and academia<xref target="CAIDA"></xref>.</t>
+services and end users. Furthermore privacy considerations are of particular importance in internet measurement research that depends on collaboration and data sharing models between industry and academia<xref target="caida"></xref>.</t>
 <t>This document outlines guidelines for academic, industry and civil society researchers
 who might use the internet as part of scientific experimentation to mitigate
 risks to the safety of users.</t>
@@ -259,7 +259,7 @@ implied consent.</t>
 
 <section anchor="share" title="Share responsibly">
 <t>Further to use of measurement data, data is often shared with other researchers. Measurement data sharing comes with its own set of expectations and responsibilities of the provider.
-Likewise there are responsibilities that come with the use of others’ measurement data. One obvious expectation is around end-user consent (see "Implied consent" above). <xref target="allman">Allman and Paxson</xref> provide "a set of guidelines that aim to aid the process of sharing measurement data... [in] a framework under which providers and users can
+Likewise there are responsibilities that come with the use of others’ measurement data. One obvious expectation is around end-user consent (see "Implied consent" above). <xref target="Allman">Allman and Paxson</xref> provide "a set of guidelines that aim to aid the process of sharing measurement data... [in] a framework under which providers and users can
 better attain a mutual understanding about how to treat particular
 datasets."</t>
 <t>Their guidance since 2007 has been for data providers to:</t>
