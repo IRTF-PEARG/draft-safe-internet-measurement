@@ -379,8 +379,9 @@ statistics in the software used by the Tor network.</t>
 </section>
 
 <section anchor="risk-analysis" title="Analyze risk">
-<t>TODO: expand. The benefits should outweigh the risks.
-Consider auxiliary data (e.g. third-party data sets) when assessing the risks.</t>
+<t>The benefits of internet measurement should outweigh the risks.
+Consider auxiliary data (e.g. third-party data sets) when assessing the risks. Consider that while a privacy risk may not be immediately apparent or realisable, in the future increased computing power may then make something possible.</t>
+<t>Example: A research project releases encrypted payloads as a method for minimising exposure of sensitive user data. However the encryption could be trivially broken in the future with typical increases in computing power.</t>
 </section>
 </section> 
 
