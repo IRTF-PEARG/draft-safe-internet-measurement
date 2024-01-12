@@ -44,7 +44,6 @@ Guidelines for Performing Safe Measurement on the Internet
 <keyword>measurement</keyword>
 <keyword>monitoring</keyword>
 <keyword>research</keyword>
-<keyword>internet</keyword>
 
 <abstract>
 <t>Internet measurement is important to researchers from industry, academia and civil society. While measurement of the internet can give insight into the
@@ -121,7 +120,7 @@ measurements against the benefits to impacted users.</t>
 <t>Some possible ways in which users can be affected as a result of an internet measurement study:</t>
 
 <t>Breach of privacy: User privacy can be violated in the context of data collection. This impact also covers the case of an internet user's data
-  being shared beyond that which a user had given consent for.</t>
+  being shared beyond that for which a user had given consent. First-order data that distinguishes a person such as name, as well as second-order data that can be used to track behaviour such as IP address, should be considered<xref target="Kenneally"></xref></t>
 
 <t>Inadequate data protection: A scenario where data, either in
   transit or at rest, lacks sufficient protection from disclosure.
@@ -541,6 +540,14 @@ Marwan Fayed and Jeroen van der Ham.</t>
 <title>Promotion of Data Sharing</title>
 <author><organization>CAIDA</organization></author>
 <date year='2010' month='January'/>
+</front>
+</reference>
+<reference anchor='Kenneally' target="https://www.caida.org/catalog/papers/2010_dialing_privacy_utility/dialing_privacy_utility.pdf">
+<front>
+<title>Dialing privacy and utility: a proposed data-sharing framework to advance Internet research</title>
+<author initials='E.' surname='Kenneally' fullname='Erin Kenneally'></author>
+<author initials='K.' surname='Claffy' fullname='Kimberly Claffy'></author>
+<date year='2010'/>
 </front>
 </reference>
 </references>
