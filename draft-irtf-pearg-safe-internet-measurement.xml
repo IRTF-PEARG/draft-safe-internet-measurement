@@ -68,7 +68,8 @@ be carried out safely, with examples.</t>
 the internet plays a role in enhancing research methods of different kinds.</t>
 <t>Performing research using the internet, as opposed to an isolated testbed
 or simulation platform, means that experiments co-exist in a space with other
-services and end users. This document outlines guidelines for academic, industry and civil society researchers
+services and end users. Furthermore privacy considerations are of particular importance in internet measurement research that depends on collaboration and data sharing models between industry and academia<xref target="CAIDA"></xref>.</t>
+<t>This document outlines guidelines for academic, industry and civil society researchers
 who might use the internet as part of scientific experimentation to mitigate
 risks to the safety of users.</t>
 
@@ -534,7 +535,13 @@ Marwan Fayed and Jeroen van der Ham.</t>
 <date year='2007' month='October'/>
 </front>
 </reference>
-
+<reference anchor='caida' target="https://www.caida.org/catalog/datasets/sharing">
+<front>
+<title>Promotion of Data Sharing</title>
+<author><organization>CAIDA</organization></author>
+<date year='2010' month='January'/>
+</front>
+</reference>
 </references>
 
 </back>
