@@ -208,6 +208,9 @@ of the network. The purpose of the experiment may affect whether or not they
 are able to provide this consent. Say, performing engineering work on
 the network may be allowed, whereas academic research may not be
 already covered.</t>
+
+<t>Example: A research project looks at networked "things", yet users' only interface with the network is through a device that does not provide interaction to the degree that would be sufficient to obtain informed consent at time of use.</t>
+<t>However in this case the user can be informed of the use of data for internet measurement research in the device's terms of use and privacy notice, which can be included in a printed, physical manual for the device or accessed at any time via a webpage. These are examples of proxy consent such that the device manufacturer may choose to share data under certain specified conditions, or to conduct their own measurements.</t>
 </section>
 
 <section anchor="low-risk" title="Implied consent">
