@@ -138,6 +138,8 @@ internet.</t>
 <t>Legal: Users and service providers are bound by a wide range of policies from Terms of Service to rule of law, each according to context and jurisdiction. 
   A measurement study may violate these policies, and the consequences of such a violation may be severe.</t>
 
+<t>Unavailability: Users or other entities may rely on the information or systems that are involved in the research and they may be harmed by unexpected or planned unavailability of that information or systems<xref target="Menlo"></xref>.</t>
+
 <t>System or data corruption: A scenario where generated or modified traffic causes the
 corruption of a system. This covers cases where a user's data may be
 lost or corrupted, and cases where a user's access to a system may be affected as a result.
@@ -156,7 +158,7 @@ lost or corrupted, and cases where a user's access to a system may be affected a
 <section anchor="consent" title="Obtain consent">
 <t>Accountability and transparency are fundamentally related to consent. As per the Menlo Report, "Accountability demands that research methodology, ethical evaluations, data collected, and
 results generated should be documented and made available responsibly in accordance with
-  balancing risks and benefits."<xref target="MenloReport"></xref> A user is best placed to balance the risks and benefits for themselves therefore consent must be obtained. From most transparent to least, there are a few options for obtaining consent.</t>
+  balancing risks and benefits."<xref target="Menlo"></xref> A user is best placed to balance the risks and benefits for themselves therefore consent must be obtained. From most transparent to least, there are a few options for obtaining consent.</t>
 
 <section anchor="informed-consent" title="Informed consent">
 <t>Informed consent should be collected from all users that
@@ -399,7 +401,7 @@ Consider auxiliary data (e.g. third-party data sets) when assessing the risks. C
 internet research.</t>
 
 <t>Other considerations are taken from the Menlo Report
-<xref target="MenloReport"></xref> and its companion document
+<xref target="Menlo"></xref> and its companion document
 <xref target="MenloReportCompanion"></xref>.</t>
 
 <t>Comments of several people on the mailing list was helpful, especially
@@ -449,7 +451,7 @@ Marwan Fayed and Jeroen van der Ham.</t>
 </front>
 <seriesInfo name="Tor Tech Report" value="2017-04-001"/>
 </reference>
-<reference anchor="MenloReport" target="https://www.caida.org/publications/papers/2012/menlo_report_actual_formatted/">
+<reference anchor="Menlo" target="https://www.dhs.gov/sites/default/files/publications/CSD-MenloPrinciplesCORE-20120803_1.pdf">
 <front>
 <title>The Menlo Report: Ethical Principles Guiding Information and Communication Technology Research</title>
 <author initials="D." surname="Dittrich" fullname="D. Dittrich"><organization/></author>
