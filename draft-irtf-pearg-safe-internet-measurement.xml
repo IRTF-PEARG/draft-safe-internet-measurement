@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rfc docName='draft-irtf-pearg-safe-internet-measurement-09' ipr="trust200902" submissionType="IRTF" category="info" xml:lang="en"><!-- xmlns:xi="http://www.w3.org/2001/XInclude"-->
+<rfc docName='draft-irtf-pearg-safe-internet-measurement-10' ipr="trust200902" submissionType="IRTF" category="info" xml:lang="en"><!-- xmlns:xi="http://www.w3.org/2001/XInclude"-->
 <front>
 
 <title abbrev='Safe Internet Measurement'>
@@ -16,16 +16,6 @@ Guidelines for Performing Safe Measurement on the Internet
   </address>
 </author>
 
-<author initials="G." surname="Grover" fullname="Gurshabad Grover">
-  <organization>Centre for Internet and Society</organization>
-  <address>
-    <postal>
-      <street></street>
-    </postal>
-    <email>gurshabad@cis-india.org</email>
-  </address>
-</author>
-
 <author initials="M." surname="Knodel" fullname="Mallory Knodel">
   <organization>Center for Democracy and Technology</organization>
   <address>
@@ -33,6 +23,15 @@ Guidelines for Performing Safe Measurement on the Internet
       <street></street>
     </postal>
     <email>mknodel@cdt.org</email>
+  </address>
+</author>
+
+<author initials="G." surname="Grover" fullname="Gurshabad Grover">
+  <address>
+    <postal>
+      <street></street>
+    </postal>
+    <email>gurshabad@cis-india.org</email>
   </address>
 </author>
 
@@ -67,7 +66,7 @@ be carried out safely, with examples.</t>
 the internet plays a role in enhancing research methods of different kinds.</t>
 <t>Performing research using the internet, as opposed to an isolated testbed
 or simulation platform, means that experiments co-exist in a space with other
-services and end users. Furthermore privacy considerations are of particular importance in internet measurement research that depends on collaboration and data sharing models between industry and academia<xref target="caida"></xref>.</t>
+services and end users. Furthermore privacy considerations are of particular importance in internet measurement research that depends on collaboration and data sharing between industry and academia <xref target="caida"></xref>.</t>
 <t>This document outlines guidelines for academic, industry and civil society researchers
 who might use the internet as part of scientific experimentation to mitigate
 risks to the safety of users.</t>
@@ -82,7 +81,7 @@ risks to the safety of users.</t>
 could help to inform that process. It is particularly important for the growing area of research that includes internet measurement to better equip review boards to evaluate internet measurement methods <xref target="SIGCOMM"></xref>, and we hope that this document is part of that larger effort.</t>
  
 <t>Similarly, these guidelines are not legal
-advice and local laws must also be considered before starting any experiment
+advice. Local laws must be considered before starting any experiment
 that could have adverse impacts on user safety.</t>
 
 <t>The scope of this document is restricted to guidelines that mitigate exposure
@@ -97,8 +96,8 @@ there is a circumstance, capability, action, or event that could
 breach security and cause harm <xref target="RFC4949"></xref>.</t>
 
 <t>User: For the purpose of this document, an internet user is an individual or
-  organisation whose data is used in communications over the internet, most broadly, and those who use the internet to communicate or maintain internet
-  infrastructure.</t>
+  organisation whose data is used in communications over the internet, and most broadly, 
+  those who use the internet to communicate.</t>
 
 <t>Active measurement: Active measurements generate
 or modify traffic.</t>
@@ -107,7 +106,7 @@ or modify traffic.</t>
 
 <t>On/off-path: A measurement that is on-path happens on the network. Off-path indicates activity in a side-channel, end-point or at other points where the user, their connection, or their data can be accessed.</t>
 
-<t>One-/two-ended: A single-ended measurement is like a probe or a trace, whereas a measurement with two-ended control provides more accuracy but requires the cooperation of both endpoints, which might include the network itself if that is the measurement target.</t>
+<t>One-/two-ended: A one-ended measurement is like a probe or a trace. A measurement with two-ended control requires the cooperation of both endpoints, which might include the network itself if that is the measurement target.</t>
 </section>
 
 <section anchor="user-impact" title="User impact from measurement studies">
@@ -120,7 +119,7 @@ measurements against the benefits to impacted users.</t>
 <t>Some possible ways in which users can be affected as a result of an internet measurement study:</t>
 
 <t>Breach of privacy: User privacy can be violated in the context of data collection. This impact also covers the case of an internet user's data
-  being shared beyond that for which a user had given consent. First-order data that distinguishes a person such as name, as well as second-order data that can be used to track behaviour such as IP address, should be considered<xref target="Kenneally"></xref></t>
+  being shared beyond that for which a user had given consent. First-order data that distinguishes a person, such as name, as well as second-order data that can be used to track behaviour, such as IP address, should be considered. <xref target="Kenneally"></xref></t>
 
 <t>Inadequate data protection: A scenario where data, either in
   transit or at rest, lacks sufficient protection from disclosure.
@@ -138,7 +137,7 @@ internet.</t>
 <t>Legal: Users and service providers are bound by a wide range of policies from Terms of Service to rule of law, each according to context and jurisdiction. 
   A measurement study may violate these policies, and the consequences of such a violation may be severe.</t>
 
-<t>Unavailability: Users or other entities may rely on the information or systems that are involved in the research and they may be harmed by unexpected or planned unavailability of that information or systems<xref target="Menlo"></xref>.</t>
+<t>Unavailability: Users or other entities may rely on the information or systems that are involved in the research and they may be harmed by unexpected or planned unavailability of that information or systems <xref target="Menlo"></xref>.</t>
 
 <t>System or data corruption: A scenario where generated or modified traffic causes the
 corruption of a system. This covers cases where a user's data may be
@@ -158,16 +157,16 @@ lost or corrupted, and cases where a user's access to a system may be affected a
 <section anchor="consent" title="Obtain consent">
 <t>Accountability and transparency are fundamentally related to consent. As per the Menlo Report, "Accountability demands that research methodology, ethical evaluations, data collected, and
 results generated should be documented and made available responsibly in accordance with
-  balancing risks and benefits."<xref target="Menlo"></xref> A user is best placed to balance the risks and benefits for themselves therefore consent must be obtained. From most transparent to least, there are a few options for obtaining consent.</t>
+  balancing risks and benefits." <xref target="Menlo"></xref> A user is best placed to balance the risks and benefits for themselves therefore consent must be obtained. From most transparent to least, there are a few options for obtaining consent.</t>
 
 <section anchor="informed-consent" title="Informed consent">
 <t>Informed consent should be collected from all users that
 may be placed at risk by an experiment.</t>
 
 <t>For consent to be informed, a reasonable coverage of possible risks must be presented to the users.
-The considerations in this document can be used to provide a starting point
+The considerations in this document can be used to provide a starting point,
 although other risks may be present depending on the nature of the measurements
-to be performed. In addition, it should be clear from the consent language who the asker is, and what the terms
+to be performed. In addition, it should be clear from the language of consent request who the asker is, and what the terms
 of data observation and/or collection are.</t>
 
 <t>Example: A researcher would like to use volunteer-owned mobile devices to collect
@@ -176,7 +175,7 @@ volunteer's device with services and content known or suspected to be subject to
 
 <t>This experiment can carry substantial risk for the user depending on their specific
 circumstances. Trying to access censored material can be seen as (network) policy infringement or breaking laws.
-Consequences can range from disciplinary action from their employer to arrest or
+Consequences can range from disciplinary action from their employer to 
 imprisonment by government authorities. If the experimenter wants to expose volunteers to this kind of risk,
 users must be fully informed, and voluntarily give consent to run the measurement.
 Even then, experimenters should seriously consider designing their experiment in another way.</t>
@@ -262,8 +261,8 @@ implied consent.</t>
 Likewise there are responsibilities that come with the use of others’ measurement data. One obvious expectation is around end-user consent (see "Implied consent" above). <xref target="Allman">Allman and Paxson</xref> provide "a set of guidelines that aim to aid the process of sharing measurement data... [in] a framework under which providers and users can
 better attain a mutual understanding about how to treat particular
 datasets."</t>
-<t>Their guidance since 2007 has been for data providers to:</t>
-<ul><li>explicitly indications of the terms of a dataset’s acceptable use</li>
+<t>Their guidance for data providers is to:</t>
+<ul><li>explicitly indicate the terms of a dataset’s acceptable use</li>
 <li>convey what interactions they desire or will accommodate.</li></ul>
 <t>Their guidance for researchers is to:</t>
 <ul><li>be thoughtful in the reporting of potentially sensitive information gleaned from providers’ data.</li>
@@ -337,10 +336,10 @@ reduces the amount of data that can be misused or leaked.</t>
 
 <t>When deciding on the data to collect, assume that any data collected might
 be disclosed. There are many ways that this could happen, through operational
-security mistakes or compulsion by a judicial system.</t>
+security mistakes or compulsion by a state authority.</t>
 
 <t>When directly instrumenting a protocol to provide metrics to a passive
-observer, see section 6.1 of RFC6973<xref target="RFC6973"></xref> for the data
+observer, see section 6.1 of RFC6973 <xref target="RFC6973"></xref> for the data
 minimization considerations enumerated below that are specific to the use case.</t>
 
 <section anchor="minimization-discard" title="Discard data">
@@ -379,13 +378,24 @@ statistics in the software used by the Tor network.</t>
 <t>There are various techniques that can be used to reduce the accuracy of the collected data and make it
   less identifying.
 </t>
-<t>The use of binning to group numbers of more-or-less continuous values, coarse categorization in modeling, reduction in concentrations of IP address by geography (geoip) or other first- or second-order identifiers, the introduction of noise and all privacy-preserving measurement techniques that allow researchers to safely conduct internet measurement experiments without risking harm to real users<xref target="Janson"></xref>.</t>
+<t>The use of binning to group numbers of more-or-less continuous values, coarse categorization in modeling, reduction in concentrations of IP address by geography (geoip) or other first- or second-order identifiers, the introduction of noise and all privacy-preserving measurement techniques that allow researchers to safely conduct internet measurement experiments without risking harm to real users <xref target="Janson"></xref>.</t>
 </section>
 
 <section anchor="risk-analysis" title="Analyze risk">
-<t>The benefits of internet measurement should outweigh the risks.
-Consider auxiliary data (e.g. third-party data sets) when assessing the risks. Consider that while a privacy risk may not be immediately apparent or realisable, in the future increased computing power may then make something possible.</t>
+<t>The benefits of internet measurement should outweigh the risks. <xref target="Menlo"> <xref target="Kenneally"></t>
+
+<t>Consider auxiliary data (e.g. third-party data sets) when assessing the risks. Consider that while a privacy risk may not be immediately apparent or realisable, in the future increased computing power may then make something possible.</t>
+
 <t>Example: A research project releases encrypted payloads as a method for minimising exposure of sensitive user data. However the encryption could be trivially broken in the future with typical increases in computing power.</t>
+</section>
+
+<section anchor="transparency" title="Transparency and accountability">
+<t>Have “a general policy of openness about developments, practices and policies with respect to personal data.” <xref target="OECD"></t> 
+
+<t>Despite best intentions, things fall apart. In the case of any adverse events, researchers should “responsibly inform affected stakeholders.” <xref target="Menlo"> Where contacting users is not feasible, information about discovery of security vulnerabilities, improvements and fixes, data compromise, instances of unauthorized access to information should be published publicly.</t>
+
+<t>If possible, institute a regular accountability and reporting mechanism, such as an annual review by an advisory board. Such regular accountability mechanisms can include an assessment of the experiment's impact on user safety and privacy, analysis of security events, and an evaluation of whether the experiment is meeting its expected goals.</t>
+
 </section>
 </section> 
 
@@ -489,6 +499,13 @@ Marwan Fayed and Jeroen van der Ham.</t>
   <author initials="N." surname="Van Dijkhuizen" fullname="Niels Van Dijkhuizen"><organization/></author>
   <author initials="J." surname="Van Der Ham" fullname="Jeroen Van Der Ham"><organization/></author>
   <date year="2018" month="May"/>
+  </front>
+</reference>
+<!-- Reference for OECD Privacy Principles -->
+<reference anchor="OECD" target="http://oecdprivacy.org/">
+  <front>
+  <title>OECD Privacy Principles</title>
+  <date year="1980" />
   </front>
 </reference>
 <!-- Reference for ZMap -->
