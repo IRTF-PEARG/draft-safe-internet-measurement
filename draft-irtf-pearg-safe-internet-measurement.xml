@@ -66,7 +66,7 @@ be carried out safely, with examples.</t>
 the internet plays a role in enhancing research methods of different kinds.</t>
 <t>Performing research using the internet, as opposed to an isolated testbed
 or simulation platform, means that experiments co-exist in a space with other
-services and end users. Furthermore privacy considerations are of particular importance in internet measurement research that depends on collaboration and data sharing between industry and academia <xref target="caida"></xref>.</t>
+services and end users. Furthermore privacy considerations are of particular importance in internet measurement research that depends on collaboration and data sharing between industry and academia <xref target="caida"/>.</t>
 <t>This document outlines guidelines for academic, industry and civil society researchers
 who might use the internet as part of scientific experimentation to mitigate
 risks to the safety of users.</t>
@@ -78,7 +78,7 @@ risks to the safety of users.</t>
   risk, or injury arising due to the research, now or in the future.</t>
 
 <t>Following the guidelines contained within this document is not a substitute for institutional ethics review processes, although these guidelines
-could help to inform that process. It is particularly important for the growing area of research that includes internet measurement to better equip review boards to evaluate internet measurement methods <xref target="SIGCOMM"></xref>, and we hope that this document is part of that larger effort.</t>
+could help to inform that process. It is particularly important for the growing area of research that includes internet measurement to better equip review boards to evaluate internet measurement methods <xref target="SIGCOMM"/>, and we hope that this document is part of that larger effort.</t>
  
 <t>Similarly, these guidelines are not legal
 advice. Local laws must be considered before starting any experiment
@@ -93,7 +93,7 @@ the network, its constituent hosts and links, or user traffic.</t>
 <section anchor="terminology" title="Terminology">
 <t>Threat model: A threat is a potential for a security violation, which exists when
 there is a circumstance, capability, action, or event that could
-breach security and cause harm <xref target="RFC4949"></xref>.</t>
+breach security and cause harm <xref target="RFC4949"/>.</t>
 
 <t>User: For the purpose of this document, an internet user is an individual or
   organisation whose data is used in communications over the internet, and most broadly, 
@@ -119,7 +119,7 @@ measurements against the benefits to impacted users.</t>
 <t>Some possible ways in which users can be affected as a result of an internet measurement study:</t>
 
 <t>Breach of privacy: User privacy can be violated in the context of data collection. This impact also covers the case of an internet user's data
-  being shared beyond that for which a user had given consent. First-order data that distinguishes a person, such as name, as well as second-order data that can be used to track behaviour, such as IP address, should be considered. <xref target="Kenneally"></xref></t>
+  being shared beyond that for which a user had given consent. First-order data that distinguishes a person, such as name, as well as second-order data that can be used to track behaviour, such as IP address, should be considered. <xref target="Kenneally"/></t>
 
 <t>Inadequate data protection: A scenario where data, either in
   transit or at rest, lacks sufficient protection from disclosure.
@@ -137,7 +137,7 @@ internet.</t>
 <t>Legal: Users and service providers are bound by a wide range of policies from Terms of Service to rule of law, each according to context and jurisdiction. 
   A measurement study may violate these policies, and the consequences of such a violation may be severe.</t>
 
-<t>Unavailability: Users or other entities may rely on the information or systems that are involved in the research and they may be harmed by unexpected or planned unavailability of that information or systems <xref target="Menlo"></xref>.</t>
+<t>Unavailability: Users or other entities may rely on the information or systems that are involved in the research and they may be harmed by unexpected or planned unavailability of that information or systems <xref target="Menlo"/>.</t>
 
 <t>System or data corruption: A scenario where generated or modified traffic causes the
 corruption of a system. This covers cases where a user's data may be
@@ -150,14 +150,14 @@ lost or corrupted, and cases where a user's access to a system may be affected a
 
 <section anchor="guidelines" title="Guidelines">
 <section anchor="attribute" title="Attribute">
-<t>Proactively identify your measurement to others on the network. "This allows any party or organization to understand what an unsolicited probe packet is, what its purpose is, and, most importantly, who to contact."<xref target="RFC9511"></xref> </t>
+<t>Proactively identify your measurement to others on the network. "This allows any party or organization to understand what an unsolicited probe packet is, what its purpose is, and, most importantly, who to contact."<xref target="RFC9511"/> </t>
 <t>Example: For a layer 3 IP packet probe you could mark measurements with a probe description URI as defined in RFC9511.</t>
 
 </section>
 <section anchor="consent" title="Obtain consent">
 <t>Accountability and transparency are fundamentally related to consent. As per the Menlo Report, "Accountability demands that research methodology, ethical evaluations, data collected, and
 results generated should be documented and made available responsibly in accordance with
-  balancing risks and benefits." <xref target="Menlo"></xref> A user is best placed to balance the risks and benefits for themselves therefore consent must be obtained. From most transparent to least, there are a few options for obtaining consent.</t>
+  balancing risks and benefits." <xref target="Menlo"/> A user is best placed to balance the risks and benefits for themselves therefore consent must be obtained. From most transparent to least, there are a few options for obtaining consent.</t>
 
 <section anchor="informed-consent" title="Informed consent">
 <t>Informed consent should be collected from all users that
@@ -279,7 +279,7 @@ produce more accurate and repeatable results than experiments using the public
 internet.</t>
 
 <t>Example: WAN link conditions can be emulated through artificial delays and/or packet
-loss using a tool like <xref target="netem"></xref>. Competing traffic can
+loss using a tool like <xref target="netem"/>. Competing traffic can
 also be emulated using traffic generators.</t>
 </section>
 
@@ -339,7 +339,7 @@ be disclosed. There are many ways that this could happen, through operational
 security mistakes or compulsion by a state authority.</t>
 
 <t>When directly instrumenting a protocol to provide metrics to a passive
-observer, see section 6.1 of RFC6973 <xref target="RFC6973"></xref> for the data
+observer, see section 6.1 of RFC6973 <xref target="RFC6973"/> for the data
 minimization considerations enumerated below that are specific to the use case.</t>
 
 <section anchor="minimization-discard" title="Discard data">
@@ -350,7 +350,7 @@ have generated. Traffic may be identified by IP ranges or by some token that is
 unlikely to be used by other users.</t>
 
 <t>Again, this can help to improve the accuracy and repeatability of your
-experiment. For performance benchmarking, <xref target="RFC2544"></xref>
+experiment. For performance benchmarking, <xref target="RFC2544"/>
 requires that any frames received that were not part of the test traffic are
 discarded and not counted in the results.</t>
 </section>
@@ -369,7 +369,7 @@ content itself. The content can be replaced with tokens or encrypted.</t>
 <t>When collecting data, consider if the granularity can be limited by using
 bins or adding noise. Differential privacy techniques <xref target="DifferentialPrivacy"/> can help with this.</t>
 
-<t>Example: <xref target="Tor.2017-04-001"></xref> presents a case-study on the in-memory
+<t>Example: <xref target="Tor.2017-04-001"/> presents a case-study on the in-memory
 statistics in the software used by the Tor network.</t>
 </section>
   </section>
@@ -382,7 +382,7 @@ statistics in the software used by the Tor network.</t>
 </section>
 
 <section anchor="risk-analysis" title="Analyze risk">
-<t>The benefits of internet measurement should outweigh the risks. <xref target="Menlo"> <xref target="Kenneally"></t>
+<t>The benefits of internet measurement should outweigh the risks. <xref target="Menlo"/> <xref target="Kenneally"/></t>
 
 <t>Consider auxiliary data (e.g. third-party data sets) when assessing the risks. Consider that while a privacy risk may not be immediately apparent or realisable, in the future increased computing power may then make something possible.</t>
 
@@ -390,9 +390,9 @@ statistics in the software used by the Tor network.</t>
 </section>
 
 <section anchor="transparency" title="Transparency and accountability">
-<t>Have “a general policy of openness about developments, practices and policies with respect to personal data.” <xref target="OECD"></t> 
+<t>Have “a general policy of openness about developments, practices and policies with respect to personal data.” <xref target="OECD"/></t> 
 
-<t>Despite best intentions, things fall apart. In the case of any adverse events, researchers should “responsibly inform affected stakeholders.” <xref target="Menlo"> Where contacting users is not feasible, information about discovery of security vulnerabilities, improvements and fixes, data compromise, instances of unauthorized access to information should be published publicly.</t>
+<t>Despite best intentions, things fall apart. In the case of any adverse events, researchers should “responsibly inform affected stakeholders.” <xref target="Menlo"/> Where contacting users is not feasible, information about discovery of security vulnerabilities, improvements and fixes, data compromise, instances of unauthorized access to information should be published publicly.</t>
 
 <t>If possible, institute a regular accountability and reporting mechanism, such as an annual review by an advisory board. Such regular accountability mechanisms can include an assessment of the experiment's impact on user safety and privacy, analysis of security events, and an evaluation of whether the experiment is meeting its expected goals.</t>
 
@@ -410,12 +410,12 @@ statistics in the software used by the Tor network.</t>
 
 <section anchor="acknowledgements" title="Acknowledgements">
 <t>Many of these considerations are based on those from the
-<xref target="TorSafetyBoard"></xref> adapted and generalised to be applied to
+<xref target="TorSafetyBoard"/> adapted and generalised to be applied to
 internet research.</t>
 
 <t>Other considerations are taken from the Menlo Report
-<xref target="Menlo"></xref> and its companion document
-<xref target="MenloReportCompanion"></xref>.</t>
+<xref target="Menlo"/> and its companion document
+<xref target="MenloReportCompanion"/>.</t>
 
 <t>Comments of several people on the mailing list was helpful, especially
 Marwan Fayed and Jeroen van der Ham.</t>
@@ -505,7 +505,8 @@ Marwan Fayed and Jeroen van der Ham.</t>
 <reference anchor="OECD" target="http://oecdprivacy.org/">
   <front>
   <title>OECD Privacy Principles</title>
-  <date year="1980" />
+  <author><organization>OECD</organization></author>
+  <date year="1980"/>
   </front>
 </reference>
 <!-- Reference for ZMap -->
