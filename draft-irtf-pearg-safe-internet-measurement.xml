@@ -313,8 +313,11 @@ generation for use in a larger measurement system, ensure that the tool will
 support the use of a "Do Not Scan" list.</t>
 
 <t>If complaints are made that request you do not generate traffic towards a
-host or network, you must add that host or network to your "Do Not Scan" list,
-even if no explanation is given or the request is automated.</t>
+host or network, you should add that host or network to your "Do Not Scan" list,
+even if the request is automated. However it seems reasonable that these requests
+could be evaluated in context. (For example in censorship measurement it would
+be comensurate to ensure the request isn't an attempt to hide the fact that a
+certain target is unreachable in a particular geography.)</t>
 
 <t>You may ask the requester for their reasoning if it would be useful to your
 experiment. This can also be an opportunity to explain your research and offer
@@ -327,6 +330,10 @@ infer your "Do Not Scan" list from those results. For example, if you measured a
 well-known list of popular websites then it would be possible to correlate the
 results with that list to determine which are missing. This inference might leak the fact
 that those websites specifically requested to not be scanned.</t>
+
+<t>On the other hand there may be benefits to publish your "Do Not Scan" list including
+the opportunity to reconsider the list over time, invite feedback, ensure research
+reproducability, or bootstrapping other measurement projects or tools.</t>
 </section>
 
 <section anchor="minimization" title="Minimize data">
