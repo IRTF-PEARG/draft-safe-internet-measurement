@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rfc docName='draft-irtf-pearg-safe-internet-measurement-10' ipr="trust200902" submissionType="IRTF" category="info" xml:lang="en"><!-- xmlns:xi="http://www.w3.org/2001/XInclude"-->
+<rfc docName='draft-irtf-pearg-safe-internet-measurement-12' ipr="trust200902" submissionType="IRTF" category="info" xml:lang="en"><!-- xmlns:xi="http://www.w3.org/2001/XInclude"-->
 <front>
 
 <title abbrev='Safe Internet Measurement'>
@@ -17,21 +17,22 @@ Guidelines for Performing Safe Measurement on the Internet
 </author>
 
 <author initials="M." surname="Knodel" fullname="Mallory Knodel">
-  <organization>Center for Democracy and Technology</organization>
+  <organization></organization>
   <address>
     <postal>
       <street></street>
     </postal>
-    <email>mknodel@cdt.org</email>
+    <email>mallory.knodel@nyu.edu</email>
   </address>
 </author>
 
 <author initials="G." surname="Grover" fullname="Gurshabad Grover">
+  <organization>internet Research Lab</organization>
   <address>
     <postal>
       <street></street>
     </postal>
-    <email>gurshabad@cis-india.org</email>
+    <email>gurshabad@irl.works</email>
   </address>
 </author>
 
@@ -72,10 +73,11 @@ who might use the internet as part of scientific experimentation to mitigate
 risks to the safety of users.</t>
 
 <section anchor="scope" title="Scope of this document">
-<t>These are guidelines for how to measure the internet safely.
-  When performing research on a platform shared with live traffic from other users,
-  that research is considered safe if and only if other users are protected from or unlikely to experience danger,
-  risk, or injury arising due to the research, now or in the future.</t>
+<t>The document contains guidelines for how to measure the internet while prioritising user safety. 
+The guidelines are particularly germane to projects that involve the generation, collection and/or analysis of traffic from humans.
+When performing research on a platform shared with live traffic from 
+ users, that research is considered safe if and only if the users and others are protected from or unlikely to experience danger,
+ risk, or injury arising due to the research, now or in the future.</t>
 
 <t>Following the guidelines contained within this document is not a substitute for institutional ethics review processes, although these guidelines
 could help to inform that process. It is particularly important for the growing area of research that includes internet measurement to better equip review boards to evaluate internet measurement methods <xref target="SIGCOMM"/>, and we hope that this document is part of that larger effort.</t>
@@ -118,8 +120,13 @@ measurements against the benefits to impacted users.</t>
 
 <t>Some possible ways in which users can be affected as a result of an internet measurement study:</t>
 
-<t>Breach of privacy: User privacy can be violated in the context of data collection. This impact also covers the case of an internet user's data
-  being shared beyond that for which a user had given consent. First-order data that distinguishes a person, such as name, as well as second-order data that can be used to track behaviour, such as IP address, should be considered. <xref target="Kenneally"/></t>
+<t>Breach of privacy: User privacy can be affected or violated in many ways. 
+  The first consideration is at the stage of data collection itself. 
+  First-order data, such as name, can distinguish a person. Second-order data, such as IP address, can be used to track behaviour.
+  The second privacy risk is an internet user's data being shared beyond that for which a user had given consent, through accidental, malicious or compelled disclosure.
+  A third privacy consideration relates to the risk of re-identification or de-anonymization of obfuscated or masked user data.   
+  <xref target="Kenneally"/></t>
+  
 
 <t>Inadequate data protection: A scenario where data, either in
   transit or at rest, lacks sufficient protection from disclosure.
@@ -134,8 +141,9 @@ internet.</t>
 
 <t>Impersonation: A scenario where a user is impersonated during a measurement.</t>
 
-<t>Legal: Users and service providers are bound by a wide range of policies from Terms of Service to rule of law, each according to context and jurisdiction. 
-  A measurement study may violate these policies, and the consequences of such a violation may be severe.</t>
+<t>Legal: Users and service providers are bound by a wide range of policies from Terms of Service to laws, each according to context and jurisdiction. 
+  A measurement study may violate these policies, and the consequences of such a violation may be severe.
+  At the same time, legal requests may compel disclosure of sensitive data to government entities or to courts in lawsuits. <xref target="Kenneally"/></t>
 
 <t>Unavailability: Users or other entities may rely on the information or systems that are involved in the research and they may be harmed by unexpected or planned unavailability of that information or systems <xref target="Menlo"/>.</t>
 
@@ -152,6 +160,8 @@ lost or corrupted, and cases where a user's access to a system may be affected a
 <section anchor="attribute" title="Attribute">
 <t>Proactively identify your measurement to others on the network. "This allows any party or organization to understand what an unsolicited probe packet is, what its purpose is, and, most importantly, who to contact."<xref target="RFC9511"/> </t>
 <t>Example: For a layer 3 IP packet probe you could mark measurements with a probe description URI as defined in RFC9511.</t>
+<t>This guideline may be ignored if and only if attribution runs contrary to the purpose of the measurement study or would otherwise render it ineffectual.
+For example, for an experiment collecting information about local internet censorship, the network may provide different results if the connections can be identified as serving that purpose.</t>
 
 </section>
 <section anchor="consent" title="Obtain consent">
@@ -388,10 +398,15 @@ statistics in the software used by the Tor network.</t>
 <t>The use of binning to group numbers of more-or-less continuous values, coarse categorization in modeling, reduction in concentrations of IP address by geography (geoip) or other first- or second-order identifiers, the introduction of noise and all privacy-preserving measurement techniques that allow researchers to safely conduct internet measurement experiments without risking harm to real users <xref target="Janson"></xref>.</t>
 </section>
 
-<section anchor="risk-analysis" title="Analyze risk">
+<section anchor="risk-analysis" title="Analyze risk and benefits">
 <t>The benefits of internet measurement should outweigh the risks. <xref target="Menlo"/> <xref target="Kenneally"/></t>
 
-<t>Consider auxiliary data (e.g. third-party data sets) when assessing the risks. Consider that while a privacy risk may not be immediately apparent or realisable, in the future increased computing power may then make something possible.</t>
+<t>Internet measurements studies should generally advance knowledge and create meaningful results. 
+Benefits of internet measurements studies can include but are not limited to analysis of internet topology; understanding the effect or prevalance of new internet technologies, protocols or applications; characterisation or prevention of malware or other security and privacy threats, and much more. <xref target="Kenneally"/></t>
+
+<t>The risks of internet measurement studies, particularly to user safety, are summarised in Section 1.3. Consider those risks, but also of auxiliary data (e.g. third-party data sets). Note that while a privacy risk may not be immediately apparent or realisable, in the future increased computing power may then make something possible.</t>
+
+<t>Ensuring that a project's benefits outweigh its risks means the application of the guidelines, but also through regular community feedback (particularly from those who will ostensibly benefit or be at risk through the project), proper auditing of the study, and impact assessments.</t>
 
 <t>Example: A research project releases encrypted payloads as a method for minimising exposure of sensitive user data. However the encryption could be trivially broken in the future with typical increases in computing power.</t>
 </section>
@@ -418,14 +433,11 @@ statistics in the software used by the Tor network.</t>
 <section anchor="acknowledgements" title="Acknowledgements">
 <t>Many of these considerations are based on those from the
 <xref target="TorSafetyBoard"/> adapted and generalised to be applied to
-internet research.</t>
-
-<t>Other considerations are taken from the Menlo Report
+internet research. Other considerations are taken from the Menlo Report
 <xref target="Menlo"/> and its companion document
-<xref target="MenloReportCompanion"/>.</t>
+<xref target="MenloReportCompanion"/>, and research and discussions of the internet measurement and ethics communities.</t>
 
-<t>Comments of several people on the mailing list was helpful, especially
-Marwan Fayed and Jeroen van der Ham.</t>
+<t>Comments and contributions from Marwan Fayed, Jeroen van der Ham, Arturo Filastò, Christian Huitema, Tobias Fiebig, Greg Skinner, Oliver Gasser, Craig Partridge, Eric Rescorla and Shivan Kaul Sahib greatly improved this document.</t>
 </section>
 </middle>
 
