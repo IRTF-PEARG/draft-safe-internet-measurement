@@ -48,7 +48,7 @@ Considerations for Performing Safe Measurement on the Internet
 <abstract>
 <t>Internet measurement is important to researchers from industry, academia and civil society. While measurement of the
 internet can give insight into the functioning and usage of the Internet, it can present risks to user privacy. This
-document describes briefly those risks. It also outlines considerations for researches to reference when designing
+document describes briefly those risks. It also outlines considerations for researchers to reference when designing
 internet measurements to ensuring that those measurements can be carried out with user safety as a priority.</t>
 </abstract>
 
@@ -71,7 +71,7 @@ plays a role in enhancing research methods of different kinds.
 <t> Performing research using the Internet, as opposed to an isolated testbed or simulation platform, means that
 experiments co-exist in a space with other services and end users. Researchers using the Internet as part of a
 scientific experiment include academic, industry and civil society researchers. This document outlines considerations
-for such researchers so they may mitigate risks to the safety of other services and end users.
+for such researchers so they may mitigate risks to the safety of end users and other services.
 </t>
 
 <t> It is common today for certain internet measurements to require an ethics review before gaining approval and to
