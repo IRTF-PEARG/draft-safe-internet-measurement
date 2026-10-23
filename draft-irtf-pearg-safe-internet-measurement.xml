@@ -76,10 +76,10 @@ for such researchers so they may mitigate risks to the safety of end users and o
 
 <t> It is common today for certain internet measurements to require an ethics review before gaining approval and to
 report details of that review in the resulting work. Previous work in the area of ethical concerns includes the Menlo Report
-[MenloReport] and its companion document [MenloReportCompanion], [Ethical Concerns for Censorship Measurement] as
-presented at SIGGCOMM, and [Operationalizing Cybersecurity Research Ethics Review: From Principles and Guidelines to
-Practice] as an example of ethical guidelines. Many organizations publish specific guidelines around safe measurements
-e.g. [TorSafetyBoard]. </t>
+[MenloReport] and its companion document [MenloReportCompanion], ethical concerns for censorship measurement
+<xref target="Jones"/>, and <xref target="Reidsma"/> as an example of putting ethical guidelines into practice in
+ethics review. Many organizations publish specific guidelines around safe measurements,
+e.g. <xref target="TorSafetyBoard"/>. </t>
 
 <t> The measurement landscape and community is wide and varied. The specific context for Internet measurements should
 be taken into account by researchers/reviewers and applied appropriately. This document does not attempt to supersede
@@ -610,7 +610,7 @@ internet research. Other considerations are taken from the Menlo Report
 </front>
 <seriesInfo name='RFC' value='6973'/>
 </reference>
-<reference anchor="SIGCOMM" target="http://conferences.sigcomm.org/sigcomm/2015/pdf/papers/nsethics/p17.pdf">
+<reference anchor="Jones" target="http://conferences.sigcomm.org/sigcomm/2015/pdf/papers/nsethics/p17.pdf">
 <front>
 <title>Ethical Concerns for Censorship Measurement</title>
 <author initials="B." surname="Jones" fullname="Ben Jones"><organization></organization></author>
@@ -620,6 +620,16 @@ internet research. Other considerations are taken from the Menlo Report
 <author initials="N." surname="Weaver" fullname="Nick Weaver"><organization></organization></author>
 <date year="2015" month="August"/>
 </front>
+</reference>
+<reference anchor='Reidsma' target="https://www.ndss-symposium.org/wp-content/uploads/2023/02/ethics2023-237352-paper.pdf">
+<front>
+<title>Operationalizing Cybersecurity Research Ethics Review: From Principles and Guidelines to Practice</title>
+<author initials='D.' surname='Reidsma' fullname='Dennis Reidsma'></author>
+<author initials='J.' surname='van der Ham' fullname='Jeroen van der Ham'></author>
+<author initials='A.' surname='Continella' fullname='Andrea Continella'></author>
+<date year='2023' month='February'/>
+</front>
+<refcontent>EthiCS 2023 workshop, NDSS Symposium</refcontent>
 </reference>
 <reference anchor='RFC9511' target="https://www.rfc-editor.org/info/rfc9511">
 <front>
