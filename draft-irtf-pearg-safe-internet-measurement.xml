@@ -602,7 +602,7 @@ internet research. Other considerations are taken from the Menlo Report
   <author><organization>University of Michigan</organization></author>
   </front>
 </reference>
-<reference anchor="RFC6973" target="https://www.rfc-editor.org/info/rfc6937">
+<reference anchor="RFC6973" target="https://www.rfc-editor.org/info/rfc6973">
 <front>
 <title>Privacy Considerations for Internet Protocols</title>
 <author initials="A." surname="Cooper" fullname="A. Cooper"><organization>CDT</organization></author>
