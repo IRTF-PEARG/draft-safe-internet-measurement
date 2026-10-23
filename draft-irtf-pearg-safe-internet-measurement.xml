@@ -231,12 +231,17 @@ censorship, the network may provide different results if the connections can be 
 <t>Accountability and transparency are fundamentally related to consent. As per the Menlo Report, "Accountability
 demands that research methodology, ethical evaluations, data collected, and results generated should be documented and
 made available responsibly in accordance with balancing risks and benefits." <xref target="Menlo"/> A user is best
-placed to balance the risks and benefits for themselves therefore consent must be obtained. From most transparent to
-least, there are a few options for obtaining consent.</t>
+placed to balance the risks and benefits for themselves therefore consent must be obtained.</t>
+
+<t>The form of consent required is set by the risk a measurement poses to users (<xref target="user-impact"/>), not by
+how practical consent is to obtain. Researchers should obtain informed consent for any measurement that poses more than
+minimal risk to users, however difficult that is; if it cannot be obtained, the measurement should be redesigned to
+reduce its risk or not performed. Proxy consent or implied consent may be used instead only for measurements that pose
+minimal risk to users, where informed consent is not practical.</t>
 
 <section anchor="informed-consent" title="Informed consent">
 <t>Informed consent should be collected from all users that
-may be placed at risk by an experiment.</t>
+may be placed at more than minimal risk by an experiment.</t>
 
 <t>For consent to be informed, a reasonable coverage of possible risks must be presented to the users.
 The considerations in this document can be used to provide a starting point,
@@ -264,7 +269,7 @@ Even then, experimenters should seriously consider designing their experiment in
 </section>
 
 <section anchor="proxy-consent" title="Proxy consent">
-<t>In cases where it is not practical to collect informed consent from all
+<t>Where a measurement poses minimal risk to users and it is not practical to collect informed consent from all
 users of a shared network, it may be possible to obtain proxy consent. Proxy
 consent may be given by a network operator or employer that would be more
 familiar with the expectations of users of a network than the researcher.</t>
@@ -288,16 +293,17 @@ already covered.</t>
 </section>
 
 <section anchor="low-risk" title="Implied consent">
-<t>In larger scale measurements, even proxy consent collection may not be
-practical. In this case, implied consent may be presumed from users for some
-measurements. Consider that users of a network will
+<t>Where a measurement poses minimal risk to users and even proxy consent is not practical, as in many larger
+scale measurements, implied consent may be presumed. Consider that users of a network will
 have certain expectations of privacy and those expectations may not align with
 the privacy guarantees offered by the technologies they are using. As a thought
 experiment, consider how users might respond if asked for their informed
 consent for the measurements you'd like to perform.</t>
 
 <t>Implied consent should not be considered sufficient for any experiment that
-may collect sensitive or personally identifying information. If practical,
+may collect sensitive or personally identifying information. Nor should it be considered sufficient for active
+measurements that may cause harm to individuals, such as those directed at personal devices rather than infrastructure.
+If practical,
 attempt to obtain informed consent or proxy consent from a sample of users to
 better understand the expectations of other users.</t>
 
