@@ -188,7 +188,18 @@ lost or corrupted, and cases where a user's access to a system may be affected a
 <section title="General Considerations">
   
 <section anchor="risk-analysis" title="Analyze the risks and benefits">
-<t>The benefits of internet measurement should outweigh the risks. <xref target="Menlo"/> <xref target="Kenneally"/></t>
+<t>The benefits of internet measurement should outweigh the risks <xref target="Menlo"/>
+<xref target="Kenneally"/>. This is not only a matter of comparing total benefit against
+total risk: the Menlo Report's principle of justice also asks how risks and benefits are
+distributed <xref target="Menlo"/>. In internet measurement, the risks often fall on the
+specific individuals whose traffic, devices or networks are measured, while the
+benefits go to researchers, operators or the internet community as a whole.</t>
+
+<t>Identify who bears the risks of a measurement and who receives its benefits. Where these
+differ, and especially where those at risk are vulnerable or cannot practically consent,
+reduce the risk as far as possible (<xref target="minimization"/>) and explicitly justify
+what remains. A study is therefore not justified simply because its total benefits exceed its total risks.
+No aggregate benefit justifies exposing people to risk without their informed consent (<xref target="consent"/>).</t>
 
 <t>Internet measurement studies should generally advance knowledge and create meaningful results. Benefits of internet
 measurement studies can include but are not limited to analysis of internet topology; understanding the effect or
@@ -199,8 +210,8 @@ security and privacy threats, and much more. <xref target="Kenneally"/></t>
 those risks, but also of auxiliary data (e.g. third-party data sets). Note that while a privacy risk may not be
 immediately apparent or realisable, in the future increased computing power may then make something possible.</t>
 
-<t>Ensuring that a project's benefits outweigh its risks means the application of the considerations, but also through
-regular community feedback (particularly from those who will ostensibly benefit or be at risk through the project),
+<t>Ensuring that a project's benefits outweigh its risks requires applying the considerations in this document, as well
+as regular community feedback (particularly from those who will ostensibly benefit or be at risk through the project),
 proper auditing of the study, and impact assessments.</t>
 
 <t>Example: A research project releases encrypted payloads as a method for minimising exposure of sensitive user data.
