@@ -72,7 +72,7 @@ plays a role in enhancing research methods of different kinds.
 <t> Performing research using the Internet, as opposed to an isolated testbed or simulation platform, means that
 experiments co-exist in a space with other services and end users. Researchers using the Internet as part of a
 scientific experiment include academic, industry and civil society researchers. This document outlines considerations
-for such researchers so they may mitigate risks to the safety of end users and other services.
+for such researchers so they may mitigate risks to the safety of users and other affected parties.
 </t>
 
 <t> It is common today for certain internet measurements to require an ethics review before gaining approval and to
@@ -96,7 +96,7 @@ methods. Future work may specialize these considerations for specific types or c
 <t>The document contains considerations for how to measure the internet while prioritizing user safety. The considerations are
 particularly germane to projects that involve the generation, collection and/or analysis of traffic from humans. When
 performing research on a platform shared with live traffic from users, that research can be considered safe only if
-the users and others are protected from or unlikely to experience danger, risk, or injury arising due to the research,
+affected parties are protected from or unlikely to experience danger, risk, or injury arising due to the research,
 now or in the future. Avoiding harm is necessary but not sufficient: safe research also requires that any remaining
 risks are justified by the benefits of the research (<xref target="risk-analysis"/>), that users have given consent
 appropriate to those risks (<xref target="consent"/>), and that researchers are transparent and accountable for how
@@ -126,8 +126,14 @@ there is a circumstance, capability, action, or event that could
 breach security and cause harm <xref target="RFC4949"/>.</t>
 
 <t>User: For the purpose of this document, an internet user is an individual or
-  organisation whose data is used in communications over the internet, and most broadly, 
-  those who use the internet to communicate.</t>
+  organisation who uses the internet to communicate, including those whose data is
+  carried in communications over the internet.</t>
+
+<t>Affected party: Any individual or organisation that may experience harm as a
+  result of a measurement, whether or not they are a subject of it. Affected parties
+  include users whose traffic or devices are measured; people whose data appears in
+  measured communications, such as the contacts of a measured user; and operators of
+  infrastructure that carries, receives or responds to measurement traffic.</t>
 
 <t>Active measurement: Active measurements generate
 or modify traffic.</t>
@@ -139,21 +145,23 @@ or modify traffic.</t>
 <t>One-/two-ended: A one-ended measurement is like a probe or a trace. A measurement with two-ended control requires the cooperation of both endpoints, which might include the network itself if that is the measurement target.</t>
 </section>
 
-<section anchor="user-impact" title="Potential user impact from measurement studies">
-<t>Any conceivable internet measurement study might have an impact on an internet user's safety. 
+<section anchor="user-impact" title="Potential impact from measurement studies">
+<t>Any conceivable internet measurement study might have an impact on the safety of affected parties, including those
+who are not subjects of the study.
 The measurement of generated traffic may also lead to insights into other users'
 traffic indirectly as well. It is always necessary to consider the best
 approach to mitigate the impact of measurements, and to balance the risks of
 measurements against the benefits to impacted users.</t>
 
-<t>Some possible ways in which users can be affected as a result of an internet measurement study:</t>
+<t>Some possible ways in which affected parties can be harmed as a result of an internet measurement study:</t>
 
 <t>Breach of privacy: User privacy can be affected or violated in many ways. 
   The first consideration is at the stage of data collection itself. 
   First-order data, such as name, can distinguish a person. Second-order data, such as IP address, can be used to track behaviour.
   The second privacy risk is an internet user's data being shared beyond that for which a user had given consent, through accidental, malicious or compelled disclosure.
-  A third privacy consideration relates to the risk of re-identification or de-anonymization of obfuscated or masked user data.   
-  <xref target="Kenneally"/></t>
+  A third privacy consideration relates to the risk of re-identification or de-anonymization of obfuscated or masked user data.
+  <xref target="Kenneally"/>
+  These risks include data about people other than the study's subjects, such as parties to a measured communication.</t>
   
 
 <t>Inadequate data protection: A scenario where data, either in
@@ -191,8 +199,8 @@ lost or corrupted, and cases where a user's access to a system may be affected a
 <t>The benefits of internet measurement should outweigh the risks <xref target="Menlo"/>
 <xref target="Kenneally"/>. This is not only a matter of comparing total benefit against
 total risk: the Menlo Report's principle of justice also asks how risks and benefits are
-distributed <xref target="Menlo"/>. In internet measurement, the risks often fall on the
-specific individuals whose traffic, devices or networks are measured, while the
+distributed <xref target="Menlo"/>. In internet measurement, the risks often fall on
+specific users, such as those whose traffic, devices or networks are measured, while the
 benefits go to researchers, operators or the internet community as a whole.</t>
 
 <t>Identify who bears the risks of a measurement and who receives its benefits. Where these
@@ -256,6 +264,11 @@ minimal risk to users, however difficult that is; if it cannot be obtained, the 
 reduce its risk or not performed. Proxy consent or implied consent may be used instead only for measurements that pose
 minimal risk to users, where informed consent is not practical.</t>
 
+<t>Consent obtained from users does not extend to other affected parties, such as the contacts of a measured user or
+the operators of measured infrastructure, many of whom cannot practically be asked. Measurements should be designed so
+that those who cannot be asked for consent are exposed to no more than minimal risk, using risk analysis
+(<xref target="risk-analysis"/>) and data minimization (<xref target="minimization"/>).</t>
+
 <section anchor="informed-consent" title="Informed consent">
 <t>Informed consent should be collected from all users that
 may be placed at more than minimal risk by an experiment.</t>
@@ -281,7 +294,7 @@ Even then, experimenters should seriously consider designing their experiment in
   is often simply impractical, depending upon how technical the user audience is, the context of the consent prompt,
   what the tool is normally used by users for, etc. In addition, consent can have network effects. For example, asking a user
   to consent to sharing information about their communication with others can have
-  impacts on users who have not personally consented to the study.
+  impacts on users affected parties who have not personally consented to the study (see <xref target="consent"/>).
 </t>
 </section>
 
