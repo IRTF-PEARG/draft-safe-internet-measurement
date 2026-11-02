@@ -312,6 +312,9 @@ imprisonment by government authorities. If the experimenter wants to expose volu
 users must be fully informed, and voluntarily give consent to run the measurement.
 Even then, experimenters should seriously consider designing their experiment in another way.</t>
 
+<t>Researchers using shared measurement platforms whose vantage points are hosted by volunteers 
+should also consider the same obligations.<xref target="RIPEAtlasEthics"/>.</t>
+
 <t>Note that informed consent is notoriously tricky to obtain. Conveying all possible risks of a measurement
   is often simply impractical, depending upon how technical the user audience is, the context of the consent prompt,
   what the tool is normally used by users for, etc. In addition, consent can have network effects. For example, asking a user
@@ -712,6 +715,14 @@ internet research. Other considerations are taken from the Menlo Report
 </front>
 <seriesInfo name='RFC' value='9511'/>
 <seriesInfo name='DOI' value='10.17487/RFC9511'/>
+</reference>
+<reference anchor="RIPEAtlasEthics" target="https://labs.ripe.net/author/kistel/ethics-of-ripe-atlas-measurements/">
+<front>
+<title>Ethics of RIPE Atlas Measurements</title>
+<author initials="R." surname="Kisteleki" fullname="Robert Kisteleki"/>
+<date year="2016" month="November"/>
+</front>
+<refcontent>RIPE Labs</refcontent>
 </reference>
 <reference anchor='Allman' target="https://conferences.sigcomm.org/imc/2007/papers/imc80.pdf">
 <front>
