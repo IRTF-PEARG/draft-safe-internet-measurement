@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rfc docName='draft-irtf-pearg-safe-internet-measurement-14' ipr="trust200902" submissionType="IRTF" category="info" xml:lang="en"><!-- xmlns:xi="http://www.w3.org/2001/XInclude"-->
+<rfc docName='draft-irtf-pearg-safe-internet-measurement-15' ipr="trust200902" submissionType="IRTF" category="info" xml:lang="en"><!-- xmlns:xi="http://www.w3.org/2001/XInclude"-->
 <front>
 
 <title abbrev='Safe Internet Measurement'>
@@ -47,8 +47,9 @@ Considerations for Performing Safe Measurement on the Internet
 
 <abstract>
 <t>Internet measurement is important to researchers from industry, academia and civil society. While measurement of the
-internet can give insight into the functioning and usage of the Internet, it can present risks to user privacy. This
-document describes briefly those risks. It also outlines considerations for researchers to reference when designing
+internet can give insight into the functioning and usage of the Internet, it can present risks to users, such as
+breaches of their privacy, legal consequences, or disruption of services they rely on. This document describes briefly
+those risks. It also outlines considerations for researchers to reference when designing
 internet measurements to ensuring that those measurements can be carried out with user safety as a priority.</t>
 </abstract>
 
@@ -94,9 +95,12 @@ methods. Future work may specialize these considerations for specific types or c
   
 <t>The document contains considerations for how to measure the internet while prioritizing user safety. The considerations are
 particularly germane to projects that involve the generation, collection and/or analysis of traffic from humans. When
-performing research on a platform shared with live traffic from users, that research is considered safe if and only if
+performing research on a platform shared with live traffic from users, that research can be considered safe only if
 the users and others are protected from or unlikely to experience danger, risk, or injury arising due to the research,
-now or in the future.</t>
+now or in the future. Avoiding harm is necessary but not sufficient: safe research also requires that any remaining
+risks are justified by the benefits of the research (<xref target="risk-analysis"/>), that users have given consent
+appropriate to those risks (<xref target="consent"/>), and that researchers are transparent and accountable for how
+the research is conducted (<xref target="transparency"/>).</t>
 
 <ul>
 
@@ -191,7 +195,7 @@ measurements studies can include but are not limited to analysis of internet top
 prevalance of new internet technologies, protocols or applications; characterisation or prevention of malware or other
 security and privacy threats, and much more. <xref target="Kenneally"/></t>
 
-<t>The risks of internet measurement studies, particularly to user safety, are summarised in Section 1.3. Consider
+<t>The risks of internet measurement studies, particularly to user safety, are summarised in <xref target="user-impact"/>. Consider
 those risks, but also of auxiliary data (e.g. third-party data sets). Note that while a privacy risk may not be
 immediately apparent or realisable, in the future increased computing power may then make something possible.</t>
 
@@ -208,8 +212,8 @@ However the encryption could be trivially broken in the future with typical incr
 
 <t>Despite best intentions, things fall apart. In the case of any adverse events, researchers should “responsibly
 inform affected stakeholders.” <xref target="Menlo"/> Where contacting users is not feasible, information about
-discovery of security vulnerabilities, improvements and fixes, data compromise, instances of unauthorized access to
-information should be published publicly.</t>
+discovery of security vulnerabilities, data compromise, and instances of unauthorized access to information should be
+published.</t>
 
 <t>If possible, institute a regular accountability and reporting mechanism, such as an annual review by an advisory
 board. Such regular accountability mechanisms can include an assessment of the experiment's impact on user safety and
@@ -223,6 +227,8 @@ privacy, analysis of security events, and an evaluation of whether the experimen
 <t>This guideline may be ignored if and only if attribution runs contrary to the purpose of the measurement study or
 would otherwise render it ineffectual. For example, for an experiment collecting information about local internet
 censorship, the network may provide different results if the connections can be identified as serving that purpose.</t>
+<t>Identifying measurement traffic also helps to reduce the impact of a measurement on others' infrastructure, as
+discussed in <xref target="others-stuff"/>.</t>
 </section>
 
 
@@ -378,9 +384,12 @@ research. </t>
 that data in order to minimize the risk to users whilst still safely providing sufficient data for
 the measurement to be effective. 
 
-A range of pseudo-anonymization or anonymization techniques are available [ADD REFERENCES].
+A range of pseudonymization or anonymization techniques are available
+<xref target="SurveyNetworkTrafficAnonymisationTech"/>.
 
-IP addresses are particularly identifying...
+IP addresses are particularly identifying, as they can often be linked to a specific subscriber, household or device,
+and to an approximate location. Where the measurement does not require full IP addresses, they should be discarded,
+truncated or pseudonymized using the techniques below.
 </t>
 
 <section anchor="minimization-mask" title="Mask data">
@@ -447,7 +456,7 @@ means that you will not be collecting results that are representative of what
 a typical client would see.</t>
 
 <t>One possible way to mitigate this risk is transparency, i.e. mark measurement-related
-  data or activity as such. For example, the popular internet measurement tool ZMap
+  data or activity as such, as also recommended in <xref target="attribute"/>. For example, the popular internet measurement tool ZMap
   hardcodes its packets to have IP ID 54321 in order to allow identification
   <xref target="ZMap"/>.
 </t>
