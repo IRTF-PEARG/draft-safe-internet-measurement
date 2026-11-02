@@ -96,7 +96,7 @@ methods. Future work may specialize these considerations for specific types or c
 <t>The document contains considerations for how to measure the internet while prioritizing user safety. The considerations are
 particularly germane to projects that involve the generation, collection and/or analysis of traffic from humans. When
 performing research on a platform shared with live traffic from users, that research can be considered safe only if
-affected parties are protected from or unlikely to experience danger, risk, or injury arising due to the research,
+users and other affected parties are protected from or unlikely to experience danger, risk, or injury arising due to the research,
 now or in the future. Avoiding harm is necessary but not sufficient: safe research also requires that any remaining
 risks are justified by the benefits of the research (<xref target="risk-analysis"/>), that users have given consent
 appropriate to those risks (<xref target="consent"/>), and that researchers are transparent and accountable for how
@@ -127,13 +127,13 @@ breach security and cause harm <xref target="RFC4949"/>.</t>
 
 <t>User: For the purpose of this document, an internet user is an individual or
   organisation who uses the internet to communicate, including those whose data is
-  carried in communications over the internet.</t>
+  carried in communications over the internet. In certain contexts, users also include
+  individuals who are not the direct subject of the
+  measurement, for example a contact whose data appears in a measured communication.</t>
 
-<t>Affected party: Any individual or organisation that may experience harm as a
-  result of a measurement, whether or not they are a subject of it. Affected parties
-  include users whose traffic or devices are measured; people whose data appears in
-  measured communications, such as the contacts of a measured user; and operators of
-  infrastructure that carries, receives or responds to measurement traffic.</t>
+<t>Affected party: Users, and any other individual or organisation that may be harmed
+  by a measurement, such as the operators of infrastructure that carries, receives or
+  responds to measurement traffic.</t>
 
 <t>Active measurement: Active measurements generate
 or modify traffic.</t>
@@ -145,15 +145,15 @@ or modify traffic.</t>
 <t>One-/two-ended: A one-ended measurement is like a probe or a trace. A measurement with two-ended control requires the cooperation of both endpoints, which might include the network itself if that is the measurement target.</t>
 </section>
 
-<section anchor="user-impact" title="Potential impact from measurement studies">
-<t>Any conceivable internet measurement study might have an impact on the safety of affected parties, including those
-who are not subjects of the study.
+<section anchor="user-impact" title="Potential user impact from measurement studies">
+<t>Any conceivable internet measurement study might have an impact on an internet user's safety, including users who
+are not subjects of the study, and on other affected parties such as infrastructure operators.
 The measurement of generated traffic may also lead to insights into other users'
 traffic indirectly as well. It is always necessary to consider the best
 approach to mitigate the impact of measurements, and to balance the risks of
 measurements against the benefits to impacted users.</t>
 
-<t>Some possible ways in which affected parties can be harmed as a result of an internet measurement study:</t>
+<t>Some possible ways in which users and other affected parties can be harmed as a result of an internet measurement study:</t>
 
 <t>Breach of privacy: User privacy can be affected or violated in many ways. 
   The first consideration is at the stage of data collection itself. 
@@ -161,7 +161,7 @@ measurements against the benefits to impacted users.</t>
   The second privacy risk is an internet user's data being shared beyond that for which a user had given consent, through accidental, malicious or compelled disclosure.
   A third privacy consideration relates to the risk of re-identification or de-anonymization of obfuscated or masked user data.
   <xref target="Kenneally"/>
-  These risks include data about people other than the study's subjects, such as parties to a measured communication.</t>
+  These risks include data about users other than the study's subjects, such as parties to a measured communication.</t>
   
 
 <t>Inadequate data protection: A scenario where data, either in
@@ -197,17 +197,7 @@ lost or corrupted, and cases where a user's access to a system may be affected a
   
 <section anchor="risk-analysis" title="Analyze the risks and benefits">
 <t>The benefits of internet measurement should outweigh the risks <xref target="Menlo"/>
-<xref target="Kenneally"/>. This is not only a matter of comparing total benefit against
-total risk: the Menlo Report's principle of justice also asks how risks and benefits are
-distributed <xref target="Menlo"/>. In internet measurement, the risks often fall on
-specific users, such as those whose traffic, devices or networks are measured, while the
-benefits go to researchers, operators or the internet community as a whole.</t>
-
-<t>Identify who bears the risks of a measurement and who receives its benefits. Where these
-differ, and especially where those at risk are vulnerable or cannot practically consent,
-reduce the risk as far as possible (<xref target="minimization"/>) and explicitly justify
-what remains. A study is therefore not justified simply because its total benefits exceed its total risks.
-No aggregate benefit justifies exposing people to risk without their informed consent (<xref target="consent"/>).</t>
+<xref target="Kenneally"/>.</t>
 
 <t>Internet measurement studies should generally advance knowledge and create meaningful results. Benefits of internet
 measurement studies can include but are not limited to analysis of internet topology; understanding the effect or
@@ -217,6 +207,19 @@ security and privacy threats, and much more. <xref target="Kenneally"/></t>
 <t>The risks of internet measurement studies, particularly to user safety, are summarised in <xref target="user-impact"/>. Consider
 those risks, but also of auxiliary data (e.g. third-party data sets). Note that while a privacy risk may not be
 immediately apparent or realisable, in the future increased computing power may then make something possible.</t>
+
+<t>Weighing benefits against risks is not only a matter of comparing total benefit against
+total risk: the Menlo Report's principle of justice also asks how risks and benefits are
+distributed <xref target="Menlo"/>. In internet measurement, the risks often fall on
+specific users, such as those whose traffic, devices or networks are measured, while the
+benefits go to researchers, operators or the internet community as a whole.</t>
+
+<t>Identify who bears the risks of a measurement and who receives its benefits. Where these
+differ, and especially where those at risk are vulnerable or cannot practically consent,
+reduce the risk as far as possible (<xref target="minimization"/>) and explicitly justify
+what remains. A study is not justified simply because its total benefits exceed its total risks.
+No aggregate benefit justifies exposing people to more than minimal risk without their informed consent
+(<xref target="consent"/>).</t>
 
 <t>Ensuring that a project's benefits outweigh its risks requires applying the considerations in this document, as well
 as regular community feedback (particularly from those who will ostensibly benefit or be at risk through the project),
@@ -264,8 +267,9 @@ minimal risk to users, however difficult that is; if it cannot be obtained, the 
 reduce its risk or not performed. Proxy consent or implied consent may be used instead only for measurements that pose
 minimal risk to users, where informed consent is not practical.</t>
 
-<t>Consent obtained from users does not extend to other affected parties, such as the contacts of a measured user or
-the operators of measured infrastructure, many of whom cannot practically be asked. Measurements should be designed so
+<t>Consent obtained from the users who take part in a measurement does not extend to other users it affects, such as
+contacts whose data appears in measured communications, or to other affected parties such as the operators of measured
+infrastructure, many of whom cannot practically be asked. Measurements should be designed so
 that those who cannot be asked for consent are exposed to no more than minimal risk, using risk analysis
 (<xref target="risk-analysis"/>) and data minimization (<xref target="minimization"/>).</t>
 
@@ -294,7 +298,7 @@ Even then, experimenters should seriously consider designing their experiment in
   is often simply impractical, depending upon how technical the user audience is, the context of the consent prompt,
   what the tool is normally used by users for, etc. In addition, consent can have network effects. For example, asking a user
   to consent to sharing information about their communication with others can have
-  impacts on users affected parties who have not personally consented to the study (see <xref target="consent"/>).
+  impacts on users who have not personally consented to the study (see <xref target="consent"/>).
 </t>
 </section>
 
