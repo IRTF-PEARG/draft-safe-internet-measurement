@@ -96,8 +96,10 @@ methods. Future work may specialize these considerations for specific types or c
 <t>The document contains considerations for how to measure the internet while prioritizing user safety. The considerations are
 particularly germane to projects that involve the generation, collection and/or analysis of traffic from humans. When
 performing research on a platform shared with live traffic from users, that research can be considered safe only if
-users and other affected parties are protected from or unlikely to experience danger, risk, or injury arising due to the research,
-now or in the future. Avoiding harm is necessary but not sufficient: safe research also requires that any remaining
+the risk of danger or injury to users and other affected parties arising due to the research, now or in the future, is
+no more than minimal or, where it is greater, has been accepted through informed consent by those who bear it
+(<xref target="consent"/>). A measurement poses minimal risk when the probability and magnitude of harm anticipated
+from it are not greater than those ordinarily encountered in everyday use of the internet. Avoiding harm is necessary but not sufficient: safe research also requires that any remaining
 risks are justified by the benefits of the research (<xref target="risk-analysis"/>), that users have given consent
 appropriate to those risks (<xref target="consent"/>), and that researchers are transparent and accountable for how
 the research is conducted (<xref target="transparency"/>).</t>
@@ -193,6 +195,17 @@ lost or corrupted, and cases where a user's access to a system may be affected a
 
 <section anchor="guidelines" title="Considerations">
 
+<t>This section sets out considerations for researchers designing and carrying out internet measurements, to mitigate
+the risks described in <xref target="user-impact"/>. They cover general considerations, obtaining consent from users,
+data collection and sharing, and the impact of measurements on the network. Not every consideration applies to every
+measurement, and researchers should apply them in the light of the specific risks their study poses.</t>
+
+<t>Where a consideration in this section allows an exception, or where it is unclear whether a measurement poses
+more than minimal risk, the decision should not rest solely with the researchers who would benefit from it. Refer it
+to an independent party, such as an institutional ethics review board. Where none is available, as is often the case
+for civil society and independent researchers, seek review from an independent body, or from peers outside the project.
+Record the decision and its reasoning, and report it with the results (<xref target="transparency"/>).</t>
+
 <section title="General Considerations">
   
 <section anchor="risk-analysis" title="Analyze the risks and benefits">
@@ -231,12 +244,17 @@ proper auditing of the study, and impact assessments.</t>
 <t>Have “a general policy of openness about developments, practices and policies with respect to personal data.” <xref target="OECD"/></t> 
 
 <t>Despite best intentions, things fall apart. In the case of any adverse events, researchers should “responsibly
-inform affected stakeholders.” <xref target="Menlo"/> Where contacting users is not feasible, information about
-discovery of security vulnerabilities, data compromise, and instances of unauthorized access to information should be
-published.</t>
+inform affected stakeholders.” <xref target="Menlo"/> Contact affected users directly where possible. In all
+cases, information about the discovery of security vulnerabilities, data compromise, and instances of unauthorized
+access to information should also be published, once doing so would not itself put users at further risk (for example,
+once a vulnerability has been fixed).</t>
 
-<t>If possible, institute a regular accountability and reporting mechanism, such as an annual review by an advisory
-board. Such regular accountability mechanisms can include an assessment of the experiment's impact on user safety and
+<t>At a minimum, report the following with the published results of the research: the outcome of any ethics review;
+the risk analysis (<xref target="risk-analysis"/>); how consent was obtained (<xref target="consent"/>); any
+exceptions taken (<xref target="guidelines"/>); and any adverse events.</t>
+
+<t>For long-running experiments, also institute a regular accountability and reporting mechanism, such as an annual
+review by an advisory board. Such regular accountability mechanisms can include an assessment of the experiment's impact on user safety and
 privacy, analysis of security events, and an evaluation of whether the experiment is meeting its expected goals.</t>
 
 </section>
@@ -244,9 +262,11 @@ privacy, analysis of security events, and an evaluation of whether the experimen
 <section anchor="attribute" title="Identification of traffic">
 <t>Proactively identify your measurement to others on the network. "This allows any party or organization to understand what an unsolicited probe packet is, what its purpose is, and, most importantly, who to contact."<xref target="RFC9511"/> </t>
 <t>Example: For a layer 3 IP packet probe you could mark measurements with a probe description URI as defined in RFC9511.</t>
-<t>This guideline may be ignored if and only if attribution runs contrary to the purpose of the measurement study or
+<t>This guideline may be ignored if attribution runs contrary to the purpose of the measurement study or
 would otherwise render it ineffectual. For example, for an experiment collecting information about local internet
-censorship, the network may provide different results if the connections can be identified as serving that purpose.</t>
+censorship, the network may provide different results if the connections can be identified as serving that purpose.
+A decision not to identify measurement traffic should be reviewed as described in <xref target="guidelines"/>, and should
+be disclosed when results from the measurements.</t>
 <t>Identifying measurement traffic also helps to reduce the impact of a measurement on others' infrastructure, as
 discussed in <xref target="others-stuff"/>.</t>
 </section>
@@ -261,7 +281,7 @@ placed to balance the risks and benefits for themselves therefore consent must b
 
 <t>The form of consent required is set by the risk a measurement poses to users (<xref target="user-impact"/>), not by
 how practical consent is to obtain. Researchers should obtain informed consent for any measurement that poses more than
-minimal risk to users, however difficult that is; if it cannot be obtained, the measurement should be redesigned to
+minimal risk to users (<xref target="scope"/>), however difficult that is; if it cannot be obtained, the measurement should be redesigned to
 reduce its risk or not performed. Proxy consent or implied consent may be used instead only for measurements that pose
 minimal risk to users, where informed consent is not practical.</t>
 
@@ -504,10 +524,11 @@ support the use of a "Do Not Scan" list.</t>
 
 <t>If complaints are made that request you do not generate traffic towards a
 host or network, you should add that host or network to your "Do Not Scan" list,
-even if the request is automated. However it seems reasonable that these requests
-could be evaluated in context. (For example in censorship measurement it would
-be commensurate to ensure the request isn't an attempt to hide the fact that a
-certain target is unreachable in a particular geography.)</t>
+even if the request is automated. A request may be declined only where honouring it
+would hide the very thing being measured. For example, in censorship measurement, a
+request could be an attempt to hide the fact that a certain target is unreachable in
+a particular geography. A decision to decline a request should be reviewed as
+described in <xref target="guidelines"/>, and the requester informed where possible.</t>
 
 <t>You may ask the requester for their reasoning if it would be useful to your
 experiment. This can also be an opportunity to explain your research and offer
