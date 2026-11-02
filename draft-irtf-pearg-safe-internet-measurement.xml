@@ -50,7 +50,7 @@ Considerations for Performing Safe Measurement on the Internet
 internet can give insight into the functioning and usage of the Internet, it can present risks to users, such as
 breaches of their privacy, legal consequences, or disruption of services they rely on. This document describes briefly
 those risks. It also outlines considerations for researchers to reference when designing
-internet measurements to ensuring that those measurements can be carried out with user safety as a priority.</t>
+internet measurements to ensure that those measurements can be carried out with user safety as a priority.</t>
 </abstract>
 
 <note title="Note">
@@ -77,7 +77,7 @@ for such researchers so they may mitigate risks to the safety of end users and o
 
 <t> It is common today for certain internet measurements to require an ethics review before gaining approval and to
 report details of that review in the resulting work. Previous work in the area of ethical concerns includes the Menlo Report
-[MenloReport] and its companion document [MenloReportCompanion], ethical concerns for censorship measurement
+<xref target="Menlo"/> and its companion document <xref target="MenloReportCompanion"/>, ethical concerns for censorship measurement
 <xref target="Jones"/>, and <xref target="Reidsma"/> as an example of putting ethical guidelines into practice in
 ethics review. Many organizations publish specific guidelines around safe measurements,
 e.g. <xref target="TorSafetyBoard"/>. </t>
@@ -190,9 +190,9 @@ lost or corrupted, and cases where a user's access to a system may be affected a
 <section anchor="risk-analysis" title="Analyze the risks and benefits">
 <t>The benefits of internet measurement should outweigh the risks. <xref target="Menlo"/> <xref target="Kenneally"/></t>
 
-<t>Internet measurements studies should generally advance knowledge and create meaningful results. Benefits of internet
-measurements studies can include but are not limited to analysis of internet topology; understanding the effect or
-prevalance of new internet technologies, protocols or applications; characterisation or prevention of malware or other
+<t>Internet measurement studies should generally advance knowledge and create meaningful results. Benefits of internet
+measurement studies can include but are not limited to analysis of internet topology; understanding the effect or
+prevalence of new internet technologies, protocols or applications; characterisation or prevention of malware or other
 security and privacy threats, and much more. <xref target="Kenneally"/></t>
 
 <t>The risks of internet measurement studies, particularly to user safety, are summarised in <xref target="user-impact"/>. Consider
@@ -293,9 +293,6 @@ of the network. The purpose of the experiment may affect whether or not they
 are able to provide this consent. Say, performing engineering work on
 the network may be allowed, whereas academic research may not be
 already covered.</t>
-
-<t>Example: A research project looks at networked "things", yet users' only interface with the network is through a device that does not provide interaction to the degree that would be sufficient to obtain informed consent at time of use.</t>
-<t>However in this case the user can be informed of the use of data for internet measurement research in the device's terms of use and privacy notice, which can be included in a printed, physical manual for the device or accessed at any time via a webpage. These are examples of proxy consent such that the device manufacturer may choose to share data under certain specified conditions, or to conduct their own measurements.</t>
 </section>
 
 <section anchor="low-risk" title="Implied consent">
@@ -333,19 +330,29 @@ identifying or sensitive information.</t>
 behaviour of the software is already expected by the user. If users have
 already been informed that data will be reported back to the developers of the
 software, then again the addition of new metrics would be expected. Note that
-the reduced impact of A/B testing should not be used be an excuse to push updates that
+the reduced impact of A/B testing should not be used as an excuse to push updates that
 might compromise user expectations around security and privacy.</t>
 
 <t>In the event that something does go wrong with the update, it should be easy
 for users to discover that they have been part of an experiment and roll back
 the change, allowing for explicit refusal of consent to override the presumed
 implied consent.</t>
+
+<t>Example: A research project looks at networked "things", yet users' only interface
+with the network is through a device that does not provide interaction to the degree 
+that would be sufficient to obtain informed consent at time of use.</t>
+<t>In this case the user can be informed of the use of data for internet measurement
+  research in the device's terms of use and privacy notice, which can be included 
+  in a printed, physical manual for the device or accessed at any time via a webpage.
+  Such a notice informs users rather than asking for their consent, so continued use of 
+  the device can at most be taken as implied consent. 
+  It is therefore only appropriate for measurements that pose minimal risk to users.</t>
 </section>
 </section>
 
 <section title="Data collection and sharing">
 
-<section anchor="minimization" title="Data collection and minimiszation">
+<section anchor="minimization" title="Data collection and minimization">
 <t>When collecting, using, disclosing, and storing data from a measurement, use
 only the minimal data necessary to perform a task. Reducing the amount of data
 reduces the amount of data that can be misused or leaked.</t>
@@ -417,7 +424,7 @@ statistics in the software used by the Tor network.</t>
 <t>The use of binning to group numbers of more-or-less continuous values, coarse categorization in modeling, reduction
 in concentrations of IP address by geography (geoip) or other first- or second-order identifiers, the introduction of
 noise and all privacy-preserving measurement techniques that allow researchers to safely conduct internet measurement
-experiments without risking harm to real users <xref target="Janson"></xref>.</t>
+experiments without risking harm to real users <xref target="Jansen"/>.</t>
 </section>
 </section>
 </section>
@@ -433,7 +440,7 @@ datasets."</t>
 <t>Their guidance for researchers is to:</t>
 <ul><li>be thoughtful in the reporting of potentially sensitive information gleaned from providers’ data.</li>
 <li>comply with the indications and interactions of the data providers.</li></ul>
-<t>Example: Researchers have obtained network measurement data from more than one provider for purposes of conducting analysis of protocol use on both. Where privacy paritioning techniques are used, the researchers' findings may inadvertently collude to uncover private information about users. Once realised, researchers should mitigate this privacy risk to end users as well as disclosing this result to the data providers themselves.</t>
+<t>Example: Researchers have obtained network measurement data from more than one provider for purposes of conducting analysis of protocol use on both. Where privacy partitioning techniques are used, the researchers' findings may inadvertently collude to uncover private information about users. Once realised, researchers should mitigate this privacy risk to end users as well as disclosing this result to the data providers themselves.</t>
 </section>
 
 </section>
@@ -522,7 +529,7 @@ internet research. Other considerations are taken from the Menlo Report
 <reference anchor='netem'>
 <front>
 <title>Network emulation with NetEm</title>
-<author initials='H.' surname='Stephen' fullname='S. Hemminger'><organization>Open Source Development Lab</organization></author>
+<author initials='S.' surname='Hemminger' fullname='Stephen Hemminger'><organization>Open Source Development Lab</organization></author>
 <date year='2005' month='April'/>
 </front>
 </reference>
@@ -550,6 +557,8 @@ internet research. Other considerations are taken from the Menlo Report
 <author initials='R.' surname='Shirey' fullname='R. Shirey'></author>
 <date year='2007' month='August'/>
 </front>
+<seriesInfo name='RFC' value='4949'/>
+<seriesInfo name='DOI' value='10.17487/RFC4949'/>
 </reference>
 <reference anchor="Tor.2017-04-001" target="https://research.torproject.org/techreports/privacy-in-memory-2017-04-28.pdf">
 <front>
@@ -654,6 +663,8 @@ internet research. Other considerations are taken from the Menlo Report
 <author initials='J.' surname='Iurman' fullname='J. Iurman'></author>
 <date year='2023' month='November'/>
 </front>
+<seriesInfo name='RFC' value='9511'/>
+<seriesInfo name='DOI' value='10.17487/RFC9511'/>
 </reference>
 <reference anchor='Allman' target="https://conferences.sigcomm.org/imc/2007/papers/imc80.pdf">
 <front>
@@ -678,14 +689,16 @@ internet research. Other considerations are taken from the Menlo Report
 <date year='2010'/>
 </front>
 </reference>
-<reference anchor='Janson' target="https://dl.acm.org/doi/pdf/10.1145/3243734.3243815">
+<reference anchor='Jansen' target="https://dl.acm.org/doi/pdf/10.1145/3243734.3243815">
 <front>
 <title>Privacy-Preserving Dynamic Learning of Tor Network Traffic</title>
-<author initials='R.' surname='Janson' fullname='Rob Janson'></author>
+<author initials='R.' surname='Jansen' fullname='Rob Jansen'></author>
 <author initials='M.' surname='Traudt' fullname='Matthew Traudt'></author>
 <author initials='N.' surname='Hopper' fullname='Nicholas Hopper'></author>
-<date year='2010'/>
+<date year='2018' month='October'/>
 </front>
+<seriesInfo name='DOI' value='10.1145/3243734.3243815'/>
+<refcontent>ACM SIGSAC Conference on Computer and Communications Security (CCS '18)</refcontent>
 </reference>
 </references>
 
