@@ -205,7 +205,7 @@ prevalence of new internet technologies, protocols or applications; characterisa
 security and privacy threats, and much more. <xref target="Kenneally"/></t>
 
 <t>The risks of internet measurement studies, particularly to user safety, are summarised in <xref target="user-impact"/>. Consider
-those risks, but also of auxiliary data (e.g. third-party data sets). Note that while a privacy risk may not be
+those risks, but also those stemming from use of auxiliary data (e.g. third-party data sets). Note that while a privacy risk may not be
 immediately apparent or realisable, in the future increased computing power may then make something possible.</t>
 
 <t>Weighing benefits against risks is not only a matter of comparing total benefit against
@@ -225,8 +225,6 @@ No aggregate benefit justifies exposing people to more than minimal risk without
 as regular community feedback (particularly from those who will ostensibly benefit or be at risk through the project),
 proper auditing of the study, and impact assessments.</t>
 
-<t>Example: A research project releases encrypted payloads as a method for minimising exposure of sensitive user data.
-However the encryption could be trivially broken in the future with typical increases in computing power.</t>
 </section>
 
 <section anchor="transparency" title="Transparency and accountability">
